@@ -6,19 +6,12 @@ from agentscope.model import DashScopeChatModel
 from agentscope.agent import ReActAgent, UserAgent
 from agentscope_runtime.engine.deployers import LocalDeployManager
 
-# 密码：Psbc@1234
-# Model: qwen-plus
-# Key： sk-ea484c09bdb54a38ba3a51a5b7164318
-# 文档：https://bailian.console.aliyun.com/?tab=api#/api/?type=model&url=2712576
-# 连接LLM：https://dashscope.aliyuncs.com/compatible-mode/v1
-
 # 创建 Agent
 agent = AgentScopeAgent(
     name="DemoApp",
     model=DashScopeChatModel(
         model_name="qwen-plus",
-        api_key="sk-ea484c09bdb54a38ba3a51a5b7164318",
-        base_http_api_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+        api_key="",
     ),
     agent_config={"sys_prompt": "You are a helpful assistant."},
     agent_builder=UserAgent,
