@@ -1,0 +1,5 @@
+agentscope
+agentscope-runtime
+python-dotenv
+dashscope>=1.24.4
+requests>=2.25.1
