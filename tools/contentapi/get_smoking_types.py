@@ -30,7 +30,8 @@ def get_smoking_types(language: str = "zh-CN") -> ToolResponse:
 
     print(f"查询吸烟类型（烟型）数据字典，语言: '{language}'")
 
-    res = Get('/api/v1/dictionary/smoking-types', params={"language": language})
+    res = Get("content", '/api/v1/dictionary/smoking-types',
+              params={"language": language})
 
     return ToolResponse(
         content=[

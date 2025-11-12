@@ -30,7 +30,8 @@ def get_window_types(language: str = "zh-CN") -> ToolResponse:
 
     print(f"查询窗户类型（窗型）数据字典，语言: '{language}'")
 
-    res = Get('/api/v1/dictionary/window-types', params={"language": language})
+    res = Get("content", '/api/v1/dictionary/window-types',
+              params={"language": language})
 
     return ToolResponse(
         content=[

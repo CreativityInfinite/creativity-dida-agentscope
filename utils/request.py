@@ -16,18 +16,20 @@ ClientID = os.environ["DIDA_CLIENT_ID"]
 
 credentials = f"{ClientID}:{LicenseKey}"
 credentials_base64 = base64.b64encode(credentials.encode()).decode()
-print(f"凭证: {credentials} -> {credentials_base64}")
+# print(f"凭证: {credentials} -> {credentials_base64}")
 
 
 # API端点
-url = "https://static-api.didatravel.com"
+contentUrl = "https://static-api.didatravel.com"
+bookingUrl = "https://api.didatravel.com"
 headers = {
     "accept": "application/json",
     "authorization": f"Basic {credentials_base64}"
 }
 
 
-def Get(path: str, params: dict[str, Any]) -> dict[str, Any] | None:
+def Get(type: str, path: str, params: dict[str, Any]) -> dict[str, Any] | None:
+    url = contentUrl if type == "content" else bookingUrl
     try:
         furl = url + path
         response = requests.get(furl, params=params, headers=headers)
@@ -48,7 +50,8 @@ def Get(path: str, params: dict[str, Any]) -> dict[str, Any] | None:
         return None
 
 
-def Post(path: str, params: dict[str, Any], data: dict[str, Any] | None = None) -> dict[str, Any] | None:
+def Post(type: str, path: str, params: dict[str, Any], data: dict[str, Any] | None = None) -> dict[str, Any] | None:
+    url = contentUrl if type == "content" else bookingUrl
     try:
         furl = url + path
         response = requests.post(

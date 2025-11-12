@@ -9,6 +9,12 @@ from tools.contentapi.get_smoking_types import get_smoking_types
 from tools.contentapi.get_view_types import get_view_types
 from tools.otherapi.get_weather import get_weather
 from tools.otherapi.get_environment import get_environment
+from tools.bookingapi.get_lowest_price import get_lowest_price
+from tools.bookingapi.price_confirm import price_confirm
+from tools.bookingapi.booking_confirm import booking_confirm
+from tools.bookingapi.booking_search import booking_search
+from tools.bookingapi.booking_pre_cancel import booking_pre_cancel
+from tools.bookingapi.booking_cancel_confirm import booking_cancel_confirm
 from agentscope.tool import Toolkit
 from agentscope.model import DashScopeChatModel
 from agentscope.message import Msg
@@ -42,6 +48,12 @@ toolkit.register_tool_function(get_smoking_types)
 toolkit.register_tool_function(get_view_types)
 toolkit.register_tool_function(get_weather)
 toolkit.register_tool_function(get_environment)
+toolkit.register_tool_function(get_lowest_price)
+toolkit.register_tool_function(price_confirm)
+toolkit.register_tool_function(booking_confirm)
+toolkit.register_tool_function(booking_search)
+toolkit.register_tool_function(booking_pre_cancel)
+toolkit.register_tool_function(booking_cancel_confirm)
 
 
 didaAgent = ReActAgent(

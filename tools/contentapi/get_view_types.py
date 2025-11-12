@@ -30,7 +30,8 @@ def get_view_types(language: str = "zh-CN") -> ToolResponse:
 
     print(f"查询景观类型数据字典，语言: '{language}'")
 
-    res = Get('/api/v1/dictionary/view-types', params={"language": language})
+    res = Get("content", '/api/v1/dictionary/view-types',
+              params={"language": language})
 
     return ToolResponse(
         content=[

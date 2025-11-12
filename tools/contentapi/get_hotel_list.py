@@ -53,7 +53,7 @@ def get_hotel_list(countryCode: str, lastUpdateTime: str | None = None, language
     if lastUpdateTime:
         params["lastUpdateTime"] = lastUpdateTime
 
-    res = Get('/api/v1/hotel/list', params=params)
+    res = Get("content", '/api/v1/hotel/list', params=params)
 
     return ToolResponse(
         content=[

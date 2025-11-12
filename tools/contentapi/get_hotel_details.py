@@ -67,7 +67,8 @@ def get_hotel_details(hotelIds: list[int], language: str = "en-US") -> ToolRespo
         "hotelIds": hotelIds
     }
 
-    res = Post('/api/v1/hotel/details', params={}, data=request_data)
+    res = Post("content", '/api/v1/hotel/details',
+               params={}, data=request_data)
 
     return ToolResponse(
         content=[

@@ -24,6 +24,12 @@ from tools.contentapi.get_smoking_types import get_smoking_types
 from tools.contentapi.get_view_types import get_view_types
 from tools.otherapi.get_weather import get_weather
 from tools.otherapi.get_environment import get_environment
+from tools.bookingapi.get_lowest_price import get_lowest_price
+from tools.bookingapi.price_confirm import price_confirm
+from tools.bookingapi.booking_confirm import booking_confirm
+from tools.bookingapi.booking_search import booking_search
+from tools.bookingapi.booking_pre_cancel import booking_pre_cancel
+from tools.bookingapi.booking_cancel_confirm import booking_cancel_confirm
 
 # 创建FunctionTool实例
 # tools = [
@@ -49,6 +55,12 @@ toolkit.register_tool_function(get_smoking_types)
 toolkit.register_tool_function(get_view_types)
 toolkit.register_tool_function(get_weather)
 toolkit.register_tool_function(get_environment)
+toolkit.register_tool_function(get_lowest_price)
+toolkit.register_tool_function(price_confirm)
+toolkit.register_tool_function(booking_confirm)
+toolkit.register_tool_function(booking_search)
+toolkit.register_tool_function(booking_pre_cancel)
+toolkit.register_tool_function(booking_cancel_confirm)
 
 # 创建 Agent
 agent = AgentScopeAgent(
@@ -60,7 +72,7 @@ agent = AgentScopeAgent(
     ),
     agent_config={
         'name': "DidaAgent",
-        'sys_prompt': "你是一个名为 DidaAgent 的有用助手，能够回答用户的问题并使用一系列的工具去执行相关的操作，请尽可能的一次性调用多个工具来加速消息反馈。",
+        'sys_prompt': f"你是一个名为 DidaAgent 的有用助手，能够回答用户的问题并使用一系列的工具去执行相关的操作，请尽可能的一次性调用多个工具来加速消息反馈。当你需要时间等实时数据时请调用get_environment工具。",
         'formatter': formatter,
         'memory': memory,
         'toolkit': toolkit,
@@ -72,19 +84,17 @@ agent = AgentScopeAgent(
 
 agentscope.init(
     studio_url=os.environ["AGENTSCOPE_STUDIO_URL"],
-    project="DIDA-AIDA-Project",
+    project="DIDA-AIDA-Project2",
     name="DemoRuntimeApp"
 )
+
 
 # 创建 StudioUserInput 实例
 studio_input = StudioUserInput(
     studio_url=os.environ["AGENTSCOPE_STUDIO_URL"],
-    run_id="DemoRuntimeApp"  # 使用一个唯一的运行ID
+    run_id='fDDiGsBb5u9bRgFRELuzWi'
 )
-
-# 创建 UserAgent 并设置 StudioUserInput
-user_agent = UserAgent(name="用户")
-user_agent.override_instance_input_method(studio_input)
+print('studio_input', studio_input)
 
 
 async def init_resources(app, **kwargs):

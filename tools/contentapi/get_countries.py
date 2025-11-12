@@ -37,7 +37,8 @@ def get_countries(language: str) -> ToolResponse:
 
     print(f"当前语言 '{language}'")
 
-    res = Get('/api/v1/region/countries', params={"language": language})
+    res = Get("content", '/api/v1/region/countries',
+              params={"language": language})
 
     return ToolResponse(
         content=[

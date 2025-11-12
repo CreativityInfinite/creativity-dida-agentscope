@@ -15,7 +15,7 @@ def get_destinations(countryCode: str, language: str = "en-US") -> ToolResponse:
 
     print(f"查询国家代码 '{countryCode}' 的目的地，语言: '{language}'")
 
-    res = Get('/api/v1/region/destinations',
+    res = Get("content", '/api/v1/region/destinations',
               params={"countryCode": countryCode, "language": language})
 
     return ToolResponse(
