@@ -1,6 +1,14 @@
 from tools.contentapi.get_countries import get_countries
 from tools.contentapi.get_destinations import get_destinations
+from tools.contentapi.get_hotel_list import get_hotel_list
+from tools.contentapi.get_hotel_details import get_hotel_details
+from tools.contentapi.get_meal_types import get_meal_types
+from tools.contentapi.get_bed_types import get_bed_types
+from tools.contentapi.get_window_types import get_window_types
+from tools.contentapi.get_smoking_types import get_smoking_types
+from tools.contentapi.get_view_types import get_view_types
 from tools.otherapi.get_weather import get_weather
+from tools.otherapi.get_environment import get_environment
 from agentscope.tool import Toolkit
 from agentscope.model import DashScopeChatModel
 from agentscope.message import Msg
@@ -25,7 +33,15 @@ memory = InMemoryMemory()
 
 toolkit.register_tool_function(get_countries)
 toolkit.register_tool_function(get_destinations)
+toolkit.register_tool_function(get_hotel_list)
+toolkit.register_tool_function(get_hotel_details)
+toolkit.register_tool_function(get_meal_types)
+toolkit.register_tool_function(get_bed_types)
+toolkit.register_tool_function(get_window_types)
+toolkit.register_tool_function(get_smoking_types)
+toolkit.register_tool_function(get_view_types)
 toolkit.register_tool_function(get_weather)
+toolkit.register_tool_function(get_environment)
 
 
 didaAgent = ReActAgent(

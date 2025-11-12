@@ -34,8 +34,8 @@ def Get(path: str, params: dict[str, Any]) -> dict[str, Any] | None:
         response.raise_for_status()  # 如果状态码不是2xx，会抛出异常
         data = response.json()
 
-        print(f"状态码: {response.status_code}")
-        print(f"响应头: {dict(response.headers)}")
+        # print(f"状态码: {response.status_code}")
+        # print(f"响应头: {dict(response.headers)}")
         # print(f"响应数据: {json.dumps(data, indent=0, ensure_ascii=False)}")
 
         return data
@@ -60,10 +60,9 @@ def Post(path: str, params: dict[str, Any], data: dict[str, Any] | None = None) 
         response.raise_for_status()  # 如果状态码不是2xx，会抛出异常
         response_data = response.json()
 
-        print(f"状态码: {response.status_code}")
-        print(f"响应头: {dict(response.headers)}")
-        print(
-            f"响应数据: {json.dumps(response_data, indent=2, ensure_ascii=False)}")
+        # print(f"状态码: {response.status_code}")
+        # print(f"响应头: {dict(response.headers)}")
+        # print(f"响应数据: {json.dumps(response_data, indent=2, ensure_ascii=False)}")
 
         return response_data
 
