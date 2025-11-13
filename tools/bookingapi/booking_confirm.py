@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from typing import Any, List, Optional
+from typing import Any
 
 from agentscope.message import TextBlock
 from agentscope.tool import ToolResponse
@@ -64,10 +64,10 @@ def booking_confirm(
     check_in_date: str,
     check_out_date: str,
     num_of_rooms: int,
-    guest_list: List[dict],
-    contact: dict,
-    client_reference: Optional[str] = None,
-    customer_request: Optional[str] = None
+    guest_list: list[dict[str, Any]],
+    contact: dict[str, Any],
+    client_reference: str | None = None,
+    customer_request: str | None = None
 ) -> ToolResponse:
     """创建酒店预订订单。在调用此接口前，必须先从价格确认接口获取有效的订单参考号（ReferenceNo）。
 
@@ -76,8 +76,8 @@ def booking_confirm(
         check_in_date (str): 入住日期，格式：YYYY-MM-DD
         check_out_date (str): 离店日期，格式：YYYY-MM-DD
         num_of_rooms (int): 房间数量
-        guest_list (List[dict]): 住客信息列表，按房间分组
-        contact (dict): 联系人信息
+        guest_list (list[dict[str, Any]]): 住客信息列表，按房间分组
+        contact (dict[str, Any]): 联系人信息
         client_reference (str, optional): 您系统内的订单号，需保证唯一性
         customer_request (str, optional): 特殊需求，酒店会尽力满足但不保证
     """

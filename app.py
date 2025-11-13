@@ -5,9 +5,24 @@ from dotenv import load_dotenv
 from agentscope_runtime.engine import AgentApp
 from agentscope_runtime.engine.agents.agentscope_agent import AgentScopeAgent
 from agentscope_runtime.sandbox.tools import FunctionTool, MCPTool, SandboxTool, create_function_tool
+from agentscope_runtime.engine.deployers import LocalDeployManager
 from agentscope.model import DashScopeChatModel
 from agentscope.agent import ReActAgent, StudioUserInput, UserAgent
-from agentscope.tool import Toolkit
+from agentscope.tool import Toolkit, execute_python_code
+# "execute_python_code",
+# "execute_shell_command",
+# "view_text_file",
+# "write_text_file",
+# "insert_text_file",
+# "dashscope_text_to_image",
+# "dashscope_text_to_audio",
+# "dashscope_image_to_text",
+# "openai_text_to_image",
+# "openai_text_to_audio",
+# "openai_edit_image",
+# "openai_create_image_variation",
+# "openai_image_to_text",
+# "openai_audio_to_text",
 from agentscope.model import DashScopeChatModel
 from agentscope.message import Msg
 from agentscope.memory import InMemoryMemory
@@ -72,7 +87,7 @@ agent = AgentScopeAgent(
     ),
     agent_config={
         'name': "DidaAgent",
-        'sys_prompt': f"你是一个名为 DidaAgent 的有用助手，能够回答用户的问题并使用一系列的工具去执行相关的操作，请尽可能的一次性调用多个工具来加速消息反馈。当你需要时间等实时数据时请调用get_environment工具。",
+        'sys_prompt': f"你是一个名为 DidaAgent 的有用助手，能够回答用户的问题并使用一系列的工具去执行相关的操作，请尽可能的一次性调用多个工具来加速消息反馈。当你需要时间等实时数据时请调用get_environment工具来获取。",
         'formatter': formatter,
         'memory': memory,
         'toolkit': toolkit,
@@ -114,4 +129,11 @@ app = AgentApp(
     before_start=init_resources,
     after_finish=cleanup_resources)
 
-app.run(host="0.0.0.0", port=8090)
+
+async def main():
+    await app.deploy(LocalDeployManager(host="0.0.0.0", port=8091))
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8090)
+    # import asyncio
+    # asyncio.run(main())

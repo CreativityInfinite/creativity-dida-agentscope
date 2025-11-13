@@ -4,7 +4,7 @@ import platform
 import psutil
 import json
 from datetime import datetime, timezone
-from typing import Dict, Any
+from typing import Any
 
 from agentscope.message import TextBlock
 from agentscope.tool import ToolResponse

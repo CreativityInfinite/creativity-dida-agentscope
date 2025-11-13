@@ -1,0 +1,685 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_countries",
+        "parameters": {
+          "properties": {
+            "language": {
+              "description": "目前支持的语言包括：zh-CN、ja-JP、ko-KR、pt-BR、es-ES、id-ID",
+              "type": "string"
+            }
+          },
+          "required": ["language"],
+          "type": "object"
+        },
+        "description": "此API用于检索DIDA平台支持的的全部国家列表，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_destinations",
+        "parameters": {
+          "properties": {
+            "countryCode": {
+              "description": "国家代码",
+              "type": "string"
+            },
+            "language": {
+              "default": "en-US",
+              "description": "响应的语言，默认为 en-US",
+              "type": "string"
+            }
+          },
+          "required": ["countryCode"],
+          "type": "object"
+        },
+        "description": "此API用于检索特定国家的目的地列表。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_hotel_list",
+        "parameters": {
+          "properties": {
+            "countryCode": {
+              "description": "国家代码（如：CN、JP、US等）",
+              "type": "string"
+            },
+            "lastUpdateTime": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "精确到秒的Unix时间戳（不能小于1732982400，即2024-12-01）。\n如果提供此值，API将仅返回在此时间之后更改的酒店列表"
+            },
+            "language": {
+              "default": "en-US",
+              "description": "响应的语言，默认为 en-US",
+              "type": "string"
+            }
+          },
+          "required": ["countryCode"],
+          "type": "object"
+        },
+        "description": "获取您在特定国家代码下被授权访问的酒店ID列表，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_hotel_details",
+        "parameters": {
+          "properties": {
+            "hotelIds": {
+              "description": "酒店ID列表，最多支持50个ID",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "language": {
+              "default": "en-US",
+              "description": "返回内容的语言代码，默认为 en-US",
+              "type": "string"
+            }
+          },
+          "required": ["hotelIds"],
+          "type": "object"
+        },
+        "description": "根据酒店ID列表获取酒店详细信息（包括基本信息、政策、设施等），返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_meal_types",
+        "parameters": {
+          "properties": {
+            "language": {
+              "default": "zh-CN",
+              "description": "指定返回内容的语言，默认为 zh-CN",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": "获取所有API接口中可能返回的用餐类型（餐型）名称及对应代码，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_bed_types",
+        "parameters": {
+          "properties": {
+            "language": {
+              "default": "zh-CN",
+              "description": "指定返回内容的语言，默认为 zh-CN",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": "获取所有API接口中可能返回的床型类型名称及对应代码，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_window_types",
+        "parameters": {
+          "properties": {
+            "language": {
+              "default": "zh-CN",
+              "description": "指定返回内容的语言，默认为 zh-CN",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": "获取所有API接口中可能返回的窗户类型（窗型）名称及对应代码，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_smoking_types",
+        "parameters": {
+          "properties": {
+            "language": {
+              "default": "zh-CN",
+              "description": "指定返回内容的语言，默认为 zh-CN",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": "获取所有API接口中可能返回的吸烟类型（烟型）名称及对应代码，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_view_types",
+        "parameters": {
+          "properties": {
+            "language": {
+              "default": "zh-CN",
+              "description": "指定返回内容的语言，默认为 zh-CN",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": "获取所有API接口中可能返回的景观类型名称及对应代码，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_weather",
+        "parameters": {
+          "properties": {
+            "country": {
+              "description": "国家名称，例如：China, United States, Japan",
+              "type": "string"
+            },
+            "destination": {
+              "description": "目的地城市名称，例如：Beijing, New York, Tokyo",
+              "type": "string"
+            },
+            "units": {
+              "default": "metric",
+              "description": "温度单位：metric(摄氏度), imperial(华氏度), kelvin(开尔文度)，默认为metric",
+              "type": "string"
+            },
+            "language": {
+              "default": "zh_cn",
+              "description": "返回语言：zh_cn(中文), en(英文), ja(日文)等，默认为zh_cn",
+              "type": "string"
+            }
+          },
+          "required": ["country", "destination"],
+          "type": "object"
+        },
+        "description": "获取指定国家和目的地的天气信息，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_environment",
+        "parameters": {
+          "properties": {
+            "include_system_info": {
+              "default": true,
+              "description": "是否包含系统信息（操作系统、CPU、内存等），默认为True",
+              "type": "boolean"
+            },
+            "include_process_info": {
+              "default": true,
+              "description": "是否包含进程信息（CPU使用率、内存使用等），默认为True",
+              "type": "boolean"
+            },
+            "include_python_info": {
+              "default": true,
+              "description": "是否包含Python环境信息（版本、路径、包等），默认为True",
+              "type": "boolean"
+            },
+            "timezone_str": {
+              "default": "local",
+              "description": "时区设置，默认为\"local\"（本地时区）",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "description": "获取当前系统的环境信息，包括时间、日期、系统运行状态、硬件信息、Python环境等详细数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_lowest_price",
+        "parameters": {
+          "properties": {
+            "check_in_date": {
+              "description": "入住日期，格式：YYYY-MM-DD，如：2023-08-26",
+              "type": "string"
+            },
+            "check_out_date": {
+              "description": "离店日期，格式：YYYY-MM-DD，如：2023-08-27",
+              "type": "string"
+            },
+            "currency": {
+              "description": "期望返回价格的币种，如：CNY、USD、JPY等",
+              "type": "string"
+            },
+            "city_code": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "目的地城市/区域代码，如：602651。与hotel_ids二选一"
+            },
+            "hotel_ids": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "酒店ID列表，最多支持查询多个酒店。与city_code二选一"
+            },
+            "nationality": {
+              "default": "CN",
+              "description": "客人国籍，使用ISO 3166-1 alpha-2标准（2个字母），默认为CN",
+              "type": "string"
+            }
+          },
+          "required": ["check_in_date", "check_out_date", "currency"],
+          "type": "object"
+        },
+        "description": "根据目的地城市代码或指定的酒店ID列表，查询酒店在指定日期的最低价格，返回JSON格式的数据。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "price_confirm",
+        "parameters": {
+          "properties": {
+            "search_code": {
+              "description": "来自价格查询API响应中的SearchCode",
+              "type": "string"
+            },
+            "hotel_id": {
+              "description": "酒店ID",
+              "type": "integer"
+            },
+            "rate_plan_id": {
+              "description": "价格计划ID",
+              "type": "string"
+            },
+            "check_in_date": {
+              "description": "入住日期，格式：YYYY-MM-DD",
+              "type": "string"
+            },
+            "check_out_date": {
+              "description": "离店日期，格式：YYYY-MM-DD",
+              "type": "string"
+            },
+            "num_of_rooms": {
+              "description": "房间数量",
+              "type": "integer"
+            },
+            "guest_list": {
+              "description": "住客信息列表，按房间分组",
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "currency": {
+              "default": "USD",
+              "description": "期望返回价格的货币代码，默认为USD",
+              "type": "string"
+            }
+          },
+          "required": [
+            "search_code",
+            "hotel_id",
+            "rate_plan_id",
+            "check_in_date",
+            "check_out_date",
+            "num_of_rooms",
+            "guest_list"
+          ],
+          "type": "object"
+        },
+        "description": "确认一个酒店报价的有效性，并获取订单参考号（ReferenceNo），该参考号是后续创建订单的必需参数。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "booking_confirm",
+        "parameters": {
+          "properties": {
+            "reference_no": {
+              "description": "从价格确认接口返回的参考号",
+              "type": "string"
+            },
+            "check_in_date": {
+              "description": "入住日期，格式：YYYY-MM-DD",
+              "type": "string"
+            },
+            "check_out_date": {
+              "description": "离店日期，格式：YYYY-MM-DD",
+              "type": "string"
+            },
+            "num_of_rooms": {
+              "description": "房间数量",
+              "type": "integer"
+            },
+            "guest_list": {
+              "description": "住客信息列表，按房间分组",
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "contact": {
+              "additionalProperties": true,
+              "description": "联系人信息",
+              "type": "object"
+            },
+            "client_reference": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "您系统内的订单号，需保证唯一性"
+            },
+            "customer_request": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "特殊需求，酒店会尽力满足但不保证"
+            }
+          },
+          "required": [
+            "reference_no",
+            "check_in_date",
+            "check_out_date",
+            "num_of_rooms",
+            "guest_list",
+            "contact"
+          ],
+          "type": "object"
+        },
+        "description": "创建酒店预订订单。在调用此接口前，必须先从价格确认接口获取有效的订单参考号（ReferenceNo）。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "booking_search",
+        "parameters": {
+          "properties": {
+            "booking_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "道旅订单号（推荐使用，查询最精确）"
+            },
+            "client_reference": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "客户订单号（推荐使用）"
+            },
+            "check_in_date_from": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "入住日期范围开始，格式：YYYY-MM-DD"
+            },
+            "check_in_date_to": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "入住日期范围结束，格式：YYYY-MM-DD"
+            },
+            "check_out_date_from": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "离店日期范围开始，格式：YYYY-MM-DD"
+            },
+            "check_out_date_to": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "离店日期范围结束，格式：YYYY-MM-DD"
+            },
+            "book_date_from": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "订单创建日期范围开始，格式：YYYY-MM-DD"
+            },
+            "book_date_to": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "订单创建日期范围结束，格式：YYYY-MM-DD"
+            },
+            "guest_first_name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "客人名字"
+            },
+            "guest_last_name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "客人姓氏"
+            },
+            "contact_first_name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "联系人名字"
+            },
+            "contact_last_name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "联系人姓氏"
+            },
+            "status": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "订单状态：0=PreBook, 2=Confirmed, 3=Canceled, 4=Failed, 5=Pending, 6=OnRequest"
+            },
+            "city_code": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "城市代码"
+            }
+          },
+          "type": "object"
+        },
+        "description": "根据订单号、客户参考号、入住日期等条件查询订单信息。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "booking_pre_cancel",
+        "parameters": {
+          "properties": {
+            "booking_id": {
+              "description": "道旅订单号",
+              "type": "string"
+            }
+          },
+          "required": ["booking_id"],
+          "type": "object"
+        },
+        "description": "预取消订单。接口将返回取消金额以及取消确认ID。注意：这是预取消，只调用这个API不足以真正取消订单，需要配合取消确认API使用。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "booking_cancel_confirm",
+        "parameters": {
+          "properties": {
+            "booking_id": {
+              "description": "道旅订单号",
+              "type": "string"
+            },
+            "confirm_id": {
+              "description": "取消确认号，来自预取消接口，有效期10分钟",
+              "type": "string"
+            },
+            "description": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "客户备注，可以填取消原因等信息"
+            }
+          },
+          "required": ["booking_id", "confirm_id"],
+          "type": "object"
+        },
+        "description": "订单取消确认接口，用取消确认ID做最后的取消确认。此接口真正完成订单取消操作。"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generate_response",
+        "parameters": {
+          "properties": {
+            "response": {
+              "description": "Your response to the user.",
+              "type": "string"
+            }
+          },
+          "required": ["response"],
+          "type": "object"
+        },
+        "description": "Generate a response. Note only the input argument `response` is\n\nvisible to the others, you should include all the necessary\ninformation in the `response` argument."
+      }
+    }
+  ]
+}

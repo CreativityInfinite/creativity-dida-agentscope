@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from typing import Any, List, Optional
+from typing import Any
 
 from agentscope.message import TextBlock
 from agentscope.tool import ToolResponse
@@ -66,7 +66,7 @@ def price_confirm(
     check_in_date: str,
     check_out_date: str,
     num_of_rooms: int,
-    guest_list: List[dict],
+    guest_list: list[dict[str, Any]],
     currency: str = "USD"
 ) -> ToolResponse:
     """确认一个酒店报价的有效性，并获取订单参考号（ReferenceNo），该参考号是后续创建订单的必需参数。
@@ -78,7 +78,7 @@ def price_confirm(
         check_in_date (str): 入住日期，格式：YYYY-MM-DD
         check_out_date (str): 离店日期，格式：YYYY-MM-DD
         num_of_rooms (int): 房间数量
-        guest_list (List[dict]): 住客信息列表，按房间分组
+        guest_list (list[dict[str, Any]]): 住客信息列表，按房间分组
         currency (str): 期望返回价格的货币代码，默认为USD
     """
 
