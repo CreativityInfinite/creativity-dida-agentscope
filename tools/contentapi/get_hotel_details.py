@@ -70,6 +70,14 @@ def get_hotel_details(hotelIds: list[int], language: str = "en-US") -> ToolRespo
     res = Post("content", '/api/v1/hotel/details',
                params={}, data=request_data)
 
+    # 移除每个酒店详情字段的policy、facilities、images、rooms
+    for hotel in res["data"]:
+        del hotel["policy"]
+        del hotel["facilities"]
+        del hotel["images"]
+        del hotel["rooms"]
+        print(f"酒店详情: {hotel}")
+
     return ToolResponse(
         content=[
             TextBlock(

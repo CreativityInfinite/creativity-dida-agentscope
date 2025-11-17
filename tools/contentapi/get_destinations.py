@@ -18,11 +18,16 @@ def get_destinations(countryCode: str, language: str = "en-US") -> ToolResponse:
     res = Get("content", '/api/v1/region/destinations',
               params={"countryCode": countryCode, "language": language})
 
+    # 仅保留前十个目的地
+    limit = 10
+    res["data"] = res["data"][:limit]
+    print(f"响应数据: {res}")
+
     return ToolResponse(
         content=[
             TextBlock(
                 type="text",
-                text=f"国家代码 '{countryCode}', 语言 '{language}', 响应数据: {res}",
+                text=f"国家代码 '{countryCode}', 语言 '{language}', 当前限制返回目的地数量 {len(res['data'])}, 响应数据: {res}",
             ),
         ],
     )
