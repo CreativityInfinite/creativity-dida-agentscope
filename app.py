@@ -37,7 +37,6 @@ from tools.contentapi.get_bed_types import get_bed_types
 from tools.contentapi.get_window_types import get_window_types
 from tools.contentapi.get_smoking_types import get_smoking_types
 from tools.contentapi.get_view_types import get_view_types
-from tools.otherapi.get_weather import get_weather
 from tools.otherapi.get_environment import get_environment
 from tools.bookingapi.get_lowest_price import get_lowest_price
 from tools.bookingapi.price_confirm import price_confirm
@@ -79,7 +78,6 @@ toolkit.register_tool_function(get_bed_types)
 toolkit.register_tool_function(get_window_types)
 toolkit.register_tool_function(get_smoking_types)
 toolkit.register_tool_function(get_view_types)
-toolkit.register_tool_function(get_weather)
 toolkit.register_tool_function(get_environment)
 toolkit.register_tool_function(get_lowest_price)
 toolkit.register_tool_function(price_confirm)

@@ -219,7 +219,7 @@ def get_lowest_price(
             content=[
                 TextBlock(
                     type="text",
-                    text=f"{result_summary}原始响应数据: {res}",
+                    text=f"{result_summary}",
                 ),
             ],
         )

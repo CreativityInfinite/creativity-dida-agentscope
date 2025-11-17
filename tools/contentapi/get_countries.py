@@ -40,11 +40,25 @@ def get_countries(language: str) -> ToolResponse:
     res = Get("content", '/api/v1/region/countries',
               params={"language": language})
 
+    # 格式化数据为字符串
+    result_summary: str = f"当前语言 '{language}', 响应数据: \n\n"
+
+    # 检查响应数据结构
+    if res and "data" in res:
+        # 格式 {'code': 'ZM', 'name': '赞比亚'}
+        for i, country in enumerate(res["data"]):
+            if isinstance(country, dict) and "code" in country and "name" in country:
+                result_summary += f"{i+1}: {country['code']}, {country['name']}\n"
+            else:
+                result_summary += f"{i+1}: {country}\n"
+    else:
+        result_summary += f"API响应格式异常: {res}"
+
     return ToolResponse(
         content=[
             TextBlock(
                 type="text",
-                text=f"当前语言 '{language}', 响应数据: {res}",
+                text=f"{result_summary}",
             ),
         ],
     )

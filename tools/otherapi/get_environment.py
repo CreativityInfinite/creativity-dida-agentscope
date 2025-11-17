@@ -63,16 +63,16 @@ def get_environment(
         # 1. 时间和日期信息
         env_info["datetime"] = _get_datetime_info(timezone_str)
         # 2. 系统基本信息
-        if include_system_info:
-            env_info["system"] = _get_system_info()
-        # 3. 进程和性能信息
-        if include_process_info:
-            env_info["process"] = _get_process_info()
-        # 4. Python环境信息
-        if include_python_info:
-            env_info["python"] = _get_python_info()
-        # 5. 环境变量信息（部分重要的）
-        env_info["environment"] = _get_environment_variables()
+        # if include_system_info:
+        #     env_info["system"] = _get_system_info()
+        # # 3. 进程和性能信息
+        # if include_process_info:
+        #     env_info["process"] = _get_process_info()
+        # # 4. Python环境信息
+        # if include_python_info:
+        #     env_info["python"] = _get_python_info()
+        # # 5. 环境变量信息（部分重要的）
+        # env_info["environment"] = _get_environment_variables()
 
         return ToolResponse(
             content=[
@@ -110,14 +110,14 @@ def _get_datetime_info(timezone_str: str) -> dict[str, Any]:
             "timestamp": now.timestamp(),
             "timezone": str(now.astimezone().tzinfo)
         },
-        "date_info": {
-            "year": now.year,
-            "month": now.month,
-            "day": now.day,
-            "weekday": now.strftime("%A"),
-            "week_number": now.isocalendar()[1],
-            "day_of_year": now.timetuple().tm_yday
-        }
+        # "date_info": {
+        #     "year": now.year,
+        #     "month": now.month,
+        #     "day": now.day,
+        #     "weekday": now.strftime("%A"),
+        #     "week_number": now.isocalendar()[1],
+        #     "day_of_year": now.timetuple().tm_yday
+        # }
     }
 
 
