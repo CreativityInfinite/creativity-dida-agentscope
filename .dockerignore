@@ -1,0 +1,66 @@
+# DIDA AI Agent Platform Docker忽略文件
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# 环境文件
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 项目特定
+logs/
+backup/
+*.backup.*
+agent_messages_*.json
+
+# 开发文件
+requirements-dev.txt
+Makefile
+README.md
+SETUP.md
+examples/
+samples/
+
+# 测试文件
+test_*.py
+*_test.py

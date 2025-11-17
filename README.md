@@ -62,9 +62,22 @@ DIDA AI Agent Platform
 - **订单状态管理**: 支持完整的订单生命周期管理
 
 ### 🌤️ 天气信息服务
+
+#### 基础天气服务 (OpenWeatherMap)
 - **实时天气**: 基于OpenWeatherMap API的全球天气查询
 - **多单位支持**: 摄氏度、华氏度、开尔文度温度单位
 - **详细信息**: 温度、湿度、风速、气压、能见度等完整天气数据
+
+#### 和风天气专业服务 (QWeather)
+- **🏙️ 基础服务**: 城市搜索、地理编码查询
+- **⛅ 实时天气**: 当前天气状况、体感温度、风力等级
+- **📅 天气预报**: 多日预报(1-30天)、逐小时预报(24/72/168小时)、分钟级降水预报
+- **🚨 预警服务**: 灾害预警信息、预警等级分类
+- **🌬️ 空气质量**: 实时空气质量、AQI指数、污染物浓度、空气质量预报
+- **🌙 天文数据**: 日出日落时间、月升月落、月相数据
+- **📊 生活指数**: 运动指数、洗车指数、穿衣指数、紫外线指数等
+- **🕰️ 历史数据**: 最近10天历史天气和空气质量数据
+- **🌍 全球覆盖**: 支持全球20万+城市，中国地区支持分钟级预报
 
 ### 💻 系统环境服务
 - **时间日期**: 获取当前时间、日期、时区、星期等信息
@@ -83,7 +96,9 @@ DIDA AI Agent Platform
 ### 环境要求
 
 - Python 3.8+
-- pip 或 pnpm (推荐使用pnpm)
+- pip (Python包管理)
+- pnpm (推荐用于前端项目，本项目主要为Python后端)
+- PyJWT (和风天气API认证依赖)
 
 ### 安装步骤
 
@@ -115,6 +130,13 @@ DIDA_LICENSE_KEY=TestKey
 
 # OpenWeatherMap API配置 (可选)
 OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
+
+# 和风天气API配置 (可选)
+QWEATHER_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----
+your_private_key_content_here
+-----END PRIVATE KEY-----"
+QWEATHER_KEY_ID=your_key_id
+QWEATHER_SUB_ID=your_sub_id
 ```
 
 4. **启动服务**
@@ -141,6 +163,15 @@ python agent.py
 1. 访问 [OpenWeatherMap](https://openweathermap.org/api)
 2. 注册免费账户获取API密钥
 3. 将密钥配置到 `OPENWEATHERMAP_API_KEY`
+
+#### 和风天气API密钥 (可选)
+1. 访问 [和风天气开发平台](https://dev.qweather.com/)
+2. 注册开发者账户并创建应用
+3. 获取以下配置信息：
+   - `QWEATHER_PRIVATE_KEY`: 私钥文件内容（包含BEGIN/END行）
+   - `QWEATHER_KEY_ID`: 密钥ID (kid)
+   - `QWEATHER_SUB_ID`: 主题ID (sub)
+4. 支持JWT认证，提供更专业的气象数据服务
 
 ## 📖 使用指南
 
@@ -179,6 +210,21 @@ DidaAgent: 正在为您查询指定酒店的最低价格信息...
 
 用户: "北京现在的天气怎么样？"
 DidaAgent: 正在查询北京的实时天气信息...
+
+用户: "帮我查询北京未来3天的天气预报"
+DidaAgent: 正在为您查询北京未来3天的详细天气预报...
+
+用户: "上海的空气质量如何？"
+DidaAgent: 正在查询上海的实时空气质量数据...
+
+用户: "深圳今天适合运动吗？"
+DidaAgent: 我来为您查询深圳今天的天气生活指数，包括运动指数...
+
+用户: "广州有天气预警吗？"
+DidaAgent: 正在查询广州地区的天气预警信息...
+
+用户: "杭州今天日出日落时间是什么时候？"
+DidaAgent: 正在查询杭州今天的天文数据，包括日出日落时间...
 
 用户: "帮我查看一下当前系统的运行状态"
 DidaAgent: 正在收集系统环境信息，包括时间、CPU、内存等状态...
@@ -293,8 +339,18 @@ creativity-agentscope/
 │   │   ├── booking_cancel_confirm.py # 预订取消确认
 │   │   └── README.md           # 预订API工具说明
 │   └── 📁 otherapi/            # 第三方API工具
-│       ├── get_weather.py      # 天气查询
-│       └── get_environment.py  # 系统环境信息
+│       ├── get_weather.py      # OpenWeatherMap天气查询
+│       ├── get_environment.py  # 系统环境信息
+│       ├── search_qweather_city_code.py # 和风天气城市搜索
+│       ├── get_qweather_forecast.py # 和风天气实时天气
+│       ├── get_qweather_daily_forecast.py # 和风天气多日预报
+│       ├── get_qweather_hourly_forecast.py # 和风天气逐小时预报
+│       ├── get_qweather_minutely.py # 和风天气分钟级降水
+│       ├── get_qweather_warning.py # 和风天气预警信息
+│       ├── get_qweather_air_quality.py # 和风天气空气质量
+│       ├── get_qweather_astronomy.py # 和风天气天文数据
+│       ├── get_qweather_indices.py # 和风天气生活指数
+│       └── get_qweather_historical.py # 和风天气历史数据
 ├── 📁 utils/                   # 工具库
 │   └── request.py              # API请求工具
 ├── 📁 agents/                  # 代理配置
@@ -303,6 +359,153 @@ creativity-agentscope/
 ├── 📁 logs/                    # 日志文件
 └── 📁 workflow/                # 工作流配置
 ```
+
+## 🌤️ 和风天气工具生态详解
+
+平台已集成完整的和风天气(QWeather)工具生态系统，提供专业级气象数据服务，涵盖13个核心工具函数。
+
+### 🎯 工具分类概览
+
+| 分类 | 工具数量 | 主要功能 |
+|------|----------|----------|
+| 🏙️ **基础服务** | 1个 | 城市搜索、地理编码 |
+| ⛅ **实时天气** | 1个 | 当前天气状况查询 |
+| 📅 **预报服务** | 3个 | 多日/逐小时/分钟级预报 |
+| 🚨 **预警服务** | 1个 | 灾害预警信息 |
+| 🌬️ **空气质量** | 2个 | 实时+预报空气质量 |
+| 🌙 **天文数据** | 2个 | 日月数据+月相信息 |
+| 📊 **生活指数** | 1个 | 运动/洗车/穿衣等指数 |
+| 🕰️ **历史数据** | 2个 | 历史天气+空气质量 |
+
+### 🔧 核心工具清单
+
+#### 基础服务类
+```python
+search_qweather_city_code(location_name, lang="zh")
+# 搜索城市编码，支持中英文城市名称
+```
+
+#### 实时天气类
+```python
+get_qweather_forecast(location_id, lang="zh")
+# 获取实时天气，包含温度、湿度、风力、体感温度等
+```
+
+#### 预报服务类
+```python
+get_qweather_daily_forecast(location_id, days=3, lang="zh")
+# 多日预报，支持1-30天，含日升日落、温度区间、风向风速
+
+get_qweather_hourly_forecast(location_id, hours=24, lang="zh")
+# 逐小时预报，支持24/72/168小时，含降水概率
+
+get_qweather_minutely(location_id, lang="zh")
+# 分钟级降水预报，仅支持中国地区，精确到5分钟
+```
+
+#### 预警服务类
+```python
+get_qweather_warning(location_id, lang="zh")
+# 天气预警信息，包含预警等级、类型、详细描述
+```
+
+#### 空气质量类
+```python
+get_qweather_air_quality(location_id, lang="zh")
+# 实时空气质量，含AQI、PM2.5、PM10等污染物浓度
+
+get_qweather_air_forecast(location_id, days=5, lang="zh")
+# 空气质量预报，支持1-5天预报
+```
+
+#### 天文数据类
+```python
+get_qweather_sun_moon(location_id, date="", lang="zh")
+# 日出日落、月升月落时间，支持指定日期查询
+
+get_qweather_moon_phase(location_id, lang="zh")
+# 月相数据，包含月相名称和照明度
+```
+
+#### 生活指数类
+```python
+get_qweather_indices(location_id, index_type="0", days=1)
+# 生活指数，含运动、洗车、穿衣、紫外线等10+指数
+```
+
+#### 历史数据类
+```python
+get_qweather_historical_weather(location_id, date, lang="zh")
+# 历史天气数据，最近10天，逐小时数据
+
+get_qweather_historical_air(location_id, date, lang="zh")
+# 历史空气质量，最近10天，逐小时数据
+```
+
+### 💡 使用示例场景
+
+#### 场景1：完整天气查询流程
+```python
+# 1. 搜索城市
+city = search_qweather_city_code("北京")
+location_id = city["location_id"]  # 101010100
+
+# 2. 获取实时天气
+current = get_qweather_forecast(location_id)
+
+# 3. 获取未来3天预报
+forecast = get_qweather_daily_forecast(location_id, days=3)
+
+# 4. 检查空气质量
+air = get_qweather_air_quality(location_id)
+
+# 5. 查看生活指数
+indices = get_qweather_indices(location_id)
+```
+
+#### 场景2：专业气象分析
+```python
+# 获取详细预报数据
+hourly = get_qweather_hourly_forecast(location_id, hours=72)
+minutely = get_qweather_minutely(location_id)  # 仅中国地区
+
+# 获取天文数据
+astronomy = get_qweather_sun_moon(location_id)
+moon = get_qweather_moon_phase(location_id)
+
+# 检查预警信息
+warnings = get_qweather_warning(location_id)
+```
+
+#### 场景3：历史数据分析
+```python
+# 查询昨天的天气
+yesterday = get_qweather_historical_weather(location_id, "2024-01-15")
+
+# 查询昨天的空气质量
+air_yesterday = get_qweather_historical_air(location_id, "2024-01-15")
+```
+
+### 🌍 数据覆盖范围
+
+- **全球城市**: 支持全球20万+城市和地区
+- **中国特色**: 分钟级降水预报仅支持中国大陆地区
+- **更新频率**: 实时数据每10-20分钟更新
+- **历史数据**: 支持最近10天的历史数据查询
+- **多语言**: 支持中文、英文等多种语言返回
+
+### 🔐 认证机制
+
+- **JWT认证**: 使用EdDSA算法的JWT Token
+- **自动刷新**: Token自动生成和刷新，有效期15分钟
+- **安全性**: 私钥安全存储在环境变量中
+
+### ⚠️ 使用限制
+
+- **分钟级预报**: 仅支持中国大陆地区
+- **历史数据**: 仅支持最近10天数据
+- **空气质量预报**: 最多支持5天预报
+- **API配额**: 根据和风天气开发者账户等级限制
 
 ## 🔍 测试和调试
 
@@ -314,6 +517,9 @@ python test_weather.py
 
 # 测试DIDA API
 python request-dida.py
+
+# 测试和风天气工具
+python -c "from tools.otherapi.search_qweather_city_code import search_qweather_city_code; print(search_qweather_city_code('北京'))"
 ```
 
 ### 调试模式
@@ -407,10 +613,12 @@ export DIDA_LICENSE_KEY="your_production_license_key"
 
 ### 短期目标
 - [x] 完善预订API工具集成（已完成：价格确认、预订确认、预订查询、预订取消等）
+- [x] 集成和风天气完整工具生态（已完成：13个专业气象工具）
 - [ ] 增加更多第三方服务集成
 - [ ] 优化响应速度和准确性
 - [ ] 完善错误处理和用户体验
 - [ ] 添加预订流程的自动化测试
+- [ ] 添加和风天气工具的单元测试
 
 ### 长期规划
 - [ ] 多租户支持
