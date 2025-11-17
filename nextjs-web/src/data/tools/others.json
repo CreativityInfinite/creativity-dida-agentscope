@@ -1,0 +1,46 @@
+[
+  {
+    "key": "others-hugging-face-spaces",
+    "name": "Hugging Face Spaces",
+    "description": "展示与运行社区模型/应用的托管平台。",
+    "link": "https://huggingface.co/spaces",
+    "logo": "https://placehold.co/32x32/ffcc02/000000?text=HF",
+    "rating": 4.5,
+    "tags": ["models", "demos", "community"],
+    "primaryCategory": "Others",
+    "subcategory": "ComprehensivePlatform"
+  },
+  {
+    "key": "others-perplexity-ai",
+    "name": "Perplexity AI",
+    "description": "带引用的即时问答与检索式生成。",
+    "link": "https://www.perplexity.ai",
+    "logo": "https://placehold.co/32x32/20b2aa/ffffff?text=PX",
+    "rating": 4.4,
+    "tags": ["search", "qa", "citations"],
+    "primaryCategory": "Others",
+    "subcategory": "SearchQA"
+  },
+  {
+    "key": "others-replicate",
+    "name": "Replicate",
+    "description": "面向开源模型的推理 API 与托管。",
+    "link": "https://replicate.com",
+    "logo": "https://placehold.co/32x32/000000/ffffff?text=RP",
+    "rating": 4.3,
+    "tags": ["api", "inference", "models"],
+    "primaryCategory": "Others",
+    "subcategory": "InferenceAPI"
+  },
+  {
+    "key": "others-vercel-v0",
+    "name": "Vercel v0",
+    "description": "从描述到 UI 的生成式工具，快速生成前端组件。",
+    "link": "https://v0.dev",
+    "logo": "https://placehold.co/32x32/000000/ffffff?text=V0",
+    "rating": 4.4,
+    "tags": ["ui", "codegen", "vercel"],
+    "primaryCategory": "Others",
+    "subcategory": "UIGeneration"
+  }
+]

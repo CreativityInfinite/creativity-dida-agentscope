@@ -1,0 +1,10 @@
+node_modules
+.next
+.env
+.env.production
+.secret.md
+tsconfig.tsbuildinfo
+pnpm-lock.yaml
+.codebuddy/.ignored_image
+/src/generated/prisma
+logs

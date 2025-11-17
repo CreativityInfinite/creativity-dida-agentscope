@@ -1,0 +1,57 @@
+[
+  {
+    "key": "text-writing-chatgpt",
+    "name": "ChatGPT",
+    "description": "多用途对话与写作助手，支持创作、问答与代码草拟。",
+    "link": "https://chat.openai.com",
+    "logo": "https://placehold.co/32x32/10a37f/ffffff?text=GP",
+    "rating": 4.9,
+    "tags": ["text", "assistant", "chat", "multimodal"],
+    "primaryCategory": "TextWriting",
+    "subcategory": "LongFormWriting"
+  },
+  {
+    "key": "text-writing-jasper-ai",
+    "name": "Jasper AI",
+    "description": "面向营销的文案生成与模板化写作，提高产出效率。",
+    "link": "https://www.jasper.ai",
+    "logo": "https://placehold.co/32x32/8b5cf6/ffffff?text=JP",
+    "rating": 4.4,
+    "tags": ["copywriting", "marketing", "templates"],
+    "primaryCategory": "TextWriting",
+    "subcategory": "WritingRewriting"
+  },
+  {
+    "key": "text-writing-grammarly",
+    "name": "Grammarly",
+    "description": "英文写作纠错与润色助手，语法风格与清晰度优化。",
+    "link": "https://www.grammarly.com",
+    "logo": "https://placehold.co/32x32/15c39a/ffffff?text=GR",
+    "rating": 4.5,
+    "tags": ["grammar", "editing", "proofreading"],
+    "primaryCategory": "TextWriting",
+    "subcategory": "GrammarCheck"
+  },
+  {
+    "key": "text-writing-claude",
+    "name": "Claude",
+    "description": "长上下文与安全对齐突出，适合长文生成与分析。",
+    "link": "https://claude.ai",
+    "logo": "https://placehold.co/32x32/d97706/ffffff?text=CL",
+    "rating": 4.7,
+    "tags": ["long-context", "analysis", "assistant"],
+    "primaryCategory": "TextWriting",
+    "subcategory": "LongFormWriting"
+  },
+  {
+    "key": "text-writing-notion-ai",
+    "name": "Notion AI",
+    "description": "Notion 内的一键生成与改写，适配知识库与笔记协作。",
+    "link": "https://www.notion.com/ai",
+    "logo": "https://placehold.co/32x32/000000/ffffff?text=NT",
+    "rating": 4.3,
+    "tags": ["notes", "docs", "productivity"],
+    "primaryCategory": "TextWriting",
+    "subcategory": "NotesDocuments"
+  }
+]

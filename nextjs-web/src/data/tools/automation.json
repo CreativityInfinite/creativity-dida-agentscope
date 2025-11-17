@@ -1,0 +1,46 @@
+[
+  {
+    "key": "automation-zapier-ai",
+    "name": "Zapier AI",
+    "description": "无代码自动化与 AI 步骤编排，连接数千服务。",
+    "link": "https://zapier.com/ai",
+    "logo": "https://placehold.co/32x32/ff6b35/ffffff?text=ZA",
+    "rating": 4.4,
+    "tags": ["automation", "workflow", "integration"],
+    "primaryCategory": "Automation",
+    "subcategory": "WorkflowAutomation"
+  },
+  {
+    "key": "automation-otter-ai",
+    "name": "Otter.ai",
+    "description": "会议转录与摘要，自动生成行动项与共享记录。",
+    "link": "https://otter.ai",
+    "logo": "https://placehold.co/32x32/6366f1/ffffff?text=OT",
+    "rating": 4.3,
+    "tags": ["transcription", "meetings", "notes"],
+    "primaryCategory": "Automation",
+    "subcategory": "MeetingNotes"
+  },
+  {
+    "key": "automation-clickup-ai",
+    "name": "ClickUp AI",
+    "description": "任务/文档一体化的 AI 能力，支持总结与分解。",
+    "link": "https://clickup.com/ai",
+    "logo": "https://placehold.co/32x32/7c3aed/ffffff?text=CU",
+    "rating": 4.2,
+    "tags": ["tasks", "docs", "project-management"],
+    "primaryCategory": "Automation",
+    "subcategory": "TaskDocuments"
+  },
+  {
+    "key": "automation-airtable-ai",
+    "name": "Airtable AI",
+    "description": "数据库表单与自动化结合的 AI 能力。",
+    "link": "https://airtable.com/ai",
+    "logo": "https://placehold.co/32x32/f59e0b/ffffff?text=AT",
+    "rating": 4.1,
+    "tags": ["database", "automation", "no-code"],
+    "primaryCategory": "Automation",
+    "subcategory": "DataAutomation"
+  }
+]

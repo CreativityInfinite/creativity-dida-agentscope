@@ -1,0 +1,57 @@
+[
+  {
+    "key": "data-insights-tableau-ai",
+    "name": "Tableau AI",
+    "description": "内置生成式分析与可视化问答，缩短洞察路径。",
+    "link": "https://www.tableau.com/ai",
+    "logo": "https://placehold.co/32x32/e97627/ffffff?text=TB",
+    "rating": 4.3,
+    "tags": ["bi", "visualization", "analytics"],
+    "primaryCategory": "DataInsights",
+    "subcategory": "BusinessIntelligence"
+  },
+  {
+    "key": "data-insights-akkio",
+    "name": "Akkio",
+    "description": "面向业务的无代码预测建模与部署。",
+    "link": "https://akkio.com",
+    "logo": "https://placehold.co/32x32/10b981/ffffff?text=AK",
+    "rating": 4.2,
+    "tags": ["ml", "no-code", "automation"],
+    "primaryCategory": "DataInsights",
+    "subcategory": "BusinessIntelligence"
+  },
+  {
+    "key": "data-insights-google-analytics-4",
+    "name": "Google Analytics 4",
+    "description": "网站/应用分析与预测，事件模型与受众洞察。",
+    "link": "https://analytics.google.com",
+    "logo": "https://placehold.co/32x32/e37400/ffffff?text=GA",
+    "rating": 4.1,
+    "tags": ["analytics", "traffic", "attribution"],
+    "primaryCategory": "DataInsights",
+    "subcategory": "BusinessIntelligence"
+  },
+  {
+    "key": "data-insights-hex",
+    "name": "Hex",
+    "description": "SQL+Python 的协作数据笔记本，适配可视化与分享。",
+    "link": "https://hex.tech",
+    "logo": "https://placehold.co/32x32/6366f1/ffffff?text=HX",
+    "rating": 4.3,
+    "tags": ["notebook", "sql", "python"],
+    "primaryCategory": "DataInsights",
+    "subcategory": "DataNotebook"
+  },
+  {
+    "key": "data-insights-databricks-ai",
+    "name": "Databricks AI",
+    "description": "统一数据与 AI 平台，面向湖仓与大规模训练推理。",
+    "link": "https://www.databricks.com/ai",
+    "logo": "https://placehold.co/32x32/ff3621/ffffff?text=DB",
+    "rating": 4.4,
+    "tags": ["lakehouse", "big-data", "platform"],
+    "primaryCategory": "DataInsights",
+    "subcategory": "DataAIPlatform"
+  }
+]

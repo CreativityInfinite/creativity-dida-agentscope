@@ -1,0 +1,123 @@
+[
+  {
+    "key": "image-generation-midjourney",
+    "name": "Midjourney",
+    "description": "基于 Discord 的艺术风格图像生成，擅长构图与细节。",
+    "link": "https://www.midjourney.com",
+    "logo": "https://placehold.co/32x32/6366f1/ffffff?text=MJ",
+    "rating": 4.8,
+    "tags": ["image", "generation", "art", "discord", "illustration"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "CommonImageTools"
+  },
+  {
+    "key": "image-generation-dall-e-3",
+    "name": "DALL·E 3",
+    "description": "OpenAI 文本到图像模型，支持图中编辑与高语义对齐。",
+    "link": "https://openai.com",
+    "logo": "https://placehold.co/32x32/10b981/ffffff?text=DE",
+    "rating": 4.6,
+    "tags": ["image", "generation", "openai", "inpainting", "illustration"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "ImageIllustration"
+  },
+  {
+    "key": "image-generation-stable-diffusion",
+    "name": "Stable Diffusion",
+    "description": "开源扩散模型，生态丰富，可本地/云端运行与微调。",
+    "link": "https://stability.ai",
+    "logo": "https://placehold.co/32x32/f59e0b/ffffff?text=SD",
+    "rating": 4.5,
+    "tags": ["image", "open-source", "generation", "finetune", "illustration"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "ImageIllustration"
+  },
+  {
+    "key": "image-generation-runway-ml",
+    "name": "Runway ML",
+    "description": "创意影音工具套件，涵盖视频编辑、AI 抠像、文本视频。",
+    "link": "https://runwayml.com",
+    "logo": "https://placehold.co/32x32/3b82f6/ffffff?text=RM",
+    "rating": 4.4,
+    "tags": ["video", "editing", "generation", "creative"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "CommonImageTools"
+  },
+  {
+    "key": "image-generation-adobe-firefly",
+    "name": "Adobe Firefly",
+    "description": "Adobe 生态中的生成式图像与样式工具，Photoshop/Express 集成。",
+    "link": "https://www.adobe.com/products/firefly.html",
+    "logo": "https://placehold.co/32x32/ef4444/ffffff?text=AF",
+    "rating": 4.3,
+    "tags": ["image", "adobe", "photoshop", "style", "illustration"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "ImageIllustration"
+  },
+  {
+    "key": "image-generation-remove-bg",
+    "name": "Remove.bg",
+    "description": "一键抠图，智能背景移除，适合电商与设计场景。",
+    "link": "https://www.remove.bg",
+    "logo": "https://placehold.co/32x32/8b5cf6/ffffff?text=RB",
+    "rating": 4.2,
+    "tags": ["background-removal", "removebg", "抠图"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "BackgroundRemoval"
+  },
+  {
+    "key": "image-generation-cleanup-pictures",
+    "name": "Cleanup.pictures",
+    "description": "基于 inpainting 的物体擦除与修复，快速清理画面杂物。",
+    "link": "https://cleanup.pictures",
+    "logo": "https://placehold.co/32x32/06b6d4/ffffff?text=CP",
+    "rating": 4.3,
+    "tags": ["inpaint", "擦除", "修复"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "ObjectRemoval"
+  },
+  {
+    "key": "image-generation-topaz-gigapixel-ai",
+    "name": "Topaz Gigapixel AI",
+    "description": "AI 无损放大与细节增强，适合高分辨率需求。",
+    "link": "https://www.topazlabs.com/gigapixel-ai",
+    "logo": "https://placehold.co/32x32/f97316/ffffff?text=TG",
+    "rating": 4.4,
+    "tags": ["upscale", "超分", "放大"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "ImageUpscaling"
+  },
+  {
+    "key": "image-generation-gfpgan",
+    "name": "GFPGAN",
+    "description": "人像修复与增强的开源方案，重建五官细节。",
+    "link": "https://github.com/TencentARC/GFPGAN",
+    "logo": "https://placehold.co/32x32/84cc16/ffffff?text=GF",
+    "rating": 4.1,
+    "tags": ["restore", "修复", "增强"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "ImageEnhancement"
+  },
+  {
+    "key": "image-generation-booth-ai",
+    "name": "Booth.ai",
+    "description": "商品图生成与场景合成，适合品牌营销与电商展示。",
+    "link": "https://www.booth.ai",
+    "logo": "https://placehold.co/32x32/ec4899/ffffff?text=BA",
+    "rating": 4.0,
+    "tags": ["product", "商品图", "场景合成"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "ProductImages"
+  },
+  {
+    "key": "image-generation-kaedim-3d",
+    "name": "Kaedim 3D",
+    "description": "从 2D 图像到 3D 模型的快速转换，适合游戏与资产制作。",
+    "link": "https://www.kaedim3d.com",
+    "logo": "https://placehold.co/32x32/a855f7/ffffff?text=K3",
+    "rating": 4.0,
+    "tags": ["3d", "模型", "mesh"],
+    "primaryCategory": "ImageGeneration",
+    "subcategory": "Model3DGeneration"
+  }
+]

@@ -1,0 +1,63 @@
+<svg width="64" height="64" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+  aria-label="Creativity Hunt — Flowing Ribbon Logo">
+  <title>Creativity Hunt — Flowing Ribbon Logo</title>
+  <desc>Open, flowing gradient ribbons suggesting creative energy, with no enclosing borders or closed geometry.</desc>
+  <defs>
+    <linearGradient id="brand-gradient" x1="16" y1="112" x2="112" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee" />
+      <stop offset="1" stop-color="#9333ea" />
+    </linearGradient>
+    <linearGradient id="brand-gradient-soft" x1="24" y1="104" x2="104" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.6" />
+      <stop offset="1" stop-color="#9333ea" stop-opacity="0.8" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(64 64) rotate(90) scale(52)">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+    <filter id="soft-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feOffset dx="0" dy="1" result="offset" />
+      <feMerge>
+        <feMergeNode in="offset" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient glow (non-enclosing, soft backdrop) -->
+  <path d="M12 64 C24 32, 48 20, 64 20 C80 20, 104 32, 116 64" stroke="url(#glow)" stroke-width="12"
+    stroke-linecap="round" fill="none" />
+
+  <!-- Primary flowing ribbon (open path, bold, expressive) -->
+  <path d="M14 66
+           C 30 38, 50 26, 68 28
+           C 86 30, 102 44, 110 64
+           C 116 80, 110 94, 96 102
+           C 82 110, 64 108, 50 98
+           C 38 88, 34 74, 36 62
+           C 38 52, 44 46, 54 44" stroke="url(#brand-gradient)" stroke-width="8" stroke-linecap="round"
+    stroke-linejoin="round" fill="none" filter="url(#soft-shadow)" />
+
+  <!-- Secondary accent ribbon (lighter, layered depth, also open) -->
+  <path d="M24 80
+           C 38 58, 58 50, 76 52
+           C 92 54, 106 66, 108 78
+           C 110 90, 100 98, 88 100
+           C 72 102, 56 96, 46 86" stroke="url(#brand-gradient-soft)" stroke-width="5" stroke-linecap="round"
+    stroke-linejoin="round" fill="none" />
+
+  <!-- Energy strokes / sparks (short open strokes, no circles/squares) -->
+  <path d="M94 40 L102 36" stroke="#9333ea" stroke-opacity="0.9" stroke-width="3" stroke-linecap="round" />
+  <path d="M28 92 L36 88" stroke="#22d3ee" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" />
+  <path d="M84 26 L88 22" stroke="#9333ea" stroke-opacity="0.7" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M22 54 L26 50" stroke="#22d3ee" stroke-opacity="0.7" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Soft highlight along the primary ribbon (subtle sheen) -->
+  <path d="M20 64
+           C 34 40, 52 30, 68 32
+           C 86 34, 100 48, 108 66" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round" fill="none" />
+
+</svg>

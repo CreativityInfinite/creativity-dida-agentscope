@@ -1,0 +1,57 @@
+[
+  {
+    "key": "voice-video-elevenlabs",
+    "name": "ElevenLabs",
+    "description": "高自然度语音克隆与多语言文本转语音。",
+    "link": "https://elevenlabs.io",
+    "logo": "https://placehold.co/32x32/000000/ffffff?text=EL",
+    "rating": 4.6,
+    "tags": ["tts", "voice", "audio"],
+    "primaryCategory": "VoiceVideo",
+    "subcategory": "TextToSpeech"
+  },
+  {
+    "key": "voice-video-descript",
+    "name": "Descript",
+    "description": "基于文字编辑音频/视频，支持配音与去噪。",
+    "link": "https://www.descript.com",
+    "logo": "https://placehold.co/32x32/6366f1/ffffff?text=DS",
+    "rating": 4.4,
+    "tags": ["audio", "video", "editing"],
+    "primaryCategory": "VoiceVideo",
+    "subcategory": "TextBasedEditing"
+  },
+  {
+    "key": "voice-video-synthesia",
+    "name": "Synthesia",
+    "description": "虚拟数字人视频生成，适合教学与营销内容。",
+    "link": "https://www.synthesia.io",
+    "logo": "https://placehold.co/32x32/f59e0b/ffffff?text=SY",
+    "rating": 4.3,
+    "tags": ["avatar", "video", "generation"],
+    "primaryCategory": "VoiceVideo",
+    "subcategory": "DigitalAvatar"
+  },
+  {
+    "key": "voice-video-adobe-podcast",
+    "name": "Adobe Podcast",
+    "description": "一键增强语音清晰度与音质的音频工具。",
+    "link": "https://podcast.adobe.com",
+    "logo": "https://placehold.co/32x32/ef4444/ffffff?text=AP",
+    "rating": 4.2,
+    "tags": ["audio", "enhance", "adobe"],
+    "primaryCategory": "VoiceVideo",
+    "subcategory": "AudioEnhancement"
+  },
+  {
+    "key": "voice-video-runway-gen-2",
+    "name": "Runway Gen-2",
+    "description": "文本到视频与图像到视频的生成式模型。",
+    "link": "https://runwayml.com",
+    "logo": "https://placehold.co/32x32/10b981/ffffff?text=RG",
+    "rating": 4.3,
+    "tags": ["video", "generation", "text-to-video"],
+    "primaryCategory": "VoiceVideo",
+    "subcategory": "TextToVideo"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "key": "code-assistant-github-copilot",
+    "name": "GitHub Copilot",
+    "description": "上下文代码建议与补全，加速开发与测试。",
+    "link": "https://github.com/copilot",
+    "logo": "https://placehold.co/32x32/24292e/ffffff?text=GC",
+    "rating": 4.6,
+    "tags": ["code", "completion", "productivity"],
+    "primaryCategory": "CodeAssistant",
+    "subcategory": "CodeCompletion"
+  },
+  {
+    "key": "code-assistant-cursor",
+    "name": "Cursor",
+    "description": "面向开发者的 AI 编辑器，提供智能补全与对话式改写。",
+    "link": "https://cursor.sh",
+    "logo": "https://placehold.co/32x32/000000/ffffff?text=CR",
+    "rating": 4.4,
+    "tags": ["editor", "code", "assistant"],
+    "primaryCategory": "CodeAssistant",
+    "subcategory": "AIEditor"
+  },
+  {
+    "key": "code-assistant-replit-ghostwriter",
+    "name": "Replit Ghostwriter",
+    "description": "在线 IDE 内的 AI 编程助手，便捷云端协作与运行。",
+    "link": "https://replit.com/ai",
+    "logo": "https://placehold.co/32x32/f26207/ffffff?text=RG",
+    "rating": 4.2,
+    "tags": ["ide", "cloud", "assistant"],
+    "primaryCategory": "CodeAssistant",
+    "subcategory": "IDEAssistant"
+  },
+  {
+    "key": "code-assistant-tabnine",
+    "name": "Tabnine",
+    "description": "多语言代码补全，专注本地/私有模型与团队策略。",
+    "link": "https://www.tabnine.com",
+    "logo": "https://placehold.co/32x32/3b82f6/ffffff?text=TN",
+    "rating": 4.1,
+    "tags": ["completion", "privacy", "team"],
+    "primaryCategory": "CodeAssistant",
+    "subcategory": "TeamPrivacy"
+  },
+  {
+    "key": "code-assistant-amazon-codewhisperer",
+    "name": "Amazon CodeWhisperer",
+    "description": "与 AWS 生态深度集成的智能代码建议。",
+    "link": "https://aws.amazon.com/codewhisperer",
+    "logo": "https://placehold.co/32x32/ff9900/ffffff?text=CW",
+    "rating": 4.0,
+    "tags": ["aws", "code", "assistant"],
+    "primaryCategory": "CodeAssistant",
+    "subcategory": "CloudAssistant"
+  }
+]

@@ -1,0 +1,350 @@
+{
+  "brand": "Creativity Hunt",
+  "hero": {
+    "title": "Discover the best AI tools",
+    "subtitle": "Explore curated AI tools to boost your productivity and creativity"
+  },
+  "search": {
+    "placeholder": "Describe your need, e.g. \"AI to generate product posters\""
+  },
+  "cta": {
+    "try": "Try",
+    "search": "Search",
+    "explore": "Start exploring",
+    "submit": "Submit a tool",
+    "trends": "View trends"
+  },
+  "labels": {
+    "hotTags": "Hot tags:",
+    "hotTagsList": ["Image Generation", "Text Writing", "Chat Tools", "Code Assistant", "Voice & Video", "Data Insights", "Automation"],
+    "primaryCategories": {
+      "ImageGeneration": "Image Generation",
+      "TextWriting": "Text Writing",
+      "ChatTools": "Chat Tools",
+      "CodeAssistant": "Code Assistant",
+      "VoiceVideo": "Voice & Video",
+      "DataInsights": "Data Insights",
+      "Automation": "Automation",
+      "Others": "Others"
+    },
+    "subcategories": {
+      "ImageGeneration": {
+        "CommonImageTools": "Common Image Tools",
+        "ImageIllustration": "Image & Illustration",
+        "BackgroundRemoval": "Background Removal",
+        "ObjectRemoval": "Object Removal",
+        "ImageUpscaling": "Image Upscaling",
+        "ImageEnhancement": "Image Enhancement",
+        "ProductImages": "Product Images",
+        "Model3DGeneration": "3D Model Generation"
+      },
+      "TextWriting": {
+        "LongFormWriting": "Long-form Writing",
+        "WritingRewriting": "Writing & Rewriting",
+        "GrammarCheck": "Grammar Check",
+        "NotesDocuments": "Notes & Documents"
+      },
+      "ChatTools": {
+        "GeneralAssistant": "General Assistant",
+        "OfficeAssistant": "Office Assistant",
+        "CharacterChat": "Character Chat",
+        "Companion": "Companion",
+        "GeneralChat": "General Chat"
+      },
+      "CodeAssistant": {
+        "CodeCompletion": "Code Completion",
+        "AIEditor": "AI Editor",
+        "IDEAssistant": "IDE Assistant",
+        "TeamPrivacy": "Team & Privacy",
+        "CloudAssistant": "Cloud Assistant"
+      },
+      "VoiceVideo": {
+        "TextToSpeech": "Text-to-Speech",
+        "TextBasedEditing": "Text-based Editing",
+        "DigitalAvatar": "Digital Avatar",
+        "AudioEnhancement": "Audio Enhancement",
+        "TextToVideo": "Text-to-Video"
+      },
+      "DataInsights": {
+        "BusinessIntelligence": "Business Intelligence",
+        "DataNotebook": "Data Notebook",
+        "DataAIPlatform": "Data/AI Platform"
+      },
+      "Automation": {
+        "WorkflowAutomation": "Workflow Automation",
+        "MeetingNotes": "Meeting Notes",
+        "TaskDocuments": "Task & Documents",
+        "DataAutomation": "Data Automation"
+      },
+      "Others": {
+        "ComprehensivePlatform": "Comprehensive Platform",
+        "SearchQA": "Search & QA",
+        "InferenceAPI": "Inference API",
+        "UIGeneration": "UI Generation"
+      }
+    }
+  },
+  "headings": {
+    "hotTools": "Popular AI Tools",
+    "explore": "Explore All Categories"
+  },
+  "ui": {
+    "scrollHint": "Scroll down to explore tools",
+    "all": "All",
+    "searchPlaceholder": "Search tool names, descriptions or tags...",
+    "noResultsSearch": "No matching tools found, try adjusting your search keywords",
+    "noResultsCategory": "No content available, try switching to other subcategories"
+  },
+  "explore": {
+    "title": "Explore All Categories",
+    "subtitle": "Discover quality AI tools and platforms, quickly locate by category and purpose",
+    "searchPlaceholder": "Search tool names, descriptions or tags...",
+    "all": "All",
+    "noResultsSearch": "No matching tools found, try adjusting your search keywords",
+    "noResultsCategory": "No content available, try switching to other subcategories"
+  },
+  "auth": {
+    "signin": {
+      "title": "Welcome to {brand}",
+      "noAccount": "Don't have an account?",
+      "signup": "Sign up",
+      "emailLabel": "Email",
+      "emailPlaceholder": "m@example.com",
+      "login": "Login",
+      "or": "Or",
+      "apple": "Continue with Apple",
+      "github": "Continue with GitHub",
+      "facebook": "Continue with Facebook",
+      "google": "Continue with Google",
+      "wehcat": "Continue with WeChat",
+      "terms": "By clicking continue, you agree to our",
+      "tos": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy"
+    }
+  },
+  "footerTagline": "Discover and search popular AI tools",
+  "footerCopyright": "© YEAR Creativity Hunt · All rights reserved",
+  "footerMenuGroups": [
+    {
+      "title": "Products",
+      "links": [
+        { "text": "Explore", "url": "#" },
+        { "text": "Submit Tool", "url": "#" },
+        { "text": "Trending", "url": "#" }
+      ]
+    },
+    {
+      "title": "About",
+      "links": [
+        { "text": "About Us", "url": "#" },
+        { "text": "Contact Us", "url": "#" },
+        { "text": "Blog", "url": "#" }
+      ]
+    },
+    {
+      "title": "Resources",
+      "links": [
+        { "text": "Help Center", "url": "#" },
+        { "text": "Getting Started", "url": "#" }
+      ]
+    },
+    {
+      "title": "Social",
+      "links": [
+        { "text": "GitHub", "url": "#" },
+        { "text": "Twitter/X", "url": "#" },
+        { "text": "LinkedIn", "url": "#" }
+      ]
+    }
+  ],
+  "footerBottomLinks": [
+    { "text": "Terms", "url": "#" },
+    { "text": "Privacy Policy", "url": "#" }
+  ],
+  "navSections": [
+    {
+      "trigger": "Explore",
+      "groups": [
+        {
+          "title": "Categories",
+          "items": [
+            { "title": "Chat Tools", "description": "Conversational AI and assistants" },
+            { "title": "Image Generation", "description": "Create images with AI" },
+            { "title": "Text Writing", "description": "AI writing and copy" },
+            { "title": "Code Assistant", "description": "Coding support and automation" },
+            { "title": "Audio & Voice", "description": "Speech and media tools" },
+            { "title": "Data Insights", "description": "Analytics and visualization" },
+            { "title": "Automation", "description": "Automate repetitive tasks" }
+          ]
+        },
+        {
+          "title": "Trending",
+          "items": [
+            { "title": "Trending Now", "description": "Most popular this week" },
+            { "title": "Top Rated", "description": "Highest user ratings" },
+            { "title": "Rising Stars", "description": "Fast-growing tools" },
+            { "title": "Most Searched", "description": "Top search queries" }
+          ]
+        },
+        {
+          "title": "Featured",
+          "items": [
+            { "title": "Editor's Picks", "description": "Curated recommendations" },
+            { "title": "New Launches", "description": "Latest releases" },
+            { "title": "Community Favorites", "description": "Loved by our users" },
+            { "title": "Weekly Highlights", "description": "Highlights of the week" }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "MCP",
+      "groups": [
+        {
+          "title": "Servers",
+          "items": [
+            { "title": "Design", "description": "Design systems, assets and components" },
+            { "title": "Testing", "description": "Browser automation and testing" },
+            { "title": "Code Analysis", "description": "Analyze codebases and repositories" },
+            { "title": "UI Components", "description": "UI component libraries and registries" },
+            { "title": "Scraping", "description": "Web scraping and site mapping" },
+            { "title": "DevTools", "description": "Developer tools for inspect and debug" }
+          ]
+        },
+        {
+          "title": "Integrations",
+          "items": [
+            { "title": "Automation", "description": "Run workflows across tools" },
+            { "title": "Scraping", "description": "Collect web content at scale" },
+            { "title": "Design", "description": "Sync design resources" }
+          ]
+        },
+        {
+          "title": "Guides",
+          "items": [
+            { "title": "MCP Guides", "description": "Getting started and advanced usage" },
+            { "title": "MCP Resources", "description": "Reference and best practices" }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "Blog",
+      "groups": [
+        {
+          "title": "Articles",
+          "items": [
+            { "title": "All Articles", "description": "In-depth posts and insights" },
+            { "title": "Guides", "description": "Step-by-step guides for beginners" }
+          ]
+        },
+        {
+          "title": "Tutorials",
+          "items": [
+            { "title": "Tutorials", "description": "Practical tutorials and walkthroughs" },
+            { "title": "Case Studies", "description": "Real-world examples and results" }
+          ]
+        },
+        {
+          "title": "Updates",
+          "items": [
+            { "title": "Product Updates", "description": "Latest changes and improvements" },
+            { "title": "Changelog", "description": "Release notes and version history" }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "News",
+      "groups": [
+        {
+          "title": "AI Trends",
+          "items": [
+            { "title": "Market Trends", "description": "Industry analyses and reports" },
+            { "title": "Opinions", "description": "Editorials and commentary" }
+          ]
+        },
+        {
+          "title": "Releases",
+          "items": [
+            { "title": "New Tools", "description": "Announcements and launches" },
+            { "title": "Changelog", "description": "Release notes and updates" }
+          ]
+        },
+        {
+          "title": "Events",
+          "items": [
+            { "title": "Conferences", "description": "Talks, meetups and conferences" },
+            { "title": "Webinars", "description": "Online sessions and demos" }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "Discussion",
+      "groups": [
+        {
+          "title": "General Discussion",
+          "items": [
+            { "title": "General Topics", "description": "Community-wide conversations" },
+            { "title": "Feedback", "description": "Suggestions and feature requests" }
+          ]
+        },
+        {
+          "title": "Tool Recommendations",
+          "items": [
+            { "title": "Recommend Tools", "description": "Share handy tools you use" },
+            { "title": "Showcase", "description": "Present your creations" }
+          ]
+        },
+        {
+          "title": "Tutorials",
+          "items": [
+            { "title": "Tutorials", "description": "Tips and how-tos" },
+            { "title": "Resources", "description": "Useful learning resources" }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "Account",
+      "groups": [
+        {
+          "title": "Dashboard",
+          "items": [
+            { "title": "Overview", "description": "Personal control panel" },
+            { "title": "Activity", "description": "Recent actions and logs" }
+          ]
+        },
+        {
+          "title": "Profile",
+          "items": [
+            { "title": "Profile", "description": "Personal information settings" },
+            { "title": "Security", "description": "Password & 2FA settings" }
+          ]
+        },
+        {
+          "title": "Settings",
+          "items": [
+            { "title": "Preferences", "description": "Account preferences and options" },
+            { "title": "Notifications", "description": "Notification settings" }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "About",
+      "groups": []
+    }
+  ],
+  "userMenu": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signedInAs": "Signed in as {name}",
+    "profile": "Profile",
+    "settings": "Settings",
+    "activity": "Activity",
+    "signOut": "Sign out"
+  }
+}
