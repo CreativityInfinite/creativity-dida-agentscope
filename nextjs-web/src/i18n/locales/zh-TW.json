@@ -1,95 +1,117 @@
 {
-  "brand": "Creativity Hunt",
+  "brand": "AIDA Travel",
   "hero": {
-    "title": "用 AI，更快發現更好的工具",
-    "subtitle": "一句話描述你的需求，Creativity Hunt 立即為你匹配最合適的 AI 工具與方案"
+    "title": "AI驅動的智能旅行分發平台",
+    "subtitle": "一句話描述你的旅行需求，AIDA 立即為你匹配最優質的旅行產品與服務"
   },
   "search": {
-    "placeholder": "描述你的需求，如「生成產品海報的 AI」"
+    "placeholder": "描述你的旅行需求，如「三亞5日遊親子套餐」"
   },
   "cta": {
-    "try": "試用",
+    "try": "立即預訂",
     "search": "搜尋",
     "explore": "開始探索",
-    "submit": "提交工具",
-    "trends": "查看趨勢"
+    "submit": "發佈產品",
+    "trends": "查看熱門"
   },
   "labels": {
-    "hotTags": "熱門標籤：",
-    "hotTagsList": ["影像生成", "文字寫作", "聊天工具", "程式助手", "語音影音", "數據洞察", "自動化"],
+    "hotTags": "熱門目的地：",
+    "hotTagsList": ["國內遊", "出境遊", "酒店住宿", "機票預訂", "當地玩樂", "郵輪旅遊", "定製旅行"],
     "primaryCategories": {
-      "ImageGeneration": "影像生成",
-      "TextWriting": "文字寫作",
-      "ChatTools": "聊天工具",
-      "CodeAssistant": "程式助手",
-      "VoiceVideo": "語音影音",
-      "DataInsights": "數據洞察",
-      "Automation": "自動化",
+      "DomesticTravel": "國內遊",
+      "OutboundTravel": "出境遊",
+      "Hotels": "酒店住宿",
+      "Flights": "機票預訂",
+      "LocalExperiences": "當地玩樂",
+      "CruiseTravel": "郵輪旅遊",
+      "CustomTravel": "定製旅行",
       "Others": "其他"
     },
     "subcategories": {
-      "ImageGeneration": {
-        "CommonImageTools": "常用影像工具",
-        "ImageIllustration": "圖片插畫生成",
-        "BackgroundRemoval": "圖片背景移除",
-        "ObjectRemoval": "圖片物體抹除",
-        "ImageUpscaling": "圖片無損放大",
-        "ImageEnhancement": "圖片優化修復",
-        "ProductImages": "商品圖生成",
-        "Model3DGeneration": "3D模型生成"
+      "DomesticTravel": {
+        "CityBreaks": "城市周邊遊",
+        "ScenicSpots": "風景名勝",
+        "CulturalTours": "文化古蹟",
+        "NaturalLandscapes": "自然風光",
+        "ThemeParks": "主題樂園",
+        "HotSprings": "溫泉度假",
+        "BeachResorts": "海濱度假",
+        "MountainRetreat": "山嶽避暑"
       },
-      "TextWriting": {
-        "LongFormWriting": "長文生成",
-        "WritingRewriting": "寫作與改寫",
-        "GrammarCheck": "語法糾錯",
-        "NotesDocuments": "筆記與文檔"
+      "OutboundTravel": {
+        "PopularDestinations": "熱門目的地",
+        "EuropeTravel": "歐洲遊",
+        "AsiaTravel": "亞洲遊",
+        "AmericaTravel": "美洲遊",
+        "AfricaTravel": "非洲遊",
+        "OceaniaTravel": "大洋洲遊",
+        "IslandGetaways": "海島度假",
+        "CulturalJourneys": "文化之旅"
       },
-      "ChatTools": {
-        "GeneralAssistant": "通用助手",
-        "OfficeAssistant": "辦公助手",
-        "CharacterChat": "角色聊天",
-        "Companion": "陪伴",
-        "GeneralChat": "通用聊天"
+      "Hotels": {
+        "LuxuryHotels": "豪華酒店",
+        "BusinessHotels": "商務酒店",
+        "BoutiqueHotels": "精品酒店",
+        "ResortHotels": "度假酒店",
+        "BudgetHotels": "經濟酒店",
+        "Homestays": "民宿客棧",
+        "Apartments": "公寓式酒店",
+        "UniqueStays": "特色住宿"
       },
-      "CodeAssistant": {
-        "CodeCompletion": "程式補全",
-        "AIEditor": "AI編輯器",
-        "IDEAssistant": "IDE助手",
-        "TeamPrivacy": "團隊與隱私",
-        "CloudAssistant": "雲端助手"
+      "Flights": {
+        "DomesticFlights": "國內航班",
+        "InternationalFlights": "國際航班",
+        "LowCostCarriers": "廉價航空",
+        "BusinessClass": "商務艙",
+        "FirstClass": "頭等艙",
+        "CharterFlights": "包機服務",
+        "FlightDeals": "特價機票",
+        "FlightPackages": "機酒套餐"
       },
-      "VoiceVideo": {
-        "TextToSpeech": "TTS",
-        "TextBasedEditing": "文字剪輯",
-        "DigitalAvatar": "數字人",
-        "AudioEnhancement": "音頻增強",
-        "TextToVideo": "文生視頻"
+      "LocalExperiences": {
+        "SightseeingTours": "觀光遊覽",
+        "CulturalExperiences": "文化體驗",
+        "AdventureSports": "戶外探險",
+        "FoodTours": "美食之旅",
+        "ShoppingTours": "購物觀光",
+        "NightlifeTours": "夜生活",
+        "WellnessRetreats": "養生體驗",
+        "FamilyActivities": "親子活動"
       },
-      "DataInsights": {
-        "BusinessIntelligence": "商業智能",
-        "DataNotebook": "數據筆記本",
-        "DataAIPlatform": "數據/AI平台"
+      "CruiseTravel": {
+        "OceanCruises": "海洋郵輪",
+        "RiverCruises": "河輪遊覽",
+        "LuxuryCruises": "豪華郵輪",
+        "FamilyCruises": "家庭郵輪",
+        "ThemeCruises": "主題郵輪",
+        "ExpeditionCruises": "探險郵輪",
+        "RegionalCruises": "區域航線",
+        "WorldCruises": "環球航線"
       },
-      "Automation": {
-        "WorkflowAutomation": "自動化編排",
-        "MeetingNotes": "會議紀要",
-        "TaskDocuments": "任務文檔",
-        "DataAutomation": "數據自動化"
+      "CustomTravel": {
+        "PrivateTours": "私人定製",
+        "GroupTravel": "團體旅行",
+        "HoneymoonPackages": "蜜月套餐",
+        "FamilyVacations": "家庭度假",
+        "BusinessTravel": "商務差旅",
+        "LuxuryTravel": "奢華旅行",
+        "AdventureTravel": "探險旅行",
+        "WellnessTravel": "康養旅行"
       },
       "Others": {
-        "ComprehensivePlatform": "綜合平台",
-        "SearchQA": "檢索問答",
-        "InferenceAPI": "推理API",
-        "UIGeneration": "UI生成"
+        "TravelInsurance": "旅行保險",
+        "VisaServices": "簽證服務",
+        "CarRentals": "租車服務",
+        "TravelGear": "旅行裝備"
       }
     }
   },
   "headings": {
-    "hotTools": "熱門 AI 工具",
+    "hotTools": "熱門旅遊服務",
     "explore": "探索全部分類"
   },
   "ui": {
-    "scrollHint": "向下滾動探索工具",
+    "scrollHint": "向下滾動探索服務",
     "all": "全部",
     "searchPlaceholder": "搜尋工具名稱、描述或標籤...",
     "noResultsSearch": "未找到匹配的工具，嘗試調整搜尋關鍵詞",
@@ -123,8 +145,8 @@
       "privacy": "隱私政策"
     }
   },
-  "footerTagline": "發現和搜尋熱門 AI 工具",
-  "footerCopyright": "© YEAR Creativity Hunt · 保留所有權利",
+  "footerTagline": "發現和預訂優質旅遊服務",
+  "footerCopyright": "© YEAR AIDA Travel · 保留所有權利",
   "footerMenuGroups": [
     {
       "title": "產品",
@@ -169,62 +191,62 @@
         {
           "title": "分類",
           "items": [
-            { "title": "聊天工具", "description": "對話式 AI 和助手" },
-            { "title": "影像生成", "description": "使用 AI 創建影像" },
-            { "title": "文字寫作", "description": "AI 寫作和文案" },
-            { "title": "程式助手", "description": "程式設計支援和自動化" },
-            { "title": "語音影音", "description": "語音和媒體工具" },
-            { "title": "數據洞察", "description": "分析和視覺化" },
-            { "title": "自動化", "description": "自動化重複任務" }
+            { "title": "國內遊", "description": "探索國內熱門目的地" },
+            { "title": "出境遊", "description": "全球精選旅行目的地" },
+            { "title": "酒店住宿", "description": "優質酒店和民宿預訂" },
+            { "title": "機票預訂", "description": "國內外航班預訂服務" },
+            { "title": "當地玩樂", "description": "目的地體驗和活動" },
+            { "title": "郵輪旅遊", "description": "豪華郵輪度假體驗" },
+            { "title": "定製旅行", "description": "個性化旅行定製服務" }
           ]
         },
         {
           "title": "趨勢",
           "items": [
-            { "title": "當前趨勢", "description": "本週最受歡迎" },
-            { "title": "最高評分", "description": "用戶評分最高" },
-            { "title": "新星崛起", "description": "快速增長的工具" },
-            { "title": "最多搜尋", "description": "熱門搜尋查詢" }
+            { "title": "熱門目的地", "description": "當前最受歡迎的旅行地" },
+            { "title": "最高評分", "description": "用戶評分最高的產品" },
+            { "title": "特價優惠", "description": "限時優惠和特價產品" },
+            { "title": "熱門預訂", "description": "最多用戶預訂的產品" }
           ]
         },
         {
           "title": "精選",
           "items": [
-            { "title": "編輯推薦", "description": "精心挑選的推薦" },
-            { "title": "新品發佈", "description": "最新發佈" },
-            { "title": "社群最愛", "description": "用戶喜愛" },
-            { "title": "每週亮點", "description": "本週亮點" }
+            { "title": "編輯推薦", "description": "專業編輯精心推薦" },
+            { "title": "新興目的地", "description": "新發現的旅行目的地" },
+            { "title": "熱門套餐", "description": "用戶喜愛的旅行套餐" },
+            { "title": "季節特色", "description": "應季旅行推薦" }
           ]
         }
       ]
     },
     {
-      "trigger": "MCP",
+      "trigger": "服務",
       "groups": [
         {
-          "title": "分類",
+          "title": "旅行服務",
           "items": [
-            { "title": "設計", "description": "設計系統、素材與元件" },
-            { "title": "測試", "description": "瀏覽器自動化與測試" },
-            { "title": "程式碼分析", "description": "分析程式碼庫與版本庫" },
-            { "title": "UI 元件", "description": "UI 元件庫與註冊表" },
-            { "title": "擷取", "description": "網頁擷取與站點地圖" },
-            { "title": "開發者工具", "description": "用於檢查與除錯的開發工具" }
+            { "title": "簽證服務", "description": "專業簽證辦理服務" },
+            { "title": "旅行保險", "description": "全面的旅行保障" },
+            { "title": "租車服務", "description": "全球租車預訂" },
+            { "title": "接送服務", "description": "機場接送和專車服務" },
+            { "title": "導遊服務", "description": "專業導遊和嚮導" },
+            { "title": "禮賓服務", "description": "高端禮賓和管家服務" }
           ]
         },
         {
-          "title": "整合",
+          "title": "商務解決方案",
           "items": [
-            { "title": "自動化", "description": "在不同工具間運行工作流程" },
-            { "title": "擷取", "description": "大規模蒐集網頁內容" },
-            { "title": "設計", "description": "同步設計資源" }
+            { "title": "企業差旅", "description": "企業商務旅行管理" },
+            { "title": "團體旅遊", "description": "團體出行解決方案" },
+            { "title": "會議活動", "description": "會議和活動策劃" }
           ]
         },
         {
-          "title": "指南",
+          "title": "支援",
           "items": [
-            { "title": "MCP 指南", "description": "快速上手與進階用法" },
-            { "title": "MCP 資源", "description": "參考與最佳實踐" }
+            { "title": "幫助中心", "description": "常見問題和使用指南" },
+            { "title": "聯絡我們", "description": "客服支援和諮詢" }
           ]
         }
       ]
@@ -233,76 +255,76 @@
       "trigger": "部落格",
       "groups": [
         {
-          "title": "文章",
+          "title": "旅行指南",
           "items": [
-            { "title": "所有文章", "description": "深度文章和見解" },
-            { "title": "指南", "description": "新手分步指南" }
+            { "title": "目的地指南", "description": "詳細的目的地旅行攻略" },
+            { "title": "旅行貼士", "description": "實用的旅行技巧和建議" }
           ]
         },
         {
-          "title": "教學",
+          "title": "體驗分享",
           "items": [
-            { "title": "教學", "description": "實用教學和演練" },
-            { "title": "案例研究", "description": "真實案例和結果" }
+            { "title": "旅行故事", "description": "真實的旅行體驗分享" },
+            { "title": "用戶評價", "description": "用戶真實評價和回饋" }
           ]
         },
         {
           "title": "更新",
           "items": [
-            { "title": "產品更新", "description": "最新變化和改進" },
-            { "title": "更新日誌", "description": "發佈說明和版本歷史" }
+            { "title": "旅遊資訊", "description": "最新旅遊新聞和資訊" },
+            { "title": "優惠資訊", "description": "最新優惠和促銷活動" }
           ]
         }
       ]
     },
     {
-      "trigger": "新聞",
+      "trigger": "資訊",
       "groups": [
         {
-          "title": "AI 趨勢",
+          "title": "旅遊趨勢",
           "items": [
-            { "title": "市場趨勢", "description": "行業分析和報告" },
-            { "title": "觀點", "description": "社論和評論" }
+            { "title": "市場趨勢", "description": "旅遊行業趨勢分析" },
+            { "title": "數據洞察", "description": "旅遊數據和市場洞察" }
           ]
         },
         {
-          "title": "發佈",
+          "title": "行業新聞",
           "items": [
-            { "title": "新工具", "description": "公告和發佈" },
-            { "title": "更新日誌", "description": "發佈說明和更新" }
+            { "title": "行業動態", "description": "旅遊行業最新動態" },
+            { "title": "政策更新", "description": "旅遊政策和規定更新" }
           ]
         },
         {
           "title": "活動",
           "items": [
-            { "title": "會議", "description": "演講、聚會和會議" },
-            { "title": "網路研討會", "description": "線上會議和演示" }
+            { "title": "旅遊展會", "description": "旅遊展覽和活動" },
+            { "title": "線上講座", "description": "旅遊主題線上講座" }
           ]
         }
       ]
     },
     {
-      "trigger": "討論",
+      "trigger": "社群",
       "groups": [
         {
-          "title": "一般討論",
+          "title": "討論",
           "items": [
-            { "title": "一般話題", "description": "社群範圍的對話" },
-            { "title": "回饋", "description": "建議和功能請求" }
+            { "title": "綜合討論", "description": "旅遊話題自由討論" },
+            { "title": "意見回饋", "description": "產品建議和意見回饋" }
           ]
         },
         {
-          "title": "工具推薦",
+          "title": "分享",
           "items": [
-            { "title": "推薦工具", "description": "分享您使用的便利工具" },
-            { "title": "展示", "description": "展示您的創作" }
+            { "title": "推薦分享", "description": "分享您的旅行推薦" },
+            { "title": "照片分享", "description": "分享您的旅行照片" }
           ]
         },
         {
-          "title": "教學",
+          "title": "資源",
           "items": [
-            { "title": "教學", "description": "技巧和操作方法" },
-            { "title": "資源", "description": "有用的學習資源" }
+            { "title": "旅行攻略", "description": "用戶貢獻的旅行攻略" },
+            { "title": "實用資源", "description": "有用的旅行資源和工具" }
           ]
         }
       ]
@@ -313,22 +335,22 @@
         {
           "title": "儀表板",
           "items": [
-            { "title": "概覽", "description": "個人控制面板" },
-            { "title": "活動", "description": "最近操作和日誌" }
+            { "title": "帳戶概覽", "description": "個人帳戶控制面板" },
+            { "title": "我的訂單", "description": "查看和管理您的訂單" }
           ]
         },
         {
           "title": "個人資料",
           "items": [
-            { "title": "個人資料", "description": "個人資訊設定" },
-            { "title": "安全", "description": "密碼和雙因素認證設定" }
+            { "title": "個人資訊", "description": "管理個人基本資訊" },
+            { "title": "旅行偏好", "description": "設定個人旅行偏好" }
           ]
         },
         {
           "title": "設定",
           "items": [
-            { "title": "偏好設定", "description": "帳戶偏好和選項" },
-            { "title": "通知", "description": "通知設定" }
+            { "title": "帳戶設定", "description": "帳戶安全和隱私設定" },
+            { "title": "通知設定", "description": "管理推送和郵件通知" }
           ]
         }
       ]

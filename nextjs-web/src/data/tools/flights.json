@@ -1,0 +1,68 @@
+[
+  {
+    "key": "flights-domestic-beijing-shanghai",
+    "name": "北京-上海航线",
+    "description": "每日多班次，经济舱特价 ¥580 起，商务舱升级优惠。",
+    "link": "/services/flights",
+    "logo": "https://placehold.co/32x32/2196f3/ffffff?text=✈️",
+    "rating": 4.6,
+    "tags": ["国内航班", "特价", "频繁航班"],
+    "primaryCategory": "Flights",
+    "subcategory": "DomesticFlights"
+  },
+  {
+    "key": "flights-international-tokyo",
+    "name": "北京-东京直飞",
+    "description": "国航/全日空直飞，3.5小时抵达，含税 ¥2880 起。",
+    "link": "/services/flights",
+    "logo": "https://placehold.co/32x32/f44336/ffffff?text=🗾",
+    "rating": 4.7,
+    "tags": ["国际航班", "直飞", "日本"],
+    "primaryCategory": "Flights",
+    "subcategory": "InternationalFlights"
+  },
+  {
+    "key": "flights-business-class-europe",
+    "name": "欧洲商务舱套餐",
+    "description": "北京/上海-巴黎/伦敦，商务舱 + 机场贵宾厅 + 接送服务。",
+    "link": "/services/flights",
+    "logo": "https://placehold.co/32x32/9c27b0/ffffff?text=💼",
+    "rating": 4.8,
+    "tags": ["商务舱", "欧洲", "贵宾服务"],
+    "primaryCategory": "Flights",
+    "subcategory": "BusinessClass"
+  },
+  {
+    "key": "flights-budget-southeast-asia",
+    "name": "东南亚廉航特惠",
+    "description": "春秋航空/亚航，泰国/马来西亚/新加坡，¥999 起含税。",
+    "link": "/services/flights",
+    "logo": "https://placehold.co/32x32/ff9800/ffffff?text=💰",
+    "rating": 4.2,
+    "tags": ["廉价航空", "东南亚", "特惠"],
+    "primaryCategory": "Flights",
+    "subcategory": "LowCostCarriers"
+  },
+  {
+    "key": "flights-package-maldives",
+    "name": "马尔代夫机酒套餐",
+    "description": "往返机票 + 水上别墅4晚，蜜月套餐 ¥18,888 起。",
+    "link": "/services/flights",
+    "logo": "https://placehold.co/32x32/00bcd4/ffffff?text=🏝️",
+    "rating": 4.9,
+    "tags": ["机酒套餐", "马尔代夫", "蜜月"],
+    "primaryCategory": "Flights",
+    "subcategory": "FlightPackages"
+  },
+  {
+    "key": "flights-charter-group",
+    "name": "团体包机服务",
+    "description": "20人以上团体包机，定制航线 + VIP服务 + 灵活时间。",
+    "link": "/services/flights",
+    "logo": "https://placehold.co/32x32/673ab7/ffffff?text=👥",
+    "rating": 4.5,
+    "tags": ["包机", "团体", "定制"],
+    "primaryCategory": "Flights",
+    "subcategory": "CharterFlights"
+  }
+]

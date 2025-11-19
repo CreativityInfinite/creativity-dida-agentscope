@@ -20,8 +20,8 @@ type SortKey = 'default' | 'rating' | 'name';
 
 export default function CategoryPage({ params }: { params: Promise<{ key: string }> }) {
   const resolvedParams = React.use(params);
-  const key = resolvedParams?.key || 'image-generation';
-  const primary: PrimaryCategoryKey = ROUTE_TO_PRIMARY[key] || 'ImageGeneration';
+  const key = resolvedParams?.key || 'domestic-travel';
+  const primary: PrimaryCategoryKey = ROUTE_TO_PRIMARY[key] || 'DomesticTravel';
   const tools = DATA_BY_PRIMARY[primary] || [];
 
   const searchParams = useSearchParams();
@@ -111,9 +111,12 @@ export default function CategoryPage({ params }: { params: Promise<{ key: string
   const [randomToolHref, setRandomToolHref] = React.useState('/explore');
   React.useEffect(() => {
     if (!tools.length) return;
-    const idx = Math.floor(Math.random() * tools.length);
+    
+    // 使用稳定的随机种子避免水合错误
+    const seed = tools.length > 0 ? tools[0]?.key?.length || 0 : 0;
+    const idx = seed % tools.length;
     const t = tools[idx] as any;
-    const k = t?.key || encodeURIComponent(t?.name || 'tool');
+    const k = t?.key || encodeURIComponent(t?.name || 'service');
     setRandomToolHref(`/tools/${k}?lang=${locale}`);
   }, [tools, locale]);
 
@@ -145,7 +148,7 @@ export default function CategoryPage({ params }: { params: Promise<{ key: string
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 lg:pt-6 pb-6 sm:pb-8">
         <div className="mt-2 sm:mt-3">
           <h1 className="text-xl sm:text-3xl lg:text-4xl font-semibold tracking-tight">{categoryDisplayName}</h1>
-          <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-3xl">快速浏览「{categoryDisplayName}」分类下的所有工具，支持搜索、子分类筛选与排序。</p>
+          <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-3xl">探索精选「{categoryDisplayName}」服务，发现优质旅游产品，支持搜索、子分类筛选与排序。</p>
         </div>
 
         <div className="mt-4 sm:mt-5 flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm">
@@ -159,8 +162,8 @@ export default function CategoryPage({ params }: { params: Promise<{ key: string
           </Link>
           <Link href={`/submit?category=${key}&lang=${locale}`} className="inline-flex items-center gap-1.5 px-3 py-2 rounded-md text-foreground/90 hover:text-foreground hover:bg-muted/50 transition">
             <PlusCircle className="h-4 w-4 flex-shrink-0" />
-            <span className="hidden sm:inline">投稿工具</span>
-            <span className="sm:hidden">投稿</span>
+            <span className="hidden sm:inline">推荐服务</span>
+            <span className="sm:hidden">推荐</span>
           </Link>
           <Link href={randomToolHref} className="inline-flex items-center gap-1.5 px-3 py-2 rounded-md text-foreground/90 hover:text-foreground hover:bg-muted/50 transition">
             <Shuffle className="h-4 w-4 flex-shrink-0" />
@@ -211,7 +214,7 @@ export default function CategoryPage({ params }: { params: Promise<{ key: string
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
             <input
               type="text"
-              placeholder={messages?.explore?.searchPlaceholder || '搜索工具名称、描述或标签...'}
+              placeholder={messages?.explore?.searchPlaceholder || '搜索旅游服务名称、描述或标签...'}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-lg border border-primary/30 bg-primary/5 hover:bg-primary/10 focus:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/50 transition-colors"
@@ -271,7 +274,7 @@ export default function CategoryPage({ params }: { params: Promise<{ key: string
 
       {/* 子分类分组渲染 */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
-        {filteredGroupedBySub.length === 0 && <div className="text-xs sm:text-sm text-muted-foreground py-10">未找到匹配的工具，试试调整搜索或筛选。</div>}
+        {filteredGroupedBySub.length === 0 && <div className="text-xs sm:text-sm text-muted-foreground py-10">未找到匹配的旅游服务，试试调整搜索或筛选。</div>}
 
         <div className="space-y-6 sm:space-y-8">
           {filteredGroupedBySub.map(([sub, items], idx) => (

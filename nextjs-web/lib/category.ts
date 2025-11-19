@@ -1,38 +1,35 @@
-import imageGenerationData from '@/src/data/tools/image-generation.json';
-import textWritingData from '@/src/data/tools/text-writing.json';
-import chatToolsData from '@/src/data/tools/chat-tools.json';
-import codeAssistantData from '@/src/data/tools/code-assistant.json';
-import voiceVideoData from '@/src/data/tools/voice-video.json';
-import dataInsightsData from '@/src/data/tools/data-insights.json';
-import automationData from '@/src/data/tools/automation.json';
+import domesticTravelData from '@/src/data/tools/domestic-travel.json';
+import outboundTravelData from '@/src/data/tools/outbound-travel.json';
+import hotelsData from '@/src/data/tools/hotels.json';
+import flightsData from '@/src/data/tools/flights.json';
+import localExperiencesData from '@/src/data/tools/local-experiences.json';
+import cruiseTravelData from '@/src/data/tools/cruise-travel.json';
+import customTravelData from '@/src/data/tools/custom-travel.json';
 
 import type { Tool } from '@/types/tool';
 import type { PrimaryCategoryKey } from '@/src/constants/category.constant';
 
 export const ROUTE_TO_PRIMARY: Record<string, PrimaryCategoryKey> = {
-  'image-generation': 'ImageGeneration',
-  'text-writing': 'TextWriting',
-  'chat-tools': 'ChatTools',
-  'code-assistant': 'CodeAssistant',
-  'audio-voice': 'VoiceVideo',
-  'voice-video': 'VoiceVideo',
-  'data-insights': 'DataInsights',
-  automation: 'Automation',
-  writing: 'TextWriting'
+  'domestic-travel': 'DomesticTravel',
+  'outbound-travel': 'OutboundTravel',
+  'hotels': 'Hotels',
+  'flights': 'Flights',
+  'local-experiences': 'LocalExperiences',
+  'cruise-travel': 'CruiseTravel',
+  'custom-travel': 'CustomTravel'
 };
 
 export const DATA_BY_PRIMARY: Record<PrimaryCategoryKey, Tool[]> = {
-  ImageGeneration: imageGenerationData as unknown as Tool[],
-  TextWriting: textWritingData as unknown as Tool[],
-  ChatTools: chatToolsData as unknown as Tool[],
-  CodeAssistant: codeAssistantData as unknown as Tool[],
-  VoiceVideo: voiceVideoData as unknown as Tool[],
-  DataInsights: dataInsightsData as unknown as Tool[],
-  Automation: automationData as unknown as Tool[],
-  Others: []
+  DomesticTravel: domesticTravelData as unknown as Tool[],
+  OutboundTravel: outboundTravelData as unknown as Tool[],
+  Hotels: hotelsData as unknown as Tool[],
+  Flights: flightsData as unknown as Tool[],
+  LocalExperiences: localExperiencesData as unknown as Tool[],
+  CruiseTravel: cruiseTravelData as unknown as Tool[],
+  CustomTravel: customTravelData as unknown as Tool[]
 };
 
 export const getToolsByPrimaryCategory = (key: string): Tool[] => {
-  const primary: PrimaryCategoryKey = ROUTE_TO_PRIMARY[key] || 'ImageGeneration';
+  const primary: PrimaryCategoryKey = ROUTE_TO_PRIMARY[key] || 'DomesticTravel';
   return DATA_BY_PRIMARY[primary] || [];
 };

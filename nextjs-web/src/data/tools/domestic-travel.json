@@ -1,0 +1,68 @@
+[
+  {
+    "key": "domestic-travel-sanya-package",
+    "name": "三亚度假套餐",
+    "description": "精选三亚海景酒店 + 亲子游乐园 + 海鲜大餐，5天4晚全包价。",
+    "link": "/services/domestic-travel",
+    "logo": "https://placehold.co/32x32/00bcd4/ffffff?text=三亚",
+    "rating": 4.8,
+    "tags": ["海滨度假", "亲子游", "全包套餐"],
+    "primaryCategory": "DomesticTravel",
+    "subcategory": "BeachResorts"
+  },
+  {
+    "key": "domestic-travel-zhangjiajie",
+    "name": "张家界山水游",
+    "description": "探索阿凡达取景地，玻璃桥 + 天门山 + 黄龙洞，3天2晚深度游。",
+    "link": "/services/domestic-travel",
+    "logo": "https://placehold.co/32x32/4caf50/ffffff?text=张家界",
+    "rating": 4.6,
+    "tags": ["自然风光", "山岳游", "摄影"],
+    "primaryCategory": "DomesticTravel",
+    "subcategory": "NaturalLandscapes"
+  },
+  {
+    "key": "domestic-travel-beijing-culture",
+    "name": "北京文化古迹游",
+    "description": "故宫 + 天安门 + 颐和园 + 八达岭长城，4天3晚经典路线。",
+    "link": "/services/domestic-travel",
+    "logo": "https://placehold.co/32x32/f44336/ffffff?text=北京",
+    "rating": 4.7,
+    "tags": ["文化古迹", "历史", "经典路线"],
+    "primaryCategory": "DomesticTravel",
+    "subcategory": "CulturalTours"
+  },
+  {
+    "key": "domestic-travel-guilin-lijiang",
+    "name": "桂林漓江山水",
+    "description": "漓江竹筏漂流 + 阳朔西街 + 象鼻山，感受山水甲天下。",
+    "link": "/services/domestic-travel",
+    "logo": "https://placehold.co/32x32/8bc34a/ffffff?text=桂林",
+    "rating": 4.5,
+    "tags": ["山水风光", "漂流", "摄影"],
+    "primaryCategory": "DomesticTravel",
+    "subcategory": "NaturalLandscapes"
+  },
+  {
+    "key": "domestic-travel-shanghai-modern",
+    "name": "上海都市风情",
+    "description": "外滩夜景 + 迪士尼乐园 + 南京路步行街，现代都市体验。",
+    "link": "/services/domestic-travel",
+    "logo": "https://placehold.co/32x32/2196f3/ffffff?text=上海",
+    "rating": 4.4,
+    "tags": ["都市游", "主题乐园", "购物"],
+    "primaryCategory": "DomesticTravel",
+    "subcategory": "ThemeParks"
+  },
+  {
+    "key": "domestic-travel-xian-terracotta",
+    "name": "西安古都探秘",
+    "description": "兵马俑 + 华清池 + 大雁塔 + 回民街，千年古都文化之旅。",
+    "link": "/services/domestic-travel",
+    "logo": "https://placehold.co/32x32/ff9800/ffffff?text=西安",
+    "rating": 4.6,
+    "tags": ["古都", "历史文化", "美食"],
+    "primaryCategory": "DomesticTravel",
+    "subcategory": "CulturalTours"
+  }
+]

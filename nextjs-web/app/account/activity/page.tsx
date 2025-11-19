@@ -31,7 +31,7 @@ const MOCK_ACTIVITIES = [
     target: 'ChatGPT',
     targetType: 'tool',
     description: '将 ChatGPT 添加到收藏夹',
-    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-17T10:00:00.000Z').toISOString(),
     metadata: { category: '对话工具', rating: 4.9 }
   },
   {
@@ -41,7 +41,7 @@ const MOCK_ACTIVITIES = [
     target: 'AI 绘画工具对比',
     targetType: 'article',
     description: '发表了一条评论：这篇文章写得很详细，对我选择工具很有帮助！',
-    timestamp: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-17T07:00:00.000Z').toISOString(),
     metadata: { likes: 12 }
   },
   {
@@ -51,7 +51,7 @@ const MOCK_ACTIVITIES = [
     target: 'Midjourney 使用指南',
     targetType: 'tutorial',
     description: '觉得这个教程很有用',
-    timestamp: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-16T12:00:00.000Z').toISOString(),
     metadata: { author: '李明' }
   },
   {
@@ -61,7 +61,7 @@ const MOCK_ACTIVITIES = [
     target: 'Stable Diffusion',
     targetType: 'tool',
     description: '查看了工具详情页',
-    timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-15T15:30:00.000Z').toISOString(),
     metadata: { duration: '5 分钟' }
   },
   {
@@ -71,7 +71,7 @@ const MOCK_ACTIVITIES = [
     target: '如何选择合适的 AI 绘画工具？',
     targetType: 'discussion',
     description: '在社区发起了一个新的讨论话题',
-    timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-14T09:20:00.000Z').toISOString(),
     metadata: { replies: 23, views: 156 }
   },
   {
@@ -81,7 +81,7 @@ const MOCK_ACTIVITIES = [
     target: '使用 AI 工具提升设计效率',
     targetType: 'case-study',
     description: '分享到社交媒体',
-    timestamp: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-13T14:45:00.000Z').toISOString(),
     metadata: { platform: 'Twitter' }
   },
   {
@@ -91,7 +91,7 @@ const MOCK_ACTIVITIES = [
     target: 'Claude 代码助手使用技巧',
     targetType: 'article',
     description: '保存以便稍后阅读',
-    timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-12T11:15:00.000Z').toISOString(),
     metadata: { readTime: '8 分钟' }
   },
   {
@@ -101,7 +101,7 @@ const MOCK_ACTIVITIES = [
     target: 'Suno AI',
     targetType: 'tool',
     description: '发表了使用体验：音乐生成质量很高，非常推荐！',
-    timestamp: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString(),
+    timestamp: new Date('2024-11-11T16:30:00.000Z').toISOString(),
     metadata: { rating: 5 }
   }
 ];
@@ -161,9 +161,9 @@ export default function AccountActivityPage() {
       result = result.filter((a) => a.title.toLowerCase().includes(query) || a.target.toLowerCase().includes(query) || a.description.toLowerCase().includes(query));
     }
 
-    // 日期筛选
+    // 日期筛选 - 使用固定的基准时间避免水合错误
     if (dateRange !== 'all') {
-      const now = Date.now();
+      const now = new Date('2024-11-17T12:00:00.000Z').getTime(); // 固定基准时间
       const ranges: Record<string, number> = {
         today: 24 * 60 * 60 * 1000,
         week: 7 * 24 * 60 * 60 * 1000,
@@ -188,9 +188,9 @@ export default function AccountActivityPage() {
     };
   }, []);
 
-  // 格式化时间
+  // 格式化时间 - 使用固定基准时间避免水合错误
   const formatTime = (timestamp: string) => {
-    const now = Date.now();
+    const now = new Date('2024-11-17T12:00:00.000Z').getTime(); // 固定基准时间
     const time = new Date(timestamp).getTime();
     const diff = now - time;
 

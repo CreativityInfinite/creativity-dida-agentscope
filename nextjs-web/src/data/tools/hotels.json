@@ -1,0 +1,68 @@
+[
+  {
+    "key": "hotels-resort-sanya",
+    "name": "三亚亚龙湾度假村",
+    "description": "五星级海景度假村，私人沙滩 + 无边泳池 + 儿童乐园。",
+    "link": "/services/hotels",
+    "logo": "https://placehold.co/32x32/ff5722/ffffff?text=🏨",
+    "rating": 4.8,
+    "tags": ["度假村", "海景房", "亲子"],
+    "primaryCategory": "Hotels",
+    "subcategory": "ResortHotels"
+  },
+  {
+    "key": "hotels-boutique-lijiang",
+    "name": "丽江古城精品客栈",
+    "description": "古城内纳西风情客栈，庭院花园 + 传统建筑 + 文化体验。",
+    "link": "/services/hotels",
+    "logo": "https://placehold.co/32x32/795548/ffffff?text=🏛️",
+    "rating": 4.6,
+    "tags": ["精品酒店", "古城", "文化"],
+    "primaryCategory": "Hotels",
+    "subcategory": "BoutiqueHotels"
+  },
+  {
+    "key": "hotels-business-shanghai",
+    "name": "上海外滩商务酒店",
+    "description": "陆家嘴金融区核心，会议设施齐全 + 江景客房 + 行政酒廊。",
+    "link": "/services/hotels",
+    "logo": "https://placehold.co/32x32/607d8b/ffffff?text=🏢",
+    "rating": 4.5,
+    "tags": ["商务酒店", "江景", "会议"],
+    "primaryCategory": "Hotels",
+    "subcategory": "BusinessHotels"
+  },
+  {
+    "key": "hotels-luxury-beijing",
+    "name": "北京王府井豪华酒店",
+    "description": "故宫附近奢华酒店，米其林餐厅 + SPA中心 + 管家服务。",
+    "link": "/services/hotels",
+    "logo": "https://placehold.co/32x32/9c27b0/ffffff?text=👑",
+    "rating": 4.9,
+    "tags": ["豪华酒店", "米其林", "管家服务"],
+    "primaryCategory": "Hotels",
+    "subcategory": "LuxuryHotels"
+  },
+  {
+    "key": "hotels-homestay-yangshuo",
+    "name": "阳朔山水民宿",
+    "description": "漓江边特色民宿，山景阳台 + 农家美食 + 竹筏体验。",
+    "link": "/services/hotels",
+    "logo": "https://placehold.co/32x32/4caf50/ffffff?text=🏠",
+    "rating": 4.4,
+    "tags": ["民宿", "山景", "农家体验"],
+    "primaryCategory": "Hotels",
+    "subcategory": "Homestays"
+  },
+  {
+    "key": "hotels-unique-ice-harbin",
+    "name": "哈尔滨冰雪主题酒店",
+    "description": "冰雪大世界旁特色酒店，冰雕装饰 + 温泉SPA + 东北美食。",
+    "link": "/services/hotels",
+    "logo": "https://placehold.co/32x32/03a9f4/ffffff?text=❄️",
+    "rating": 4.3,
+    "tags": ["主题酒店", "冰雪", "温泉"],
+    "primaryCategory": "Hotels",
+    "subcategory": "UniqueStays"
+  }
+]

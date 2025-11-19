@@ -32,7 +32,6 @@ import {
   GraduationCap,
   Shield,
   BellRing,
-  Images,
   SquarePen,
   Code,
   Mic,
@@ -41,7 +40,35 @@ import {
   Gauge,
   Home,
   Server,
-  Boxes
+  Boxes,
+  MapPin,
+  Plane,
+  Hotel,
+  Car,
+  Ship,
+  Mountain,
+  Palmtree,
+  Compass,
+  Globe,
+  Briefcase,
+  Heart,
+  Users,
+  CreditCard,
+  Umbrella,
+  FileText as PassportIcon,
+  Luggage,
+  Camera as CameraIcon,
+  Utensils,
+  Coffee,
+  Sparkles,
+  Crown,
+  Building,
+  Waves,
+  TreePine,
+  Sun,
+  Snowflake,
+  Gift,
+  PartyPopper
 } from 'lucide-react';
 import { getMessages } from '@/src/i18n'; // i18n helper，与原 getNavSections 相同来源
 export const iconMap = {
@@ -87,7 +114,36 @@ export const iconMap = {
   'thumbs-up': ThumbsUp,
   gauge: Gauge,
   server: Server,
-  boxes: Boxes
+  boxes: Boxes,
+  // 旅游相关图标
+  'map-pin': MapPin,
+  plane: Plane,
+  hotel: Hotel,
+  car: Car,
+  ship: Ship,
+  mountain: Mountain,
+  palmtree: Palmtree,
+  compass: Compass,
+  globe: Globe,
+  briefcase: Briefcase,
+  heart: Heart,
+  users: Users,
+  'credit-card': CreditCard,
+  umbrella: Umbrella,
+  passport: PassportIcon,
+  luggage: Luggage,
+  'camera-icon': CameraIcon,
+  utensils: Utensils,
+  coffee: Coffee,
+  sparkles: Sparkles,
+  crown: Crown,
+  building: Building,
+  waves: Waves,
+  'tree-pine': TreePine,
+  sun: Sun,
+  snowflake: Snowflake,
+  gift: Gift,
+  'party-popper': PartyPopper
 };
 export type IconKey = keyof typeof iconMap;
 export interface NavigationItem {
@@ -113,13 +169,13 @@ export const staticNavigation = [
       {
         title: 'Categories',
         items: [
-          { href: `/categories/chat-tools`, icon: 'bot' as IconKey },
-          { href: `/categories/image-generation`, icon: 'images' as IconKey },
-          { href: `/categories/writing`, icon: 'pen-line' as IconKey },
-          { href: `/categories/code-assistant`, icon: 'code' as IconKey },
-          { href: `/categories/audio-voice`, icon: 'mic' as IconKey },
-          { href: `/categories/data-insights`, icon: 'line-chart' as IconKey },
-          { href: `/categories/automation`, icon: 'zap' as IconKey }
+          { href: `/categories/domestic-travel`, icon: 'map-pin' as IconKey },
+          { href: `/categories/outbound-travel`, icon: 'globe' as IconKey },
+          { href: `/categories/hotels`, icon: 'hotel' as IconKey },
+          { href: `/categories/flights`, icon: 'plane' as IconKey },
+          { href: `/categories/local-experiences`, icon: 'camera' as IconKey },
+          { href: `/categories/cruise-travel`, icon: 'ship' as IconKey },
+          { href: `/categories/custom-travel`, icon: 'heart' as IconKey }
         ]
       },
       {
@@ -127,7 +183,7 @@ export const staticNavigation = [
         items: [
           { href: `/trending/now`, icon: 'trending-up' as IconKey },
           { href: `/trending/top-rated`, icon: 'trophy' as IconKey },
-          { href: `/trending/rising`, icon: 'rocket' as IconKey },
+          { href: `/trending/rising`, icon: 'sparkles' as IconKey },
           { href: `/trending/most-searched`, icon: 'search' as IconKey }
         ]
       },
@@ -135,40 +191,40 @@ export const staticNavigation = [
         title: 'Featured',
         items: [
           { href: `/featured/editors-picks`, icon: 'bookmark' as IconKey },
-          { href: `/featured/new-launches`, icon: 'calendar-days' as IconKey },
+          { href: `/featured/new-launches`, icon: 'compass' as IconKey },
           { href: `/featured/community-favorites`, icon: 'thumbs-up' as IconKey },
-          { href: `/featured/weekly-highlights`, icon: 'bell' as IconKey }
+          { href: `/featured/weekly-highlights`, icon: 'gift' as IconKey }
         ]
       }
     ]
   },
   {
-    trigger: 'MCP',
+    trigger: 'Services',
     groups: [
       {
-        title: 'Categories',
+        title: 'Travel Services',
         items: [
-          { href: `/mcp/categories/design`, icon: 'images' as IconKey },
-          { href: `/mcp/categories/testing`, icon: 'gauge' as IconKey },
-          { href: `/mcp/categories/code-analysis`, icon: 'bar-chart' as IconKey },
-          { href: `/mcp/categories/ui-components`, icon: 'layout-dashboard' as IconKey },
-          { href: `/mcp/categories/scraping`, icon: 'search' as IconKey },
-          { href: `/mcp/categories/devtools`, icon: 'tool' as IconKey }
+          { href: `/services/visa`, icon: 'passport' as IconKey },
+          { href: `/services/insurance`, icon: 'umbrella' as IconKey },
+          { href: `/services/car-rental`, icon: 'car' as IconKey },
+          { href: `/services/transfers`, icon: 'luggage' as IconKey },
+          { href: `/services/guides`, icon: 'users' as IconKey },
+          { href: `/services/concierge`, icon: 'crown' as IconKey }
         ]
       },
       {
-        title: 'Integrations',
+        title: 'Business Solutions',
         items: [
-          { href: `/mcp/integrations/automation`, icon: 'zap' as IconKey },
-          { href: `/mcp/integrations/scraping`, icon: 'camera' as IconKey },
-          { href: `/mcp/integrations/design`, icon: 'pen-line' as IconKey }
+          { href: `/services/corporate`, icon: 'briefcase' as IconKey },
+          { href: `/services/groups`, icon: 'users' as IconKey },
+          { href: `/services/events`, icon: 'calendar' as IconKey }
         ]
       },
       {
-        title: 'Guides',
+        title: 'Support',
         items: [
-          { href: `/blog/guides?tag=mcp`, icon: 'book-open' as IconKey },
-          { href: `/discussion/resources?tag=mcp`, icon: 'folder' as IconKey }
+          { href: `/services/help`, icon: 'book-open' as IconKey },
+          { href: `/services/contact`, icon: 'message-circle' as IconKey }
         ]
       }
     ]
@@ -177,24 +233,19 @@ export const staticNavigation = [
     trigger: 'Blog',
     groups: [
       {
-        title: 'Articles',
+        title: 'Travel Guides',
         items: [
-          { href: `/blog/articles`, icon: 'file-text' as IconKey },
-          { href: `/blog/guides`, icon: 'book-open' as IconKey }
+          { href: `/blog/articles`, icon: 'map-pin' as IconKey },
+          { href: `/blog/tutorials`, icon: 'book-open' as IconKey },
+          { href: `/blog/guides`, icon: 'book-open' as IconKey },
+          { href: `/blog/case-studies`, icon: 'book-open' as IconKey }
         ]
       },
       {
-        title: 'Tutorials',
+        title: 'Experiences',
         items: [
-          { href: `/blog/tutorials`, icon: 'book' as IconKey },
-          { href: `/blog/case-studies`, icon: 'pie-chart' as IconKey }
-        ]
-      },
-      {
-        title: 'Updates',
-        items: [
-          { href: `/blog/updates`, icon: 'history' as IconKey },
-          { href: `/blog/changelog`, icon: 'activity' as IconKey }
+          { href: `/blog/changelog`, icon: 'book' as IconKey },
+          { href: `/blog/updates`, icon: 'star' as IconKey }
         ]
       }
     ]
@@ -203,50 +254,40 @@ export const staticNavigation = [
     trigger: 'News',
     groups: [
       {
-        title: 'AI Trends',
+        title: 'Travel Trends',
         items: [
           { href: `/news/trends`, icon: 'bar-chart' as IconKey },
-          { href: `/news/opinion`, icon: 'newspaper' as IconKey }
+          { href: `/news/releases`, icon: 'line-chart' as IconKey },
+          { href: `/news/opinion`, icon: 'line-chart' as IconKey }
         ]
       },
       {
-        title: 'Releases',
+        title: 'Industry News',
         items: [
-          { href: `/news/releases`, icon: 'zap' as IconKey },
-          { href: `/news/changelog`, icon: 'calendar' as IconKey }
-        ]
-      },
-      {
-        title: 'Events',
-        items: [
-          { href: `/news/events`, icon: 'clock' as IconKey },
-          { href: `/news/webinars`, icon: 'megaphone' as IconKey }
+          { href: `/news/events`, icon: 'newspaper' as IconKey },
+          { href: `/news/webinars`, icon: 'bell' as IconKey },
+          { href: `/news/changelog`, icon: 'bell' as IconKey }
         ]
       }
     ]
   },
   {
-    trigger: 'Discussion',
+    trigger: 'Community',
     groups: [
       {
-        title: 'General Discussion',
+        title: 'Discussion',
         items: [
           { href: `/discussion/general`, icon: 'message-circle' as IconKey },
+          { href: `/discussion/tools`, icon: 'message-square' as IconKey },
+          { href: `/discussion/showcase`, icon: 'message-square' as IconKey },
           { href: `/discussion/feedback`, icon: 'message-square' as IconKey }
         ]
       },
       {
-        title: 'Tool Recommendations',
+        title: 'Sharing',
         items: [
-          { href: `/discussion/tools`, icon: 'tool' as IconKey },
-          { href: `/discussion/showcase`, icon: 'camera' as IconKey }
-        ]
-      },
-      {
-        title: 'Tutorials',
-        items: [
-          { href: `/discussion/tutorials`, icon: 'graduation-cap' as IconKey },
-          { href: `/discussion/resources`, icon: 'folder' as IconKey }
+          { href: `/discussion/tutorials`, icon: 'thumbs-up' as IconKey },
+          { href: `/discussion/resources`, icon: 'camera-icon' as IconKey }
         ]
       }
     ]
@@ -258,14 +299,14 @@ export const staticNavigation = [
         title: 'Dashboard',
         items: [
           { href: `/account`, icon: 'layout-dashboard' as IconKey },
-          { href: `/account/activity`, icon: 'gauge' as IconKey }
+          { href: `/account/activity`, icon: 'calendar' as IconKey }
         ]
       },
       {
         title: 'Profile',
         items: [
           { href: `/profile`, icon: 'user' as IconKey },
-          { href: `/profile/security`, icon: 'shield' as IconKey }
+          { href: `/profile/security`, icon: 'heart' as IconKey }
         ]
       },
       {

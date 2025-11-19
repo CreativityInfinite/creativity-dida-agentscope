@@ -35,7 +35,7 @@ export default function MostSearchedPage() {
     return [...ALL_TOOLS]
       .map((tool) => ({
         ...tool,
-        searchCount: Math.floor((tool.rating ?? 0) * 100 * multiplier + Math.random() * 500)
+        searchCount: Math.floor((tool.rating ?? 0) * 100 * multiplier + ((tool.key?.length || 0) % 500))
       }))
       .sort((a, b) => b.searchCount - a.searchCount)
       .slice(0, 12);

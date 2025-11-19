@@ -27,8 +27,9 @@ export default function TrendingNowPage() {
   const trendingNow = React.useMemo(() => {
     return [...ALL_TOOLS]
       .sort((a, b) => {
-        const scoreA = (b.rating ?? 0) * 0.6 + Math.random() * 0.4;
-        const scoreB = (a.rating ?? 0) * 0.6 + Math.random() * 0.4;
+        // 使用稳定的排序避免水合错误
+        const scoreA = (b.rating ?? 0) * 0.6 + ((b.key?.length || 0) % 100) * 0.004;
+        const scoreB = (a.rating ?? 0) * 0.6 + ((a.key?.length || 0) % 100) * 0.004;
         return scoreB - scoreA;
       })
       .slice(0, 12);

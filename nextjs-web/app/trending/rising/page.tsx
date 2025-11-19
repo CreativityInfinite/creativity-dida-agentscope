@@ -32,7 +32,7 @@ export default function RisingPage() {
     return [...ALL_TOOLS]
       .map((tool) => ({
         ...tool,
-        growthScore: (tool.rating ?? 0) * 0.5 + Math.random() * 50
+        growthScore: (tool.rating ?? 0) * 0.5 + ((tool.key?.length || 0) % 50)
       }))
       .sort((a, b) => b.growthScore - a.growthScore)
       .slice(0, 12);

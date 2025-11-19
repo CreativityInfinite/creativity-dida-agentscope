@@ -19,8 +19,8 @@ import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTi
 
 export default function CategoryViewAllPage({ params }: { params: Promise<{ key: string }> }) {
   const resolvedParams = React.use(params);
-  const key = resolvedParams?.key || 'image-generation';
-  const primary: PrimaryCategoryKey = ROUTE_TO_PRIMARY[key] || 'ImageGeneration';
+  const key = resolvedParams?.key || 'domestic-travel';
+  const primary: PrimaryCategoryKey = ROUTE_TO_PRIMARY[key] || 'DomesticTravel';
   const tools = DATA_BY_PRIMARY[primary] || [];
 
   const searchParams = useSearchParams();
@@ -114,7 +114,7 @@ export default function CategoryViewAllPage({ params }: { params: Promise<{ key:
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 lg:pt-6 pb-6 sm:pb-8">
         <div className="mt-2 sm:mt-3">
           <h1 className="text-xl sm:text-3xl lg:text-4xl font-semibold tracking-tight">{sub ? `${sub}` : categoryDisplayName}</h1>
-          <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-3xl">「{sub || categoryDisplayName}」全部工具列表，支持评分阈值筛选与快速浏览。</p>
+          <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-3xl">「{sub || categoryDisplayName}」精选旅游服务，支持评分阈值筛选与快速浏览。</p>
         </div>
       </section>
 
@@ -125,7 +125,7 @@ export default function CategoryViewAllPage({ params }: { params: Promise<{ key:
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary" />
             <input
               type="text"
-              placeholder="搜索工具名称、描述或标签..."
+              placeholder="搜索旅游服务名称、描述或标签..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-lg border border-primary/30 bg-primary/5 hover:bg-primary/10 focus:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/50 transition-colors"
@@ -192,10 +192,10 @@ export default function CategoryViewAllPage({ params }: { params: Promise<{ key:
               {/* 热门工具 */}
               {topTools.length > 0 && (
                 <div className="pt-3 sm:pt-4 border-t">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Flame className="h-4 w-4 text-orange-500" />
-                    <h3 className="text-sm font-semibold">热门工具</h3>
-                  </div>
+                <div className="flex items-center gap-2 mb-3">
+                  <Flame className="h-4 w-4 text-orange-500" />
+                  <h3 className="text-sm font-semibold">热门服务</h3>
+                </div>
                   <div className="space-y-2">
                     {topTools.map((tool, idx) => (
                       <Link
@@ -222,7 +222,7 @@ export default function CategoryViewAllPage({ params }: { params: Promise<{ key:
                 </div>
                 <div className="space-y-2 text-xs text-muted-foreground">
                   <div className="flex justify-between">
-                    <span>总工具数：</span>
+                    <span>总服务数：</span>
                     <span className="font-semibold text-foreground">{list.length}</span>
                   </div>
                   <div className="flex justify-between">
@@ -262,12 +262,12 @@ export default function CategoryViewAllPage({ params }: { params: Promise<{ key:
             <div className="mb-4 sm:mb-6 flex items-center justify-between">
               <div>
                 <h2 className="text-sm sm:text-base font-semibold text-foreground">
-                  找到 <span className="text-primary">{filtered.length}</span> 个工具
+                  找到 <span className="text-primary">{filtered.length}</span> 个旅游服务
                 </h2>
                 <p className="text-xs text-muted-foreground mt-1">
                   {minRating > 0 && `评分 ≥ ${minRating}.0 · `}
                   {searchQuery && `搜索: "${searchQuery}" · `}
-                  {selectedTags.length > 0 && `标签: ${selectedTags.join(', ')} · `}共 {list.length} 个工具
+                  {selectedTags.length > 0 && `标签: ${selectedTags.join(', ')} · `}共 {list.length} 个旅游服务
                 </p>
               </div>
             </div>
@@ -280,8 +280,8 @@ export default function CategoryViewAllPage({ params }: { params: Promise<{ key:
                 </EmptyMedia>
                 <EmptyContent>
                   <EmptyHeader>
-                    <EmptyTitle>暂无符合条件的工具</EmptyTitle>
-                    <EmptyDescription>{searchQuery || minRating > 0 || selectedTags.length > 0 ? '试试调整搜索条件或筛选' : '该分类暂无工具'}</EmptyDescription>
+                    <EmptyTitle>暂无符合条件的旅游服务</EmptyTitle>
+                    <EmptyDescription>{searchQuery || minRating > 0 || selectedTags.length > 0 ? '试试调整搜索条件或筛选' : '该分类暂无旅游服务'}</EmptyDescription>
                   </EmptyHeader>
                 </EmptyContent>
               </Empty>

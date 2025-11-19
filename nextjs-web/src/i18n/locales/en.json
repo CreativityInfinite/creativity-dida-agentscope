@@ -1,95 +1,117 @@
 {
-  "brand": "Creativity Hunt",
+  "brand": "AIDA Travel",
   "hero": {
-    "title": "Discover the best AI tools",
-    "subtitle": "Explore curated AI tools to boost your productivity and creativity"
+    "title": "AI-Driven Travel Platform",
+    "subtitle": "Describe your travel needs and AIDA instantly matches you with the best travel products and services"
   },
   "search": {
-    "placeholder": "Describe your need, e.g. \"AI to generate product posters\""
+    "placeholder": "Describe your travel needs, e.g. \"5-day family trip to Sanya\""
   },
   "cta": {
-    "try": "Try",
+    "try": "Book Now",
     "search": "Search",
     "explore": "Start exploring",
-    "submit": "Submit a tool",
-    "trends": "View trends"
+    "submit": "List Product",
+    "trends": "View Popular"
   },
   "labels": {
-    "hotTags": "Hot tags:",
-    "hotTagsList": ["Image Generation", "Text Writing", "Chat Tools", "Code Assistant", "Voice & Video", "Data Insights", "Automation"],
+    "hotTags": "Popular Destinations:",
+    "hotTagsList": ["Domestic Travel", "International Travel", "Hotels", "Flights", "Local Experiences", "Cruises", "Custom Travel"],
     "primaryCategories": {
-      "ImageGeneration": "Image Generation",
-      "TextWriting": "Text Writing",
-      "ChatTools": "Chat Tools",
-      "CodeAssistant": "Code Assistant",
-      "VoiceVideo": "Voice & Video",
-      "DataInsights": "Data Insights",
-      "Automation": "Automation",
+      "DomesticTravel": "Domestic Travel",
+      "OutboundTravel": "International Travel",
+      "Hotels": "Hotels",
+      "Flights": "Flights",
+      "LocalExperiences": "Local Experiences",
+      "CruiseTravel": "Cruises",
+      "CustomTravel": "Custom Travel",
       "Others": "Others"
     },
     "subcategories": {
-      "ImageGeneration": {
-        "CommonImageTools": "Common Image Tools",
-        "ImageIllustration": "Image & Illustration",
-        "BackgroundRemoval": "Background Removal",
-        "ObjectRemoval": "Object Removal",
-        "ImageUpscaling": "Image Upscaling",
-        "ImageEnhancement": "Image Enhancement",
-        "ProductImages": "Product Images",
-        "Model3DGeneration": "3D Model Generation"
+      "DomesticTravel": {
+        "CityBreaks": "City Breaks",
+        "ScenicSpots": "Scenic Spots",
+        "CulturalTours": "Cultural Tours",
+        "NaturalLandscapes": "Natural Landscapes",
+        "ThemeParks": "Theme Parks",
+        "HotSprings": "Hot Springs",
+        "BeachResorts": "Beach Resorts",
+        "MountainRetreat": "Mountain Retreat"
       },
-      "TextWriting": {
-        "LongFormWriting": "Long-form Writing",
-        "WritingRewriting": "Writing & Rewriting",
-        "GrammarCheck": "Grammar Check",
-        "NotesDocuments": "Notes & Documents"
+      "OutboundTravel": {
+        "PopularDestinations": "Popular Destinations",
+        "EuropeTravel": "Europe Travel",
+        "AsiaTravel": "Asia Travel",
+        "AmericaTravel": "America Travel",
+        "AfricaTravel": "Africa Travel",
+        "OceaniaTravel": "Oceania Travel",
+        "IslandGetaways": "Island Getaways",
+        "CulturalJourneys": "Cultural Journeys"
       },
-      "ChatTools": {
-        "GeneralAssistant": "General Assistant",
-        "OfficeAssistant": "Office Assistant",
-        "CharacterChat": "Character Chat",
-        "Companion": "Companion",
-        "GeneralChat": "General Chat"
+      "Hotels": {
+        "LuxuryHotels": "Luxury Hotels",
+        "BusinessHotels": "Business Hotels",
+        "BoutiqueHotels": "Boutique Hotels",
+        "ResortHotels": "Resort Hotels",
+        "BudgetHotels": "Budget Hotels",
+        "Homestays": "Homestays",
+        "Apartments": "Apartments",
+        "UniqueStays": "Unique Stays"
       },
-      "CodeAssistant": {
-        "CodeCompletion": "Code Completion",
-        "AIEditor": "AI Editor",
-        "IDEAssistant": "IDE Assistant",
-        "TeamPrivacy": "Team & Privacy",
-        "CloudAssistant": "Cloud Assistant"
+      "Flights": {
+        "DomesticFlights": "Domestic Flights",
+        "InternationalFlights": "International Flights",
+        "LowCostCarriers": "Low-Cost Carriers",
+        "BusinessClass": "Business Class",
+        "FirstClass": "First Class",
+        "CharterFlights": "Charter Flights",
+        "FlightDeals": "Flight Deals",
+        "FlightPackages": "Flight Packages"
       },
-      "VoiceVideo": {
-        "TextToSpeech": "Text-to-Speech",
-        "TextBasedEditing": "Text-based Editing",
-        "DigitalAvatar": "Digital Avatar",
-        "AudioEnhancement": "Audio Enhancement",
-        "TextToVideo": "Text-to-Video"
+      "LocalExperiences": {
+        "SightseeingTours": "Sightseeing Tours",
+        "CulturalExperiences": "Cultural Experiences",
+        "AdventureSports": "Adventure Sports",
+        "FoodTours": "Food Tours",
+        "ShoppingTours": "Shopping Tours",
+        "NightlifeTours": "Nightlife Tours",
+        "WellnessRetreats": "Wellness Retreats",
+        "FamilyActivities": "Family Activities"
       },
-      "DataInsights": {
-        "BusinessIntelligence": "Business Intelligence",
-        "DataNotebook": "Data Notebook",
-        "DataAIPlatform": "Data/AI Platform"
+      "CruiseTravel": {
+        "OceanCruises": "Ocean Cruises",
+        "RiverCruises": "River Cruises",
+        "LuxuryCruises": "Luxury Cruises",
+        "FamilyCruises": "Family Cruises",
+        "ThemeCruises": "Theme Cruises",
+        "ExpeditionCruises": "Expedition Cruises",
+        "RegionalCruises": "Regional Cruises",
+        "WorldCruises": "World Cruises"
       },
-      "Automation": {
-        "WorkflowAutomation": "Workflow Automation",
-        "MeetingNotes": "Meeting Notes",
-        "TaskDocuments": "Task & Documents",
-        "DataAutomation": "Data Automation"
+      "CustomTravel": {
+        "PrivateTours": "Private Tours",
+        "GroupTravel": "Group Travel",
+        "HoneymoonPackages": "Honeymoon Packages",
+        "FamilyVacations": "Family Vacations",
+        "BusinessTravel": "Business Travel",
+        "LuxuryTravel": "Luxury Travel",
+        "AdventureTravel": "Adventure Travel",
+        "WellnessTravel": "Wellness Travel"
       },
       "Others": {
-        "ComprehensivePlatform": "Comprehensive Platform",
-        "SearchQA": "Search & QA",
-        "InferenceAPI": "Inference API",
-        "UIGeneration": "UI Generation"
+        "TravelInsurance": "Travel Insurance",
+        "VisaServices": "Visa Services",
+        "CarRentals": "Car Rentals",
+        "TravelGear": "Travel Gear"
       }
     }
   },
   "headings": {
-    "hotTools": "Popular AI Tools",
+    "hotTools": "Popular Travel Services",
     "explore": "Explore All Categories"
   },
   "ui": {
-    "scrollHint": "Scroll down to explore tools",
+    "scrollHint": "Scroll down to explore services",
     "all": "All",
     "searchPlaceholder": "Search tool names, descriptions or tags...",
     "noResultsSearch": "No matching tools found, try adjusting your search keywords",
@@ -123,8 +145,8 @@
       "privacy": "Privacy Policy"
     }
   },
-  "footerTagline": "Discover and search popular AI tools",
-  "footerCopyright": "© YEAR Creativity Hunt · All rights reserved",
+  "footerTagline": "Discover and book quality travel services",
+  "footerCopyright": "© YEAR AIDA Travel · All rights reserved",
   "footerMenuGroups": [
     {
       "title": "Products",
@@ -169,88 +191,89 @@
         {
           "title": "Categories",
           "items": [
-            { "title": "Chat Tools", "description": "Conversational AI and assistants" },
-            { "title": "Image Generation", "description": "Create images with AI" },
-            { "title": "Text Writing", "description": "AI writing and copy" },
-            { "title": "Code Assistant", "description": "Coding support and automation" },
-            { "title": "Audio & Voice", "description": "Speech and media tools" },
-            { "title": "Data Insights", "description": "Analytics and visualization" },
-            { "title": "Automation", "description": "Automate repetitive tasks" }
+            { "title": "Domestic Travel", "description": "Explore popular domestic destinations" },
+            { "title": "International Travel", "description": "Global travel destinations" },
+            { "title": "Hotels", "description": "Quality hotels and accommodations" },
+            { "title": "Flights", "description": "Domestic and international flights" },
+            { "title": "Local Experiences", "description": "Destination activities and experiences" },
+            { "title": "Cruises", "description": "Luxury cruise vacation experiences" },
+            { "title": "Custom Travel", "description": "Personalized travel planning" }
           ]
         },
         {
           "title": "Trending",
           "items": [
-            { "title": "Trending Now", "description": "Most popular this week" },
-            { "title": "Top Rated", "description": "Highest user ratings" },
-            { "title": "Rising Stars", "description": "Fast-growing tools" },
-            { "title": "Most Searched", "description": "Top search queries" }
+            { "title": "Popular Destinations", "description": "Most popular travel destinations" },
+            { "title": "Top Rated", "description": "Highest rated products" },
+            { "title": "Hot Deals", "description": "Limited time offers and deals" },
+            { "title": "Most Booked", "description": "Most booked travel products" }
           ]
         },
         {
           "title": "Featured",
           "items": [
-            { "title": "Editor's Picks", "description": "Curated recommendations" },
-            { "title": "New Launches", "description": "Latest releases" },
-            { "title": "Community Favorites", "description": "Loved by our users" },
-            { "title": "Weekly Highlights", "description": "Highlights of the week" }
+            { "title": "Editor's Recommendations", "description": "Professionally curated recommendations" },
+            { "title": "New Destinations", "description": "Newly discovered destinations" },
+            { "title": "Popular Packages", "description": "User favorite travel packages" },
+            { "title": "Seasonal Offers", "description": "Seasonal travel recommendations" }
           ]
         }
       ]
     },
     {
-      "trigger": "MCP",
+      "trigger": "Services",
       "groups": [
         {
-          "title": "Servers",
+          "title": "Travel Services",
           "items": [
-            { "title": "Design", "description": "Design systems, assets and components" },
-            { "title": "Testing", "description": "Browser automation and testing" },
-            { "title": "Code Analysis", "description": "Analyze codebases and repositories" },
-            { "title": "UI Components", "description": "UI component libraries and registries" },
-            { "title": "Scraping", "description": "Web scraping and site mapping" },
-            { "title": "DevTools", "description": "Developer tools for inspect and debug" }
+            { "title": "Visa Services", "description": "Professional visa processing" },
+            { "title": "Travel Insurance", "description": "Comprehensive travel protection" },
+            { "title": "Car Rentals", "description": "Global car rental booking" },
+            { "title": "Airport Transfers", "description": "Airport pickup and transfer services" },
+            { "title": "Tour Guides", "description": "Professional guides and escorts" },
+            { "title": "Concierge Service", "description": "Premium concierge and butler services" }
           ]
         },
         {
-          "title": "Integrations",
+          "title": "Business Solutions",
           "items": [
-            { "title": "Automation", "description": "Run workflows across tools" },
-            { "title": "Scraping", "description": "Collect web content at scale" },
-            { "title": "Design", "description": "Sync design resources" }
+            { "title": "Corporate Travel", "description": "Business travel management" },
+            { "title": "Group Travel", "description": "Group travel solutions" },
+            { "title": "Events & Meetings", "description": "Meeting and event planning" }
           ]
         },
         {
-          "title": "Guides",
+          "title": "Support",
           "items": [
-            { "title": "MCP Guides", "description": "Getting started and advanced usage" },
-            { "title": "MCP Resources", "description": "Reference and best practices" }
+            { "title": "Help Center", "description": "FAQs and user guides" },
+            { "title": "Contact Us", "description": "Customer support and consultation" }
           ]
         }
       ]
     },
+
     {
       "trigger": "Blog",
       "groups": [
         {
-          "title": "Articles",
+          "title": "Travel Guides",
           "items": [
-            { "title": "All Articles", "description": "In-depth posts and insights" },
-            { "title": "Guides", "description": "Step-by-step guides for beginners" }
+            { "title": "Destination Guides", "description": "Comprehensive destination travel guides" },
+            { "title": "Travel Tips", "description": "Practical travel tips and advice" }
           ]
         },
         {
-          "title": "Tutorials",
+          "title": "Experiences",
           "items": [
-            { "title": "Tutorials", "description": "Practical tutorials and walkthroughs" },
-            { "title": "Case Studies", "description": "Real-world examples and results" }
+            { "title": "Travel Stories", "description": "Real travel experience sharing" },
+            { "title": "User Reviews", "description": "Authentic user reviews and feedback" }
           ]
         },
         {
           "title": "Updates",
           "items": [
-            { "title": "Product Updates", "description": "Latest changes and improvements" },
-            { "title": "Changelog", "description": "Release notes and version history" }
+            { "title": "Travel News", "description": "Latest travel news and information" },
+            { "title": "Offers & Deals", "description": "Latest offers and promotional activities" }
           ]
         }
       ]
@@ -259,50 +282,50 @@
       "trigger": "News",
       "groups": [
         {
-          "title": "AI Trends",
+          "title": "Travel Trends",
           "items": [
-            { "title": "Market Trends", "description": "Industry analyses and reports" },
-            { "title": "Opinions", "description": "Editorials and commentary" }
+            { "title": "Market Trends", "description": "Travel industry trend analysis" },
+            { "title": "Data Insights", "description": "Travel data and market insights" }
           ]
         },
         {
-          "title": "Releases",
+          "title": "Industry News",
           "items": [
-            { "title": "New Tools", "description": "Announcements and launches" },
-            { "title": "Changelog", "description": "Release notes and updates" }
+            { "title": "Industry Updates", "description": "Latest travel industry updates" },
+            { "title": "Policy Updates", "description": "Travel policy and regulation updates" }
           ]
         },
         {
           "title": "Events",
           "items": [
-            { "title": "Conferences", "description": "Talks, meetups and conferences" },
-            { "title": "Webinars", "description": "Online sessions and demos" }
+            { "title": "Travel Exhibitions", "description": "Travel exhibitions and events" },
+            { "title": "Webinars", "description": "Travel-themed online seminars" }
           ]
         }
       ]
     },
     {
-      "trigger": "Discussion",
+      "trigger": "Community",
       "groups": [
         {
-          "title": "General Discussion",
+          "title": "Discussion",
           "items": [
-            { "title": "General Topics", "description": "Community-wide conversations" },
-            { "title": "Feedback", "description": "Suggestions and feature requests" }
+            { "title": "General Discussion", "description": "Free discussion on travel topics" },
+            { "title": "Feedback", "description": "Product suggestions and feedback" }
           ]
         },
         {
-          "title": "Tool Recommendations",
+          "title": "Sharing",
           "items": [
-            { "title": "Recommend Tools", "description": "Share handy tools you use" },
-            { "title": "Showcase", "description": "Present your creations" }
+            { "title": "Recommendations", "description": "Share your travel recommendations" },
+            { "title": "Photo Sharing", "description": "Share your travel photos" }
           ]
         },
         {
-          "title": "Tutorials",
+          "title": "Resources",
           "items": [
-            { "title": "Tutorials", "description": "Tips and how-tos" },
-            { "title": "Resources", "description": "Useful learning resources" }
+            { "title": "Travel Guides", "description": "User-contributed travel guides" },
+            { "title": "Useful Resources", "description": "Useful travel resources and tools" }
           ]
         }
       ]
@@ -313,22 +336,22 @@
         {
           "title": "Dashboard",
           "items": [
-            { "title": "Overview", "description": "Personal control panel" },
-            { "title": "Activity", "description": "Recent actions and logs" }
+            { "title": "Account Overview", "description": "Personal account dashboard" },
+            { "title": "My Bookings", "description": "View and manage your bookings" }
           ]
         },
         {
           "title": "Profile",
           "items": [
-            { "title": "Profile", "description": "Personal information settings" },
-            { "title": "Security", "description": "Password & 2FA settings" }
+            { "title": "Personal Info", "description": "Manage personal information" },
+            { "title": "Travel Preferences", "description": "Set personal travel preferences" }
           ]
         },
         {
           "title": "Settings",
           "items": [
-            { "title": "Preferences", "description": "Account preferences and options" },
-            { "title": "Notifications", "description": "Notification settings" }
+            { "title": "Account Settings", "description": "Account security and privacy settings" },
+            { "title": "Notifications", "description": "Manage push and email notifications" }
           ]
         }
       ]

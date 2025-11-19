@@ -18,6 +18,8 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
   const [hasAutoScrolledUp, setHasAutoScrolledUp] = useState(false);
   const [showScrollHint, setShowScrollHint] = useState(true);
   const [suppressAutoScroll, setSuppressAutoScroll] = useState(false);
+  const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
+  const [initialViewportHeight, setInitialViewportHeight] = useState(0);
 
   const prevYRef = useRef(0);
   const messages = getMessages(locale);
@@ -31,8 +33,8 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
     // 隐藏滚动提示
     setShowScrollHint(currentScrollY <= 100);
 
-    // 在程序化滚动期间，禁用自动吸附
-    if (suppressAutoScroll) {
+    // 在程序化滚动期间，或移动端键盘弹起时，禁用自动吸附
+    if (suppressAutoScroll || isKeyboardOpen) {
       return;
     }
 
@@ -84,6 +86,9 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
   }, [triggerDistance, autoScrollTarget, reverseScrollTarget, hasAutoScrolledDown, hasAutoScrolledUp, suppressAutoScroll]);
 
   useEffect(() => {
+    // 记录初始视口高度
+    setInitialViewportHeight(window.visualViewport?.height || window.innerHeight);
+    
     const onStart = (_e: Event) => setSuppressAutoScroll(true);
     const onEnd = (_e: Event) => {
       setSuppressAutoScroll(false);
@@ -91,16 +96,71 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
       setHasAutoScrolledUp(false);
     };
 
+    // 键盘弹起检测
+    const handleViewportChange = () => {
+      const currentHeight = window.visualViewport?.height || window.innerHeight;
+      const heightDifference = initialViewportHeight - currentHeight;
+      
+      // 如果高度减少超过150px，认为是键盘弹起
+      const keyboardIsOpen = heightDifference > 150;
+      setIsKeyboardOpen(keyboardIsOpen);
+      
+      // 键盘弹起时，暂时禁用自动滚动
+      if (keyboardIsOpen) {
+        setSuppressAutoScroll(true);
+      } else {
+        // 键盘收起后，延迟恢复自动滚动以避免布局变化引起的误触
+        setTimeout(() => {
+          setSuppressAutoScroll(false);
+        }, 300);
+      }
+    };
+
+    // 键盘事件监听
+    const onKeyboardOpen = () => {
+      setIsKeyboardOpen(true);
+      setSuppressAutoScroll(true);
+      console.log('[ScrollTrigger] 键盘弹起，禁用自动滚动');
+    };
+    
+    const onKeyboardClose = () => {
+      setIsKeyboardOpen(false);
+      console.log('[ScrollTrigger] 键盘收起，延迟恢复自动滚动');
+      // 延迟恢复自动滚动，避免布局变化引起的误触
+      setTimeout(() => {
+        setSuppressAutoScroll(false);
+        console.log('[ScrollTrigger] 已恢复自动滚动');
+      }, 500);
+    };
+
+    // 使用 visualViewport API（现代浏览器）或 resize 事件（兼容性）
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', handleViewportChange);
+    } else {
+      window.addEventListener('resize', handleViewportChange);
+    }
+
+    // 监听自定义键盘事件
+    window.addEventListener('keyboard:open', onKeyboardOpen as EventListener);
+    window.addEventListener('keyboard:close', onKeyboardClose as EventListener);
+    
     window.addEventListener('backToTop:start', onStart as EventListener);
     window.addEventListener('backToTop:end', onEnd as EventListener);
-
     window.addEventListener('scroll', handleScroll, { passive: true });
+    
     return () => {
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', handleViewportChange);
+      } else {
+        window.removeEventListener('resize', handleViewportChange);
+      }
+      window.removeEventListener('keyboard:open', onKeyboardOpen as EventListener);
+      window.removeEventListener('keyboard:close', onKeyboardClose as EventListener);
       window.removeEventListener('backToTop:start', onStart as EventListener);
       window.removeEventListener('backToTop:end', onEnd as EventListener);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll]);
+  }, [handleScroll, initialViewportHeight]);
 
   return (
     <>

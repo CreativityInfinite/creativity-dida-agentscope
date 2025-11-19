@@ -1,106 +1,128 @@
 {
-  "brand": "Creativity Hunt",
+  "brand": "AIDA Travel",
   "hero": {
-    "title": "用 AI，更快发现更好的工具",
-    "subtitle": "一句话描述你的需求，Creativity Hunt 即刻为你匹配最合适的 AI 工具与方案"
+    "title": "AI驱动的智能旅行分发平台",
+    "subtitle": "一句话描述你的旅行需求，AIDA 即刻为你匹配最优质的旅行产品与服务"
   },
   "search": {
-    "placeholder": "描述你的需求，如\"生成产品海报的 AI\""
+    "placeholder": "描述你的旅行需求，如\"三亚5日游亲子套餐\""
   },
   "cta": {
-    "try": "试用",
+    "try": "立即预订",
     "search": "搜索",
     "explore": "开始探索",
-    "submit": "提交工具",
-    "trends": "查看趋势"
+    "submit": "发布产品",
+    "trends": "查看热门"
   },
   "labels": {
-    "hotTags": "热门标签：",
-    "hotTagsList": ["图像生成", "文本写作", "聊天工具", "代码助手", "语音视频", "数据洞察", "自动化"],
+    "hotTags": "热门目的地：",
+    "hotTagsList": ["国内游", "出境游", "酒店住宿", "机票预订", "当地玩乐", "邮轮旅游", "定制旅行"],
     "primaryCategories": {
-      "ImageGeneration": "图像生成",
-      "TextWriting": "文本写作",
-      "ChatTools": "聊天工具",
-      "CodeAssistant": "代码助手",
-      "VoiceVideo": "语音视频",
-      "DataInsights": "数据洞察",
-      "Automation": "自动化",
+      "DomesticTravel": "国内游",
+      "OutboundTravel": "出境游",
+      "Hotels": "酒店住宿",
+      "Flights": "机票预订",
+      "LocalExperiences": "当地玩乐",
+      "CruiseTravel": "邮轮旅游",
+      "CustomTravel": "定制旅行",
       "Others": "其他"
     },
     "subcategories": {
-      "ImageGeneration": {
-        "CommonImageTools": "常用图像工具",
-        "ImageIllustration": "图片插画生成",
-        "BackgroundRemoval": "图片背景移除",
-        "ObjectRemoval": "图片物体抹除",
-        "ImageUpscaling": "图片无损放大",
-        "ImageEnhancement": "图片优化修复",
-        "ProductImages": "商品图生成",
-        "Model3DGeneration": "3D模型生成"
+      "DomesticTravel": {
+        "CityBreaks": "城市周边游",
+        "ScenicSpots": "风景名胜",
+        "CulturalTours": "文化古迹",
+        "NaturalLandscapes": "自然风光",
+        "ThemeParks": "主题乐园",
+        "HotSprings": "温泉度假",
+        "BeachResorts": "海滨度假",
+        "MountainRetreat": "山岳避暑"
       },
-      "TextWriting": {
-        "LongFormWriting": "长文生成",
-        "WritingRewriting": "写作与改写",
-        "GrammarCheck": "语法纠错",
-        "NotesDocuments": "笔记与文档"
+      "OutboundTravel": {
+        "PopularDestinations": "热门目的地",
+        "EuropeTravel": "欧洲游",
+        "AsiaTravel": "亚洲游",
+        "AmericaTravel": "美洲游",
+        "AfricaTravel": "非洲游",
+        "OceaniaTravel": "大洋洲游",
+        "IslandGetaways": "海岛度假",
+        "CulturalJourneys": "文化之旅"
       },
-      "ChatTools": {
-        "GeneralAssistant": "通用助手",
-        "OfficeAssistant": "办公助手",
-        "CharacterChat": "角色聊天",
-        "Companion": "陪伴",
-        "GeneralChat": "通用聊天"
+      "Hotels": {
+        "LuxuryHotels": "豪华酒店",
+        "BusinessHotels": "商务酒店",
+        "BoutiqueHotels": "精品酒店",
+        "ResortHotels": "度假酒店",
+        "BudgetHotels": "经济酒店",
+        "Homestays": "民宿客栈",
+        "Apartments": "公寓式酒店",
+        "UniqueStays": "特色住宿"
       },
-      "CodeAssistant": {
-        "CodeCompletion": "代码补全",
-        "AIEditor": "AI编辑器",
-        "IDEAssistant": "IDE助手",
-        "TeamPrivacy": "团队与隐私",
-        "CloudAssistant": "云端助手"
+      "Flights": {
+        "DomesticFlights": "国内航班",
+        "InternationalFlights": "国际航班",
+        "LowCostCarriers": "廉价航空",
+        "BusinessClass": "商务舱",
+        "FirstClass": "头等舱",
+        "CharterFlights": "包机服务",
+        "FlightDeals": "特价机票",
+        "FlightPackages": "机酒套餐"
       },
-      "VoiceVideo": {
-        "TextToSpeech": "TTS",
-        "TextBasedEditing": "文字剪辑",
-        "DigitalAvatar": "数字人",
-        "AudioEnhancement": "音频增强",
-        "TextToVideo": "文生视频"
+      "LocalExperiences": {
+        "SightseeingTours": "观光游览",
+        "CulturalExperiences": "文化体验",
+        "AdventureSports": "户外探险",
+        "FoodTours": "美食之旅",
+        "ShoppingTours": "购物观光",
+        "NightlifeTours": "夜生活",
+        "WellnessRetreats": "养生体验",
+        "FamilyActivities": "亲子活动"
       },
-      "DataInsights": {
-        "BusinessIntelligence": "商业智能",
-        "DataNotebook": "数据笔记本",
-        "DataAIPlatform": "数据/AI平台"
+      "CruiseTravel": {
+        "OceanCruises": "海洋邮轮",
+        "RiverCruises": "河轮游览",
+        "LuxuryCruises": "豪华邮轮",
+        "FamilyCruises": "家庭邮轮",
+        "ThemeCruises": "主题邮轮",
+        "ExpeditionCruises": "探险邮轮",
+        "RegionalCruises": "区域航线",
+        "WorldCruises": "环球航线"
       },
-      "Automation": {
-        "WorkflowAutomation": "自动化编排",
-        "MeetingNotes": "会议纪要",
-        "TaskDocuments": "任务文档",
-        "DataAutomation": "数据自动化"
+      "CustomTravel": {
+        "PrivateTours": "私人定制",
+        "GroupTravel": "团体旅行",
+        "HoneymoonPackages": "蜜月套餐",
+        "FamilyVacations": "家庭度假",
+        "BusinessTravel": "商务差旅",
+        "LuxuryTravel": "奢华旅行",
+        "AdventureTravel": "探险旅行",
+        "WellnessTravel": "康养旅行"
       },
       "Others": {
-        "ComprehensivePlatform": "综合平台",
-        "SearchQA": "检索问答",
-        "InferenceAPI": "推理API",
-        "UIGeneration": "UI生成"
+        "TravelInsurance": "旅行保险",
+        "VisaServices": "签证服务",
+        "CarRentals": "租车服务",
+        "TravelGear": "旅行装备"
       }
     }
   },
   "headings": {
-    "hotTools": "热门 AI 工具",
+    "hotTools": "热门旅游服务",
     "explore": "探索全部分类"
   },
   "ui": {
-    "scrollHint": "向下滚动探索工具",
+    "scrollHint": "向下滚动探索服务",
     "all": "全部",
-    "searchPlaceholder": "搜索工具名称、描述或标签...",
-    "noResultsSearch": "未找到匹配的工具，尝试调整搜索关键词",
+    "searchPlaceholder": "搜索旅游产品、目的地或服务...",
+    "noResultsSearch": "未找到匹配的旅游产品，尝试调整搜索关键词",
     "noResultsCategory": "暂无内容，切换其他二级分类试试"
   },
   "explore": {
     "title": "探索全部分类",
-    "subtitle": "发现优质 AI 工具与平台，按分类和用途快速定位",
-    "searchPlaceholder": "搜索工具名称、描述或标签...",
+    "subtitle": "发现优质旅游产品与服务，按分类和目的地快速定位",
+    "searchPlaceholder": "搜索旅游产品、目的地或服务...",
     "all": "全部",
-    "noResultsSearch": "未找到匹配的工具，尝试调整搜索关键词",
+    "noResultsSearch": "未找到匹配的旅游产品，尝试调整搜索关键词",
     "noResultsCategory": "暂无内容，切换其他二级分类试试"
   },
   "auth": {
@@ -123,8 +145,8 @@
       "privacy": "隐私政策"
     }
   },
-  "footerTagline": "发现和搜索热门 AI 工具",
-  "footerCopyright": "© YEAR Creativity Hunt · 保留所有权利",
+  "footerTagline": "发现和预订优质旅游服务",
+  "footerCopyright": "© YEAR AIDA Travel · 保留所有权利",
   "footerMenuGroups": [
     {
       "title": "产品",
@@ -169,62 +191,62 @@
         {
           "title": "分类",
           "items": [
-            { "title": "聊天工具", "description": "对话式 AI 和助手" },
-            { "title": "图像生成", "description": "使用 AI 创建图像" },
-            { "title": "文本写作", "description": "AI 写作和文案" },
-            { "title": "代码助手", "description": "编程支持和自动化" },
-            { "title": "语音视频", "description": "语音和媒体工具" },
-            { "title": "数据洞察", "description": "分析和可视化" },
-            { "title": "自动化", "description": "自动化重复任务" }
+            { "title": "国内游", "description": "探索国内热门目的地" },
+            { "title": "出境游", "description": "全球精选旅行目的地" },
+            { "title": "酒店住宿", "description": "优质酒店和民宿预订" },
+            { "title": "机票预订", "description": "国内外航班预订服务" },
+            { "title": "当地玩乐", "description": "目的地体验和活动" },
+            { "title": "邮轮旅游", "description": "豪华邮轮度假体验" },
+            { "title": "定制旅行", "description": "个性化旅行定制服务" }
           ]
         },
         {
           "title": "趋势",
           "items": [
-            { "title": "当前趋势", "description": "本周最受欢迎" },
-            { "title": "最高评分", "description": "用户评分最高" },
-            { "title": "新星崛起", "description": "快速增长的工具" },
-            { "title": "最多搜索", "description": "热门搜索查询" }
+            { "title": "热门目的地", "description": "当前最受欢迎的旅行地" },
+            { "title": "最高评分", "description": "用户评分最高的产品" },
+            { "title": "特价优惠", "description": "限时优惠和特价产品" },
+            { "title": "热门预订", "description": "最多用户预订的产品" }
           ]
         },
         {
           "title": "精选",
           "items": [
-            { "title": "编辑推荐", "description": "精心挑选的推荐" },
-            { "title": "新品发布", "description": "最新发布" },
-            { "title": "社区最爱", "description": "用户喜爱" },
-            { "title": "每周亮点", "description": "本周亮点" }
+            { "title": "编辑推荐", "description": "专业编辑精心推荐" },
+            { "title": "新兴目的地", "description": "新发现的旅行目的地" },
+            { "title": "热门套餐", "description": "用户喜爱的旅行套餐" },
+            { "title": "季节特色", "description": "应季旅行推荐" }
           ]
         }
       ]
     },
     {
-      "trigger": "MCP",
+      "trigger": "服务",
       "groups": [
         {
-          "title": "分类",
+          "title": "旅行服务",
           "items": [
-            { "title": "设计", "description": "设计系统、素材与组件" },
-            { "title": "测试", "description": "浏览器自动化与测试" },
-            { "title": "代码分析", "description": "分析代码库与仓库" },
-            { "title": "UI 组件", "description": "UI 组件库与注册表" },
-            { "title": "抓取", "description": "网页抓取与站点映射" },
-            { "title": "开发者工具", "description": "用于检查与调试的开发工具" }
+            { "title": "签证服务", "description": "专业签证办理服务" },
+            { "title": "旅行保险", "description": "全面的旅行保障" },
+            { "title": "租车服务", "description": "全球租车预订" },
+            { "title": "接送服务", "description": "机场接送和专车服务" },
+            { "title": "导游服务", "description": "专业导游和向导" },
+            { "title": "礼宾服务", "description": "高端礼宾和管家服务" }
           ]
         },
         {
-          "title": "集成",
+          "title": "商务解决方案",
           "items": [
-            { "title": "自动化", "description": "在不同工具间运行工作流" },
-            { "title": "抓取", "description": "大规模采集网页内容" },
-            { "title": "设计", "description": "同步设计资源" }
+            { "title": "企业差旅", "description": "企业商务旅行管理" },
+            { "title": "团体旅游", "description": "团体出行解决方案" },
+            { "title": "会议活动", "description": "会议和活动策划" }
           ]
         },
         {
-          "title": "指南",
+          "title": "支持",
           "items": [
-            { "title": "MCP 指南", "description": "快速入门与进阶用法" },
-            { "title": "MCP 资源", "description": "参考与最佳实践" }
+            { "title": "帮助中心", "description": "常见问题和使用指南" },
+            { "title": "联系我们", "description": "客服支持和咨询" }
           ]
         }
       ]
@@ -233,76 +255,76 @@
       "trigger": "博客",
       "groups": [
         {
-          "title": "文章",
+          "title": "旅行指南",
           "items": [
-            { "title": "所有文章", "description": "深度文章和见解" },
-            { "title": "指南", "description": "新手分步指南" }
+            { "title": "目的地指南", "description": "详细的目的地旅行攻略" },
+            { "title": "旅行贴士", "description": "实用的旅行技巧和建议" }
           ]
         },
         {
-          "title": "教程",
+          "title": "体验分享",
           "items": [
-            { "title": "教程", "description": "实用教程和演练" },
-            { "title": "案例研究", "description": "真实案例和结果" }
+            { "title": "旅行故事", "description": "真实的旅行体验分享" },
+            { "title": "用户评价", "description": "用户真实评价和反馈" }
           ]
         },
         {
           "title": "更新",
           "items": [
-            { "title": "产品更新", "description": "最新变化和改进" },
-            { "title": "更新日志", "description": "发布说明和版本历史" }
+            { "title": "旅游资讯", "description": "最新旅游新闻和资讯" },
+            { "title": "优惠信息", "description": "最新优惠和促销活动" }
           ]
         }
       ]
     },
     {
-      "trigger": "新闻",
+      "trigger": "资讯",
       "groups": [
         {
-          "title": "AI 趋势",
+          "title": "旅游趋势",
           "items": [
-            { "title": "市场趋势", "description": "行业分析和报告" },
-            { "title": "观点", "description": "社论和评论" }
+            { "title": "市场趋势", "description": "旅游行业趋势分析" },
+            { "title": "数据洞察", "description": "旅游数据和市场洞察" }
           ]
         },
         {
-          "title": "发布",
+          "title": "行业新闻",
           "items": [
-            { "title": "新工具", "description": "公告和发布" },
-            { "title": "更新日志", "description": "发布说明和更新" }
+            { "title": "行业动态", "description": "旅游行业最新动态" },
+            { "title": "政策更新", "description": "旅游政策和规定更新" }
           ]
         },
         {
           "title": "活动",
           "items": [
-            { "title": "会议", "description": "演讲、聚会和会议" },
-            { "title": "网络研讨会", "description": "在线会议和演示" }
+            { "title": "旅游展会", "description": "旅游展览和活动" },
+            { "title": "在线讲座", "description": "旅游主题在线讲座" }
           ]
         }
       ]
     },
     {
-      "trigger": "讨论",
+      "trigger": "社区",
       "groups": [
         {
-          "title": "一般讨论",
+          "title": "讨论",
           "items": [
-            { "title": "一般话题", "description": "社区范围的对话" },
-            { "title": "反馈", "description": "建议和功能请求" }
+            { "title": "综合讨论", "description": "旅游话题自由讨论" },
+            { "title": "意见反馈", "description": "产品建议和意见反馈" }
           ]
         },
         {
-          "title": "工具推荐",
+          "title": "分享",
           "items": [
-            { "title": "推荐工具", "description": "分享您使用的便利工具" },
-            { "title": "展示", "description": "展示您的创作" }
+            { "title": "推荐分享", "description": "分享您的旅行推荐" },
+            { "title": "照片分享", "description": "分享您的旅行照片" }
           ]
         },
         {
-          "title": "教程",
+          "title": "资源",
           "items": [
-            { "title": "教程", "description": "技巧和操作方法" },
-            { "title": "资源", "description": "有用的学习资源" }
+            { "title": "旅行攻略", "description": "用户贡献的旅行攻略" },
+            { "title": "实用资源", "description": "有用的旅行资源和工具" }
           ]
         }
       ]
@@ -313,22 +335,22 @@
         {
           "title": "仪表板",
           "items": [
-            { "title": "概览", "description": "个人控制面板" },
-            { "title": "活动", "description": "最近操作和日志" }
+            { "title": "账户概览", "description": "个人账户控制面板" },
+            { "title": "我的订单", "description": "查看和管理您的订单" }
           ]
         },
         {
           "title": "个人资料",
           "items": [
-            { "title": "个人资料", "description": "个人信息设置" },
-            { "title": "安全", "description": "密码和双因素认证设置" }
+            { "title": "个人信息", "description": "管理个人基本信息" },
+            { "title": "旅行偏好", "description": "设置个人旅行偏好" }
           ]
         },
         {
           "title": "设置",
           "items": [
-            { "title": "偏好设置", "description": "账户偏好和选项" },
-            { "title": "通知", "description": "通知设置" }
+            { "title": "账户设置", "description": "账户安全和隐私设置" },
+            { "title": "通知设置", "description": "管理推送和邮件通知" }
           ]
         }
       ]

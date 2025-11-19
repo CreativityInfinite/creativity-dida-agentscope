@@ -8,7 +8,7 @@ import { Loader2, Search, ArrowRight, Sparkles } from 'lucide-react';
 import { cn } from '@component/lib/utils';
 import { motion } from 'framer-motion';
 
-const searchSuggestions = ['生成产品海报的 AI', '视频剪辑工具', '代码自动补全', '语音转文字', '图片背景移除', 'PPT 自动生成'];
+const searchSuggestions = ['三亚5日游亲子套餐', '日本樱花季旅游', '欧洲深度游', '马尔代夫蜜月旅行', '西藏自驾游', '泰国海岛游'];
 
 export function SearchBar({ placeholder, compact = false, showButton = true }: { placeholder: string; compact?: boolean; showButton?: boolean }) {
   const router = useRouter();
@@ -17,7 +17,9 @@ export function SearchBar({ placeholder, compact = false, showButton = true }: {
   const [showSuggestions, setShowSuggestions] = React.useState(false);
   const [focused, setFocused] = React.useState(false);
   const [selectedIndex, setSelectedIndex] = React.useState(-1);
+  const [keyboardOpen, setKeyboardOpen] = React.useState(false);
   const timer = React.useRef<NodeJS.Timeout | null>(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   const submit = (q: string) => {
     const query = q.trim();
@@ -92,16 +94,27 @@ export function SearchBar({ placeholder, compact = false, showButton = true }: {
           onChange={onChange}
           placeholder={placeholder}
           onKeyDown={handleKeyDown}
+          ref={inputRef}
           onFocus={() => {
             if (value.length > 0) setShowSuggestions(true);
             setFocused(true);
+            setKeyboardOpen(true);
+
+            // 发送自定义事件通知其他组件键盘已弹起
+            window.dispatchEvent(new CustomEvent('keyboard:open'));
           }}
           onBlur={() => {
             setTimeout(() => {
               setShowSuggestions(false);
               setSelectedIndex(-1);
             }, 200);
-            setTimeout(() => setFocused(false), 150);
+            setTimeout(() => {
+              setFocused(false);
+              setKeyboardOpen(false);
+
+              // 发送自定义事件通知其他组件键盘已收起
+              window.dispatchEvent(new CustomEvent('keyboard:close'));
+            }, 150);
           }}
           className="pl-10 sm:pl-12 pr-12 sm:pr-14 lg:pr-16 h-12 sm:h-14 lg:h-16 text-base sm:text-lg rounded-lg sm:rounded-xl bg-background/80 backdrop-blur border border-border/50 focus:ring-2 focus:ring-ring focus:border-ring/50 transition-all"
         />

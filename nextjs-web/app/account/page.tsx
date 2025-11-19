@@ -55,8 +55,9 @@ export default function AccountPage() {
   const displayName = user.name || user.email || '用户';
   const userEmail = user.email || '';
   const avatar = (user as any).picture || (user as any).avatarUrl || `https://api.dicebear.com/7.x/avataaars/svg?seed=${userEmail}`;
-  const createdAt = (user as any).createdAt || new Date().toISOString();
-  const lastLoginAt = (user as any).lastLoginAt || new Date().toISOString();
+  // 使用固定的默认日期避免水合错误
+  const createdAt = (user as any).createdAt || '2024-01-01T00:00:00.000Z';
+  const lastLoginAt = (user as any).lastLoginAt || '2024-01-01T00:00:00.000Z';
 
   // 模拟用户统计数据
   const stats = {

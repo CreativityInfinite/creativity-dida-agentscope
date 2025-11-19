@@ -9,30 +9,28 @@ import { ToolCard } from '@component/ToolCard';
 import { useSearchParams } from 'next/navigation';
 import { getMessages } from '@/src/i18n/index';
 
-import imageGenerationData from '@/src/data/tools/image-generation.json';
-import textWritingData from '@/src/data/tools/text-writing.json';
-import chatToolsData from '@/src/data/tools/chat-tools.json';
-import codeAssistantData from '@/src/data/tools/code-assistant.json';
-import voiceVideoData from '@/src/data/tools/voice-video.json';
-import dataInsightsData from '@/src/data/tools/data-insights.json';
-import automationData from '@/src/data/tools/automation.json';
-import othersData from '@/src/data/tools/others.json';
+import domesticTravelData from '@/src/data/tools/domestic-travel.json';
+import outboundTravelData from '@/src/data/tools/outbound-travel.json';
+import hotelsData from '@/src/data/tools/hotels.json';
+import flightsData from '@/src/data/tools/flights.json';
+import localExperiencesData from '@/src/data/tools/local-experiences.json';
+import cruiseTravelData from '@/src/data/tools/cruise-travel.json';
+import customTravelData from '@/src/data/tools/custom-travel.json';
 
 import { PRIMARY_CATEGORIES, CATEGORY_ICONS, CATEGORY_COLORS, getCategoryDisplayName, getSubcategoryDisplayName, type PrimaryCategoryKey } from '@/src/constants/category.constant';
 import type { Tool } from '@/types/tool';
 import { Search, SearchX } from 'lucide-react';
 import { BackToTop } from '@/components/BackToTop';
 
-// 汇总所有工具数据
+// 汇总所有旅游服务数据
 const ALL_TOOLS_DATA = {
-  ImageGeneration: imageGenerationData as unknown as Tool[],
-  TextWriting: textWritingData as unknown as Tool[],
-  ChatTools: chatToolsData as unknown as Tool[],
-  CodeAssistant: codeAssistantData as unknown as Tool[],
-  VoiceVideo: voiceVideoData as unknown as Tool[],
-  DataInsights: dataInsightsData as unknown as Tool[],
-  Automation: automationData as unknown as Tool[],
-  Others: othersData as unknown as Tool[]
+  DomesticTravel: domesticTravelData as unknown as Tool[],
+  OutboundTravel: outboundTravelData as unknown as Tool[],
+  Hotels: hotelsData as unknown as Tool[],
+  Flights: flightsData as unknown as Tool[],
+  LocalExperiences: localExperiencesData as unknown as Tool[],
+  CruiseTravel: cruiseTravelData as unknown as Tool[],
+  CustomTravel: customTravelData as unknown as Tool[]
 };
 
 // 动态聚合二级分类：从数据中读取 subcategory
@@ -50,7 +48,7 @@ export default function ExplorePage() {
   const [locale, setLocale] = React.useState('zh-CN');
   const [messages, setMessages] = React.useState(getMessages('zh-CN'));
 
-  const [activeCategory, setActiveCategory] = React.useState<PrimaryCategoryKey>('ImageGeneration');
+  const [activeCategory, setActiveCategory] = React.useState<PrimaryCategoryKey>('DomesticTravel');
   const [activeSub, setActiveSub] = React.useState<string>('全部');
   const [searchQuery, setSearchQuery] = React.useState<string>('');
   const [isClient, setIsClient] = React.useState(false);

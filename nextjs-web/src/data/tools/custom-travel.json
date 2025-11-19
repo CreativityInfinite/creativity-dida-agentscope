@@ -1,0 +1,74 @@
+[
+  {
+    "key": "luxury-japan-tour",
+    "name": "日本奢华定制游",
+    "description": "私人定制的日本深度文化体验之旅，专属导游陪伴",
+    "logo": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/luxury-japan-tour",
+    "rating": 4.9,
+    "primaryCategory": "CustomTravel",
+    "subcategory": "LuxuryTravel",
+    "tags": ["私人定制", "奢华体验", "文化深度游", "专属导游"],
+    "features": ["7天6晚", "五星酒店", "私人导游", "米其林餐厅", "茶道体验", "专车接送"]
+  },
+  {
+    "key": "family-safari-africa",
+    "name": "非洲亲子野生动物园",
+    "description": "为家庭量身定制的非洲野生动物观察之旅",
+    "logo": "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/family-safari-africa",
+    "rating": 4.8,
+    "primaryCategory": "CustomTravel",
+    "subcategory": "FamilyTravel",
+    "tags": ["亲子旅游", "野生动物", "教育意义", "安全保障"],
+    "features": ["10天9晚", "专业向导", "儿童活动", "安全保障", "摄影指导", "文化体验"]
+  },
+  {
+    "key": "wellness-retreat-bali",
+    "name": "巴厘岛身心灵疗愈之旅",
+    "description": "在巴厘岛享受瑜伽、冥想和传统疗法的身心疗愈体验",
+    "logo": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/wellness-retreat-bali",
+    "rating": 4.7,
+    "primaryCategory": "CustomTravel",
+    "subcategory": "WellnessRetreat",
+    "tags": ["身心疗愈", "瑜伽冥想", "传统疗法", "私人教练"],
+    "features": ["5天4晚", "私人瑜伽", "传统按摩", "有机餐食", "冥想指导", "海滨别墅"]
+  },
+  {
+    "key": "adventure-nepal-trek",
+    "name": "尼泊尔喜马拉雅徒步探险",
+    "description": "专业向导带领的喜马拉雅山脉徒步探险定制之旅",
+    "logo": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/adventure-nepal-trek",
+    "rating": 4.6,
+    "primaryCategory": "CustomTravel",
+    "subcategory": "AdventureTravel",
+    "tags": ["徒步探险", "高山挑战", "专业装备", "安全保障"],
+    "features": ["14天13晚", "专业向导", "高山装备", "医疗保障", "当地文化", "摄影指导"]
+  },
+  {
+    "key": "cultural-india-immersion",
+    "name": "印度文化沉浸式体验",
+    "description": "深入印度本土文化，体验真正的印度生活方式",
+    "logo": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/cultural-india-immersion",
+    "rating": 4.5,
+    "primaryCategory": "CustomTravel",
+    "subcategory": "CulturalImmersion",
+    "tags": ["文化体验", "本土生活", "宗教探索", "手工艺学习"],
+    "features": ["12天11晚", "当地家庭", "宗教仪式", "手工艺坊", "传统美食", "文化导师"]
+  },
+  {
+    "key": "private-europe-tour",
+    "name": "欧洲私人订制游",
+    "description": "根据个人喜好定制的欧洲历史文化深度游",
+    "logo": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/private-europe-tour",
+    "rating": 4.8,
+    "primaryCategory": "CustomTravel",
+    "subcategory": "PersonalizedTours",
+    "tags": ["私人订制", "历史文化", "艺术鉴赏", "美食体验"],
+    "features": ["15天14晚", "私人导游", "博物馆专场", "米其林体验", "艺术工坊", "专车服务"]
+  }
+]

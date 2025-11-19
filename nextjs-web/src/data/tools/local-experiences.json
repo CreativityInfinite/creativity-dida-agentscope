@@ -1,0 +1,68 @@
+[
+  {
+    "key": "local-beijing-food-tour",
+    "name": "北京胡同美食游",
+    "description": "老北京胡同徒步 + 烤鸭品鉴 + 豆汁儿体验 + 传统小吃。",
+    "link": "/services/local-experiences",
+    "logo": "https://placehold.co/32x32/f44336/ffffff?text=🥟",
+    "rating": 4.6,
+    "tags": ["美食之旅", "胡同", "传统文化"],
+    "primaryCategory": "LocalExperiences",
+    "subcategory": "FoodTours"
+  },
+  {
+    "key": "local-guilin-bamboo-rafting",
+    "name": "桂林漓江竹筏漂流",
+    "description": "专业向导带领，竹筏漂流 + 山水摄影 + 渔鹰表演观赏。",
+    "link": "/services/local-experiences",
+    "logo": "https://placehold.co/32x32/4caf50/ffffff?text=🚣",
+    "rating": 4.7,
+    "tags": ["漂流", "摄影", "自然风光"],
+    "primaryCategory": "LocalExperiences",
+    "subcategory": "AdventureSports"
+  },
+  {
+    "key": "local-xian-cultural-experience",
+    "name": "西安文化沉浸体验",
+    "description": "兵马俑深度讲解 + 唐装体验 + 书法学习 + 古乐演出。",
+    "link": "/services/local-experiences",
+    "logo": "https://placehold.co/32x32/ff9800/ffffff?text=🏺",
+    "rating": 4.8,
+    "tags": ["文化体验", "历史", "唐装"],
+    "primaryCategory": "LocalExperiences",
+    "subcategory": "CulturalExperiences"
+  },
+  {
+    "key": "local-shanghai-night-tour",
+    "name": "上海外滩夜景游",
+    "description": "黄浦江游船 + 外滩观光 + 南京路购物 + 酒吧街体验。",
+    "link": "/services/local-experiences",
+    "logo": "https://placehold.co/32x32/2196f3/ffffff?text=🌃",
+    "rating": 4.5,
+    "tags": ["夜景", "游船", "购物"],
+    "primaryCategory": "LocalExperiences",
+    "subcategory": "NightlifeTours"
+  },
+  {
+    "key": "local-sanya-water-sports",
+    "name": "三亚水上运动套餐",
+    "description": "浮潜 + 摩托艇 + 香蕉船 + 海底漫步，全天水上乐园。",
+    "link": "/services/local-experiences",
+    "logo": "https://placehold.co/32x32/00bcd4/ffffff?text=🏄",
+    "rating": 4.4,
+    "tags": ["水上运动", "浮潜", "刺激"],
+    "primaryCategory": "LocalExperiences",
+    "subcategory": "AdventureSports"
+  },
+  {
+    "key": "local-chengdu-panda-family",
+    "name": "成都熊猫亲子游",
+    "description": "熊猫基地 + 熊猫饲养体验 + 川菜学习 + 变脸表演。",
+    "link": "/services/local-experiences",
+    "logo": "https://placehold.co/32x32/000000/ffffff?text=🐼",
+    "rating": 4.9,
+    "tags": ["亲子游", "熊猫", "川菜"],
+    "primaryCategory": "LocalExperiences",
+    "subcategory": "FamilyActivities"
+  }
+]

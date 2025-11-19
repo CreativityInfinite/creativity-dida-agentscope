@@ -1,0 +1,74 @@
+[
+  {
+    "key": "mediterranean-cruise",
+    "name": "地中海豪华邮轮",
+    "description": "探索欧洲最美海岸线，享受豪华邮轮度假体验",
+    "logo": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/mediterranean-cruise",
+    "rating": 4.8,
+    "primaryCategory": "CruiseTravel",
+    "subcategory": "OceanCruises",
+    "tags": ["豪华邮轮", "地中海", "多国游", "全包服务"],
+    "features": ["7天6晚", "多国港口", "豪华套房", "米其林餐厅", "娱乐表演", "免费WiFi"]
+  },
+  {
+    "key": "caribbean-cruise",
+    "name": "加勒比海家庭邮轮",
+    "description": "适合全家出游的加勒比海邮轮之旅，丰富的娱乐活动",
+    "logo": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/caribbean-cruise", 
+    "rating": 4.6,
+    "primaryCategory": "CruiseTravel",
+    "subcategory": "FamilyCruises",
+    "tags": ["家庭出游", "加勒比海", "水上乐园", "儿童俱乐部"],
+    "features": ["8天7晚", "私人海滩", "水上滑梯", "儿童看护", "免税购物", "多种餐厅"]
+  },
+  {
+    "key": "yangtze-river-cruise",
+    "name": "长江三峡游轮",
+    "description": "沿长江欣赏三峡美景，体验中华文化之旅",
+    "logo": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/yangtze-river-cruise",
+    "rating": 4.5,
+    "primaryCategory": "CruiseTravel",
+    "subcategory": "RiverCruises",
+    "tags": ["长江三峡", "文化之旅", "观光游轮", "中式服务"],
+    "features": ["4天3晚", "三峡大坝", "白帝城", "太极晨练", "中式美食", "专业导游"]
+  },
+  {
+    "key": "antarctica-expedition",
+    "name": "南极探险邮轮",
+    "description": "前往地球最后的净土，体验极地探险之旅",
+    "logo": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/antarctica-expedition",
+    "rating": 4.9,
+    "primaryCategory": "CruiseTravel",
+    "subcategory": "ExpeditionCruises",
+    "tags": ["南极探险", "极地动物", "科考体验", "摄影天堂"],
+    "features": ["12天11晚", "橡皮艇登陆", "专业向导", "极地装备", "科普讲座", "摄影指导"]
+  },
+  {
+    "key": "northern-lights-cruise",
+    "name": "北欧极光邮轮",
+    "description": "追寻神秘北极光，游览挪威峡湾美景",
+    "logo": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/northern-lights-cruise",
+    "rating": 4.7,
+    "primaryCategory": "CruiseTravel",
+    "subcategory": "ThemeCruises",
+    "tags": ["北极光", "挪威峡湾", "极地体验", "摄影主题"],
+    "features": ["10天9晚", "极光观测", "峡湾巡游", "萨米文化", "温泉体验", "专业摄影师"]
+  },
+  {
+    "key": "world-cruise",
+    "name": "世界环游邮轮",
+    "description": "108天环游世界，访问6大洲30个国家",
+    "logo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=400&fit=crop&crop=center",
+    "link": "https://example.com/world-cruise",
+    "rating": 4.8,
+    "primaryCategory": "CruiseTravel",
+    "subcategory": "WorldCruises",
+    "tags": ["环游世界", "长途邮轮", "多国文化", "奢华体验"],
+    "features": ["108天", "30个国家", "豪华套房", "专属管家", "文化讲座", "VIP服务"]
+  }
+]

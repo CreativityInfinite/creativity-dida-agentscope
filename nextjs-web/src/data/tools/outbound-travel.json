@@ -1,0 +1,68 @@
+[
+  {
+    "key": "outbound-travel-japan-sakura",
+    "name": "日本樱花季",
+    "description": "东京 + 京都 + 大阪，赏樱花、品美食、购物一站式体验。",
+    "link": "/services/outbound-travel",
+    "logo": "https://placehold.co/32x32/e91e63/ffffff?text=🌸",
+    "rating": 4.9,
+    "tags": ["樱花季", "文化体验", "美食"],
+    "primaryCategory": "OutboundTravel",
+    "subcategory": "AsiaTravel"
+  },
+  {
+    "key": "outbound-travel-thailand-islands",
+    "name": "泰国海岛游",
+    "description": "普吉岛 + 甲米 + 皮皮岛，阳光沙滩 + 浮潜 + SPA按摩。",
+    "link": "/services/outbound-travel",
+    "logo": "https://placehold.co/32x32/00bcd4/ffffff?text=🏝️",
+    "rating": 4.7,
+    "tags": ["海岛度假", "浮潜", "SPA"],
+    "primaryCategory": "OutboundTravel",
+    "subcategory": "IslandGetaways"
+  },
+  {
+    "key": "outbound-travel-europe-classic",
+    "name": "欧洲经典游",
+    "description": "法国 + 意大利 + 瑞士，巴黎铁塔 + 罗马斗兽场 + 阿尔卑斯山。",
+    "link": "/services/outbound-travel",
+    "logo": "https://placehold.co/32x32/3f51b5/ffffff?text=🇪🇺",
+    "rating": 4.8,
+    "tags": ["欧洲游", "文化古迹", "风景"],
+    "primaryCategory": "OutboundTravel",
+    "subcategory": "EuropeTravel"
+  },
+  {
+    "key": "outbound-travel-maldives-honeymoon",
+    "name": "马尔代夫蜜月",
+    "description": "水上别墅 + 无边泳池 + 私人海滩，浪漫蜜月首选。",
+    "link": "/services/outbound-travel",
+    "logo": "https://placehold.co/32x32/00acc1/ffffff?text=🏖️",
+    "rating": 4.9,
+    "tags": ["蜜月", "水上别墅", "浪漫"],
+    "primaryCategory": "OutboundTravel",
+    "subcategory": "IslandGetaways"
+  },
+  {
+    "key": "outbound-travel-dubai-luxury",
+    "name": "迪拜奢华游",
+    "description": "帆船酒店 + 哈利法塔 + 沙漠冲沙 + 黄金市集购物。",
+    "link": "/services/outbound-travel",
+    "logo": "https://placehold.co/32x32/ffc107/ffffff?text=🏜️",
+    "rating": 4.6,
+    "tags": ["奢华游", "购物", "沙漠"],
+    "primaryCategory": "OutboundTravel",
+    "subcategory": "PopularDestinations"
+  },
+  {
+    "key": "outbound-travel-singapore-family",
+    "name": "新加坡亲子游",
+    "description": "环球影城 + 圣淘沙 + 动物园 + 滨海湾花园，亲子乐园。",
+    "link": "/services/outbound-travel",
+    "logo": "https://placehold.co/32x32/009688/ffffff?text=🎢",
+    "rating": 4.5,
+    "tags": ["亲子游", "主题乐园", "动物园"],
+    "primaryCategory": "OutboundTravel",
+    "subcategory": "AsiaTravel"
+  }
+]

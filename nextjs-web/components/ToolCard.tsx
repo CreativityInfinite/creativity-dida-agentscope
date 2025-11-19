@@ -21,14 +21,13 @@ function getIconBgForTool(tool: Tool) {
   const primaryCategory = tool.primaryCategory as PrimaryCategoryKey;
   // 提升亮度（透明度约 20%）的调色板
   const palette = {
-    ImageGeneration: '#22d3ee33', // cyan
-    TextWriting: '#9333ea33', // violet
-    ChatTools: '#9333ea33', // violet
-    CodeAssistant: '#f59e0b33', // amber
-    VoiceVideo: '#3b82f633', // blue
-    DataInsights: '#10b98133', // emerald
-    Automation: '#1d4ed833', // indigo
-    Others: '#6b72801a' // gray
+    DomesticTravel: '#1d4ed833', // blue
+    OutboundTravel: '#9333ea33', // violet
+    Hotels: '#22d3ee33', // cyan
+    Flights: '#f59e0b33', // amber
+    LocalExperiences: '#ef444433', // red
+    CruiseTravel: '#0ea5e933', // sky blue
+    CustomTravel: '#ec489933' // pink
   };
   if (primaryCategory && palette[primaryCategory]) {
     return palette[primaryCategory];

@@ -109,6 +109,8 @@ export default function ToolDetailPage() {
 
   // 持久化模块显示设置
   React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const savedVisibility = localStorage.getItem('sidebar-modules-visibility');
     if (savedVisibility) {
       try {
@@ -121,6 +123,8 @@ export default function ToolDetailPage() {
   }, []);
 
   React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     localStorage.setItem('sidebar-modules-visibility', JSON.stringify(sidebarModulesVisibility));
   }, [sidebarModulesVisibility]);
 

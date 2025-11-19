@@ -8,7 +8,8 @@ import { Footer } from '@component/Footer';
 import { getMessages } from '@i18n/index';
 import { ScrollTrigger } from '@component/ScrollTrigger';
 import { BackToTop } from '@component/BackToTop';
-import { Search, Upload, TrendingUp, Image, SquarePen, Code, Mic, LineChart, Zap, Compass, MessageCircleMore } from 'lucide-react';
+import { Search, Upload, TrendingUp } from 'lucide-react';
+import { MapPin, Plane, Hotel, Car, Ship, Mountain, Palmtree, Compass, Globe, Briefcase, Heart } from 'lucide-react';
 import { Tool } from '@/types/tool';
 import { GradientBackground } from '@component/shared/GradientBackground';
 import { cookies } from 'next/headers';
@@ -32,7 +33,7 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
         <SiteNavigation locale={locale} />
 
         {/* Hero */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-20 lg:pb-50 text-center min-h-screen flex flex-col justify-center">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-20 lg:pb-50 text-center min-h-dvh sm:min-h-screen flex flex-col justify-center">
           {/* 标题 - 响应式字体大小 */}
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-tight px-2 sm:px-0">{messages.hero.title}</h1>
 
@@ -58,14 +59,18 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
                   <span className="text-xs">{messages.cta.explore}</span>
                 </Button>
               </Link>
-              <Button variant="ghost" size="sm" className="flex flex-col items-center gap-1 px-3 py-2 h-auto">
-                <Upload className="h-5 w-5" />
-                <span className="text-xs">{messages.cta.submit}</span>
-              </Button>
-              <Button variant="ghost" size="sm" className="flex flex-col items-center gap-1 px-3 py-2 h-auto">
-                <TrendingUp className="h-5 w-5" />
-                <span className="text-xs">{messages.cta.trends}</span>
-              </Button>
+              <Link href="/services/contact">
+                <Button variant="ghost" size="sm" className="flex flex-col items-center gap-1 px-3 py-2 h-auto">
+                  <Upload className="h-5 w-5" />
+                  <span className="text-xs">{messages.cta.submit}</span>
+                </Button>
+              </Link>
+              <Link href="/trending/most-searched">
+                <Button variant="ghost" size="sm" className="flex flex-col items-center gap-1 px-3 py-2 h-auto">
+                  <TrendingUp className="h-5 w-5" />
+                  <span className="text-xs">{messages.cta.trends}</span>
+                </Button>
+              </Link>
             </div>
 
             {/* 桌面端：原有的横向布局 */}
@@ -76,14 +81,18 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
                   {messages.cta.explore}
                 </Button>
               </Link>
-              <Button variant="ghost" size="sm" className="px-8 py-3 text-base">
-                <Upload className="mr-2 h-5 w-5" />
-                {messages.cta.submit}
-              </Button>
-              <Button variant="ghost" size="sm" className="px-8 py-3 text-base">
-                <TrendingUp className="mr-2 h-5 w-5" />
-                {messages.cta.trends}
-              </Button>
+              <Link href="/services/contact">
+                <Button variant="ghost" size="sm" className="px-8 py-3 text-base">
+                  <Upload className="mr-2 h-5 w-5" />
+                  {messages.cta.submit}
+                </Button>
+              </Link>
+              <Link href="/trending/most-searched">
+                <Button variant="ghost" size="sm" className="px-8 py-3 text-base">
+                  <TrendingUp className="mr-2 h-5 w-5" />
+                  {messages.cta.trends}
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -92,15 +101,15 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
             <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6">
               {hotTags.map((tag, index) => {
                 const categoryLinks = [
-                  '/categories/image-generation',
-                  '/categories/writing',
-                  '/categories/chat-tools',
-                  '/categories/code-assistant',
-                  '/categories/audio-voice',
-                  '/categories/data-insights',
-                  '/categories/automation'
+                  '/categories/domestic-travel',
+                  '/categories/outbound-travel',
+                  '/categories/hotels',
+                  '/categories/flights',
+                  '/categories/local-experiences',
+                  '/categories/cruise-travel',
+                  '/categories/custom-travel'
                 ];
-                const icons = [Image, SquarePen, MessageCircleMore, Code, Mic, LineChart, Zap];
+                const icons = [MapPin, Plane, Hotel, Car, Ship, Mountain, Palmtree, Compass, Globe, Briefcase, Heart];
                 const Icon = icons[index] || Search;
                 const href = categoryLinks[index] || `/search/${encodeURIComponent(tag)}`;
                 return (
