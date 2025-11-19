@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { Loader2, Search, ArrowRight, Sparkles } from 'lucide-react';
-import { cn } from '@component/lib/utils';
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
 const searchSuggestions = ['三亚5日游亲子套餐', '日本樱花季旅游', '欧洲深度游', '马尔代夫蜜月旅行', '西藏自驾游', '泰国海岛游'];
@@ -26,7 +26,7 @@ export function SearchBar({ placeholder, compact = false, showButton = true }: {
     if (!query) return;
     setLoading(true);
     setShowSuggestions(false);
-    router.push(`/search/${encodeURIComponent(query)}`);
+    router.push(`/search?q=${encodeURIComponent(query)}`);
   };
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
