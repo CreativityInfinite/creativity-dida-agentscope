@@ -41,16 +41,16 @@ export function MobileNav({ locale }: MobileNavProps) {
   };
 
   return (
-    <div className="md:hidden relative">
+    <div className="md:hidden relative" suppressHydrationWarning>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="h-8 w-8">
+          <Button variant="ghost" size="icon" className="h-8 w-8" suppressHydrationWarning>
             <Menu className="h-4 w-4" />
             <span className="sr-only">打开菜单</span>
           </Button>
         </SheetTrigger>
 
-        <SheetContent side="left" className="w-80 p-0 border-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" showClose={false}>
+        <SheetContent side="left" className="w-80 p-0 border-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" showClose={false} suppressHydrationWarning>
           <SheetTitle className="sr-only">导航菜单</SheetTitle>
           {/* 添加渐变背景 */}
           <GradientBackground type="other" className="opacity-60" />
@@ -63,13 +63,13 @@ export function MobileNav({ locale }: MobileNavProps) {
                   <LogoText className="text-sm ml-2">{defaultLogo.title}</LogoText>
                 </Logo>
               </Link>
-              <Button variant="ghost" size="icon" onClick={() => setOpen(false)} className="h-8 w-8">
+              <Button variant="ghost" size="icon" onClick={() => setOpen(false)} className="h-8 w-8" suppressHydrationWarning>
                 <X className="h-4 w-4" />
               </Button>
             </div>
 
             {/* Navigation */}
-            <ScrollArea className="flex-1 overflow-auto">
+            <ScrollArea className="flex-1 overflow-auto" suppressHydrationWarning>
               <div className="space-y-2 p-4 pb-6">
                 {navSections.map((section) => (
                   <div key={section.trigger}>
@@ -84,15 +84,15 @@ export function MobileNav({ locale }: MobileNavProps) {
                       </Link>
                     ) : (
                       // 可折叠的分组
-                      <Collapsible open={openSections.includes(section.trigger)} onOpenChange={() => toggleSection(section.trigger)}>
+                      <Collapsible open={openSections.includes(section.trigger)} onOpenChange={() => toggleSection(section.trigger)} suppressHydrationWarning>
                         <CollapsibleTrigger asChild>
-                          <Button variant="ghost" className="w-full justify-between px-3 py-2.5 text-sm font-medium hover:bg-accent/50">
+                          <Button variant="ghost" className="w-full justify-between px-3 py-2.5 text-sm font-medium hover:bg-accent/50" suppressHydrationWarning>
                             <div className="flex items-center gap-3">{section.trigger}</div>
                             <ChevronDown className={cn('h-4 w-4 transition-transform', openSections.includes(section.trigger) && 'rotate-180')} />
                           </Button>
                         </CollapsibleTrigger>
 
-                        <CollapsibleContent className="space-y-1">
+                        <CollapsibleContent className="space-y-1" suppressHydrationWarning>
                           {section.groups?.map((group) => (
                             <div key={group.title} className="ml-6 space-y-1">
                               <h4 className="px-3 py-1 text-xs font-medium text-muted-foreground/80 uppercase tracking-wider">{group.title}</h4>

@@ -23,10 +23,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={cn('min-h-screen bg-background font-sans antialiased', inter.variable)}>
+      <body className={cn('min-h-screen bg-background font-sans antialiased', inter.variable)} suppressHydrationWarning>
         <ClientSessionProvider>
           <ThemeProvider>
-            <main>{children}</main>
+            <main suppressHydrationWarning>{children}</main>
           </ThemeProvider>
         </ClientSessionProvider>
       </body>

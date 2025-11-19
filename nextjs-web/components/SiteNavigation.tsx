@@ -34,7 +34,7 @@ export function SiteNavigation({ locale, fixed = false }: { locale: string; fixe
   const navSections: NavSection[] = getNavSections(locale);
 
   return (
-    <div className={fixed ? 'fixed top-0 left-0 right-0 z-50 backdrop-blur-md' : 'top-0'}>
+    <div className={fixed ? 'fixed top-0 left-0 right-0 z-50 backdrop-blur-md' : 'top-0'} suppressHydrationWarning>
       <div className="container mx-auto flex h-12 sm:h-14 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* 左侧导航页 */}
         <div className="flex items-center gap-3 sm:gap-6">
@@ -50,14 +50,14 @@ export function SiteNavigation({ locale, fixed = false }: { locale: string; fixe
             </span>
           </Link>
 
-          <NavigationMenu className="hidden md:block">
-            <NavigationMenuList>
+          <NavigationMenu className="hidden md:block" suppressHydrationWarning>
+            <NavigationMenuList suppressHydrationWarning>
               {navSections.map((section) => (
-                <NavigationMenuItem key={section.trigger}>
+                <NavigationMenuItem key={section.trigger} suppressHydrationWarning>
                   {section.groups && section.groups.length ? (
                     <>
-                      <NavigationMenuTrigger className="bg-transparent">{section.trigger}</NavigationMenuTrigger>
-                      <NavigationMenuContent className={`p-6 min-w-[640px] md:min-w-[720px] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(34,211,238,0.08),transparent_65%)] backdrop-blur shadow-lg`}>
+                      <NavigationMenuTrigger className="bg-transparent" suppressHydrationWarning>{section.trigger}</NavigationMenuTrigger>
+                      <NavigationMenuContent className={`p-6 min-w-[640px] md:min-w-[720px] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(34,211,238,0.08),transparent_65%)] backdrop-blur shadow-lg`} suppressHydrationWarning>
                         <div className="grid gap-4 md:grid-cols-3">
                           {section.groups
                             .filter((group) => group.items && group.items.length)
@@ -75,7 +75,7 @@ export function SiteNavigation({ locale, fixed = false }: { locale: string; fixe
                       </NavigationMenuContent>
                     </>
                   ) : (
-                    <NavigationMenuLink asChild>
+                    <NavigationMenuLink asChild suppressHydrationWarning>
                       <Link href={section.href || base} className="bg-transparent px-3 py-2 rounded-md">
                         {section.trigger}
                       </Link>
@@ -84,12 +84,12 @@ export function SiteNavigation({ locale, fixed = false }: { locale: string; fixe
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
-            <NavigationMenuViewport />
+            <NavigationMenuViewport suppressHydrationWarning />
           </NavigationMenu>
         </div>
 
         {/* 右侧登录、操作区域 */}
-        <div className="flex items-center gap-1 sm:gap-2">
+        <div className="flex items-center gap-1 sm:gap-2" suppressHydrationWarning>
           <ThemeToggle />
           <LangSwitcher locale={locale} />
           <UserMenu locale={locale} />
