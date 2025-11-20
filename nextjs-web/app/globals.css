@@ -173,16 +173,18 @@ button {
 /* 移动端键盘优化 */
 @media (max-width: 768px) {
   /* 防止iOS Safari在键盘弹起时的缩放 */
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-size: 16px !important;
   }
-  
+
   /* 使用更稳定的视口高度单位 */
   .min-h-screen-mobile {
     min-height: 100dvh;
     min-height: -webkit-fill-available;
   }
-  
+
   /* iOS Safari 兼容性 */
   body {
     /* 防止橡皮筋效果 */
@@ -190,7 +192,7 @@ button {
     /* Safari 视口高度修复 */
     min-height: -webkit-fill-available;
   }
-  
+
   /* 键盘弹起时的平滑过渡 */
   .keyboard-transition {
     transition: height 0.3s ease-in-out;

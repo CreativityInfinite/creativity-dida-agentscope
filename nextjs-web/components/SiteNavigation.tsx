@@ -56,8 +56,13 @@ export function SiteNavigation({ locale, fixed = false }: { locale: string; fixe
                 <NavigationMenuItem key={section.trigger} suppressHydrationWarning>
                   {section.groups && section.groups.length ? (
                     <>
-                      <NavigationMenuTrigger className="bg-transparent" suppressHydrationWarning>{section.trigger}</NavigationMenuTrigger>
-                      <NavigationMenuContent className={`p-6 min-w-[640px] md:min-w-[720px] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(34,211,238,0.08),transparent_65%)] backdrop-blur shadow-lg`} suppressHydrationWarning>
+                      <NavigationMenuTrigger className="bg-transparent" suppressHydrationWarning>
+                        {section.trigger}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent
+                        className={`p-6 min-w-[640px] md:min-w-[720px] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(34,211,238,0.08),transparent_65%)] backdrop-blur shadow-lg`}
+                        suppressHydrationWarning
+                      >
                         <div className="grid gap-4 md:grid-cols-3">
                           {section.groups
                             .filter((group) => group.items && group.items.length)

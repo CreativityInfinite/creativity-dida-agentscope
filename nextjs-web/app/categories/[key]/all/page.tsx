@@ -192,10 +192,10 @@ export default function CategoryViewAllPage({ params }: { params: Promise<{ key:
               {/* 热门工具 */}
               {topTools.length > 0 && (
                 <div className="pt-3 sm:pt-4 border-t">
-                <div className="flex items-center gap-2 mb-3">
-                  <Flame className="h-4 w-4 text-orange-500" />
-                  <h3 className="text-sm font-semibold">热门服务</h3>
-                </div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Flame className="h-4 w-4 text-orange-500" />
+                    <h3 className="text-sm font-semibold">热门服务</h3>
+                  </div>
                   <div className="space-y-2">
                     {topTools.map((tool, idx) => (
                       <Link

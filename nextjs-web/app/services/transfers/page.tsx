@@ -243,9 +243,7 @@ export default function TransfersPage() {
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-primary">
-                              {service.price}
-                            </div>
+                            <div className="text-2xl font-bold text-primary">{service.price}</div>
                           </div>
                         </div>
                       </CardHeader>

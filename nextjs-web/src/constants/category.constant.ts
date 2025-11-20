@@ -10,7 +10,7 @@ export const CATEGORY_ICONS = {
   DomesticTravel: MapPin,
   OutboundTravel: Globe,
   Hotels: Hotel,
-  Flights: FlightIcon,  
+  Flights: FlightIcon,
   LocalExperiences: Camera,
   CruiseTravel: Ship,
   CustomTravel: Heart

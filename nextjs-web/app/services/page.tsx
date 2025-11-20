@@ -76,16 +76,14 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
       <GradientBackground type="other" className="opacity-30" />
-      
+
       <div className="relative z-10">
         {/* Header */}
         <div className="border-b bg-background/80 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-8">
             <div className="max-w-3xl">
               <h1 className="text-3xl font-bold tracking-tight mb-4">专业服务</h1>
-              <p className="text-lg text-muted-foreground mb-6">
-                为个人开发者和企业用户提供全方位的 AI 工具服务支持，助力您的业务发展
-              </p>
+              <p className="text-lg text-muted-foreground mb-6">为个人开发者和企业用户提供全方位的 AI 工具服务支持，助力您的业务发展</p>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">API 集成</Badge>
                 <Badge variant="secondary">企业定制</Badge>
@@ -103,12 +101,8 @@ export default function ServicesPage() {
               const IconComponent = service.icon;
               return (
                 <Card key={service.id} className={`relative transition-all duration-200 hover:shadow-lg ${service.popular ? 'ring-2 ring-primary' : ''}`}>
-                  {service.popular && (
-                    <Badge className="absolute -top-2 left-4 bg-primary text-primary-foreground">
-                      热门推荐
-                    </Badge>
-                  )}
-                  
+                  {service.popular && <Badge className="absolute -top-2 left-4 bg-primary text-primary-foreground">热门推荐</Badge>}
+
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="p-2 rounded-lg bg-primary/10">
@@ -116,9 +110,7 @@ export default function ServicesPage() {
                       </div>
                       <CardTitle className="text-lg">{service.title}</CardTitle>
                     </div>
-                    <CardDescription className="text-sm leading-relaxed">
-                      {service.description}
-                    </CardDescription>
+                    <CardDescription className="text-sm leading-relaxed">{service.description}</CardDescription>
                   </CardHeader>
 
                   <CardContent>
@@ -164,19 +156,13 @@ export default function ServicesPage() {
           <div className="container mx-auto px-4 py-12">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-2xl font-bold mb-4">需要定制化服务？</h2>
-              <p className="text-muted-foreground mb-6">
-                我们的专业团队可以为您提供量身定制的 AI 工具解决方案
-              </p>
+              <p className="text-muted-foreground mb-6">我们的专业团队可以为您提供量身定制的 AI 工具解决方案</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
-                  <Link href="/services/enterprise">
-                    企业咨询
-                  </Link>
+                  <Link href="/services/enterprise">企业咨询</Link>
                 </Button>
                 <Button variant="outline" asChild size="lg">
-                  <Link href="/services/support">
-                    联系支持
-                  </Link>
+                  <Link href="/services/support">联系支持</Link>
                 </Button>
               </div>
             </div>

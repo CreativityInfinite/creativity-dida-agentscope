@@ -12,8 +12,8 @@ import type { PrimaryCategoryKey } from '@/src/constants/category.constant';
 export const ROUTE_TO_PRIMARY: Record<string, PrimaryCategoryKey> = {
   'domestic-travel': 'DomesticTravel',
   'outbound-travel': 'OutboundTravel',
-  'hotels': 'Hotels',
-  'flights': 'Flights',
+  hotels: 'Hotels',
+  flights: 'Flights',
   'local-experiences': 'LocalExperiences',
   'cruise-travel': 'CruiseTravel',
   'custom-travel': 'CustomTravel'

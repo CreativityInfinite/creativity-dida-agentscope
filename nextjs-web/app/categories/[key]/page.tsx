@@ -111,7 +111,7 @@ export default function CategoryPage({ params }: { params: Promise<{ key: string
   const [randomToolHref, setRandomToolHref] = React.useState('/explore');
   React.useEffect(() => {
     if (!tools.length) return;
-    
+
     // 使用稳定的随机种子避免水合错误
     const seed = tools.length > 0 ? tools[0]?.key?.length || 0 : 0;
     const idx = seed % tools.length;

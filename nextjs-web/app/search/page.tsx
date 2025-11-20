@@ -144,50 +144,54 @@ export default function SearchPage() {
       }
     } finally {
       setIsStreaming(false);
-      // 确保最终内容正确显示
-      const finalContent = assistantBufferRef.current;
-      setMessages((prev) => prev.map((msg) => (msg.id === assistantMessage.id ? { ...msg, content: finalContent, isStreaming: false } : msg)));
-      // 若中断时仍有打字机在跑，停止它
+      // 停止打字机效果
       if (typingTimerRef.current) {
         clearInterval(typingTimerRef.current);
         typingTimerRef.current = null;
       }
+      // 确保最终内容正确显示
+      const finalContent = assistantBufferRef.current;
+      setMessages((prev) => prev.map((msg) => (msg.id === assistantMessage.id ? { ...msg, content: finalContent, isStreaming: false } : msg)));
       abortControllerRef.current = null;
     }
   };
 
   const processSSEMessage = async (data: SSEMessage, messageId: string) => {
     const startTypewriter = () => {
-      if (typingTimerRef.current) return; // 已在进行中
+      // 停止现有的打字机效果
+      if (typingTimerRef.current) {
+        clearInterval(typingTimerRef.current);
+        typingTimerRef.current = null;
+      }
 
-      // 记录开始打字时的初始内容长度
-      const initialLength = assistantBufferRef.current.length;
-      typingIndexRef.current = initialLength;
+      // 重置打字机状态
+      typingIndexRef.current = 0;
       typingMessageIdRef.current = messageId;
 
       const step = 2; // 每次输出字符数
       const intervalMs = 18; // 输出间隔
 
       typingTimerRef.current = window.setInterval(() => {
-        const currentFullText = assistantBufferRef.current; // 获取最新的完整文本
-        const nextIndex = Math.min(typingIndexRef.current + step, currentFullText.length);
-
-        // 只获取新增的内容部分
-        const newContent = currentFullText.slice(typingIndexRef.current, nextIndex);
-
-        if (newContent) {
-          setMessages((prev) => prev.map((msg) => (msg.id === messageId ? { ...msg, content: msg.content + newContent } : msg)));
-        }
-
-        typingIndexRef.current = nextIndex;
-
+        const currentFullText = assistantBufferRef.current;
+        
         // 如果已经显示完所有内容，停止打字机
         if (typingIndexRef.current >= currentFullText.length) {
           if (typingTimerRef.current) {
             clearInterval(typingTimerRef.current);
             typingTimerRef.current = null;
           }
+          return;
         }
+
+        const nextIndex = Math.min(typingIndexRef.current + step, currentFullText.length);
+        const displayContent = currentFullText.slice(0, nextIndex);
+
+        // 直接设置完整内容，而不是追加
+        setMessages((prev) => prev.map((msg) => 
+          msg.id === messageId ? { ...msg, content: displayContent } : msg
+        ));
+
+        typingIndexRef.current = nextIndex;
       }, intervalMs);
     };
 
@@ -217,7 +221,10 @@ export default function SearchPage() {
       case 'content':
         if (data.text && data.delta) {
           assistantBufferRef.current += data.text;
-          if (!typingTimerRef.current) startTypewriter();
+          // 只在没有打字机运行时启动新的打字机
+          if (!typingTimerRef.current) {
+            startTypewriter();
+          }
         }
         break;
       case 'response':

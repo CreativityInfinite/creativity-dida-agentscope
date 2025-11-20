@@ -88,7 +88,7 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
   useEffect(() => {
     // 记录初始视口高度
     setInitialViewportHeight(window.visualViewport?.height || window.innerHeight);
-    
+
     const onStart = (_e: Event) => setSuppressAutoScroll(true);
     const onEnd = (_e: Event) => {
       setSuppressAutoScroll(false);
@@ -100,11 +100,11 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
     const handleViewportChange = () => {
       const currentHeight = window.visualViewport?.height || window.innerHeight;
       const heightDifference = initialViewportHeight - currentHeight;
-      
+
       // 如果高度减少超过150px，认为是键盘弹起
       const keyboardIsOpen = heightDifference > 150;
       setIsKeyboardOpen(keyboardIsOpen);
-      
+
       // 键盘弹起时，暂时禁用自动滚动
       if (keyboardIsOpen) {
         setSuppressAutoScroll(true);
@@ -122,7 +122,7 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
       setSuppressAutoScroll(true);
       console.log('[ScrollTrigger] 键盘弹起，禁用自动滚动');
     };
-    
+
     const onKeyboardClose = () => {
       setIsKeyboardOpen(false);
       console.log('[ScrollTrigger] 键盘收起，延迟恢复自动滚动');
@@ -143,11 +143,11 @@ export function ScrollTrigger({ locale, children, triggerDistance = 400, autoScr
     // 监听自定义键盘事件
     window.addEventListener('keyboard:open', onKeyboardOpen as EventListener);
     window.addEventListener('keyboard:close', onKeyboardClose as EventListener);
-    
+
     window.addEventListener('backToTop:start', onStart as EventListener);
     window.addEventListener('backToTop:end', onEnd as EventListener);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     return () => {
       if (window.visualViewport) {
         window.visualViewport.removeEventListener('resize', handleViewportChange);
